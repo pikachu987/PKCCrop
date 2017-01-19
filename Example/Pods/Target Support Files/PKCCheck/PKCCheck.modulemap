@@ -1,0 +1,6 @@
+framework module PKCCheck {
+  umbrella header "PKCCheck-umbrella.h"
+
+  export *
+  module * { export * }
+}

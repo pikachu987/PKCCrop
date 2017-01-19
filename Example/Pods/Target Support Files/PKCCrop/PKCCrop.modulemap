@@ -1,0 +1,6 @@
+framework module PKCCrop {
+  umbrella header "PKCCrop-umbrella.h"
+
+  export *
+  module * { export * }
+}

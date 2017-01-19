@@ -1,0 +1,902 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1680ACB82B05AE7BE838821370AA81FD /* PKCCrop-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 426AD31E838FDC430FCA9188A1693008 /* PKCCrop-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D9F20A29A63FF84831A4CA1CFB53208 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */; };
+		61EEA04064BB20F4C4917C7506193A7E /* PKCCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6966893826224803E71846D9419803 /* PKCCheck.framework */; };
+		6E86F7878FF786425810EAE9A08FA688 /* PKCCheck-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F655E292F9F5401CBF9AABB44ECB3AC /* PKCCheck-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76E785678C91DC5BF7DDC9849F94D55B /* Pods-PKCCrop_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F875D9FB7DFB2A0A5163C671E434A6BA /* Pods-PKCCrop_Tests-dummy.m */; };
+		7950F462A9921E5504319B38611F19A0 /* PKCCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA9686C35DCCA0192A1A6DB219C36E /* PKCCheck.swift */; };
+		79D71BE5518FF4D989C528FB2020259A /* PKCCheck-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8CEF8F66AEAAF395F7D342888DEAEF /* PKCCheck-dummy.m */; };
+		A9EE5B12CA0D0673328FAD30E3467C29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */; };
+		AA19B0DBA01CFA657414692B9D702AB1 /* Pods-PKCCrop_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A27DB6E4A3CF74B74E3D29E2A3E78C7C /* Pods-PKCCrop_Example-dummy.m */; };
+		C0AB09BE03B479FC5FA3804F2B4B8EED /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDDC06B6F040A42479C7AEF651416EC /* ReplaceMe.swift */; };
+		E0B0F7DA51C07AE5DBFB177412D61788 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */; };
+		E60254E045EC99A55C5FEE778BFA2BA0 /* PKCCrop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EF83E47C569397A90AC431C6729421 /* PKCCrop-dummy.m */; };
+		F1C935958878643B833647963ECD9B24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */; };
+		FB8894BDD14725F2E0AFD6862729C548 /* Pods-PKCCrop_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1B9A20FCA7C803BA5BBBD1FF8B890E /* Pods-PKCCrop_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE67BF42C47EEB812EF1E1890AAA1D0B /* Pods-PKCCrop_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 778AC436DE144D6F0FBDECF0D8FAF4F1 /* Pods-PKCCrop_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B6D321C70FFA8373665BCC1A9EAFF79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA77CEB2331F59C4BE19EDBA10BF9AE3;
+			remoteInfo = PKCCheck;
+		};
+		64B997F76BFA4B628B62C92051FF0265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA77CEB2331F59C4BE19EDBA10BF9AE3;
+			remoteInfo = PKCCheck;
+		};
+		AE4529CF73DEB54D9DE3B187F53F7F6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48ABBBADD342F0FE0C2B717CB5B9C8E2;
+			remoteInfo = PKCCrop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09CA9686C35DCCA0192A1A6DB219C36E /* PKCCheck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCCheck.swift; path = PKCCheck/Classes/PKCCheck.swift; sourceTree = "<group>"; };
+		139C4E729234E56C4878EE45D76519F1 /* Pods-PKCCrop_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PKCCrop_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		236E212F6F98CFDA4452FE5A94D9A6F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25D911C0A7C19FD81A4569A557D8E6C9 /* Pods-PKCCrop_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PKCCrop_Example.modulemap"; sourceTree = "<group>"; };
+		26C7EA000C38901B4ABE204AFA97B9EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31E2CF919670459DC1228CE235BE04D0 /* Pods-PKCCrop_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PKCCrop_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		31EF83E47C569397A90AC431C6729421 /* PKCCrop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKCCrop-dummy.m"; sourceTree = "<group>"; };
+		36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		42122F7705F8D51FB8E5A00145030342 /* Pods-PKCCrop_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PKCCrop_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		426AD31E838FDC430FCA9188A1693008 /* PKCCrop-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCrop-umbrella.h"; sourceTree = "<group>"; };
+		465001315E0C163D757E880BA18E81F6 /* Pods-PKCCrop_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Example-resources.sh"; sourceTree = "<group>"; };
+		4EB68AFCFED0FBCF3DEC3D5557484EE4 /* PKCCheck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PKCCheck.modulemap; sourceTree = "<group>"; };
+		5138FA381DC4AB2A1CBA58E7C626BDD5 /* PKCCrop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKCCrop.xcconfig; sourceTree = "<group>"; };
+		5F655E292F9F5401CBF9AABB44ECB3AC /* PKCCheck-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCheck-umbrella.h"; sourceTree = "<group>"; };
+		6DDDC06B6F040A42479C7AEF651416EC /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		722628FA546E503380664DCEA780957A /* Pods-PKCCrop_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Example-frameworks.sh"; sourceTree = "<group>"; };
+		778AC436DE144D6F0FBDECF0D8FAF4F1 /* Pods-PKCCrop_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PKCCrop_Example-umbrella.h"; sourceTree = "<group>"; };
+		7C1B9A20FCA7C803BA5BBBD1FF8B890E /* Pods-PKCCrop_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PKCCrop_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7CFF51F9C7491662F737DF9FCED5F747 /* Pods-PKCCrop_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		8A6966893826224803E71846D9419803 /* PKCCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKCCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BFD0BEBDBC92B5622B0AB9EB5CB4B57 /* Pods-PKCCrop_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8DF75849394A6FA6CAF1BC9AA5204562 /* Pods-PKCCrop_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PKCCrop_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93EF8BF355DFCAE6448A0FA3265FC379 /* Pods-PKCCrop_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9864E58F8B8E492B89B2BF18CD6CEBC2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A2E5DF180E1A31A5B35A459B458C82E /* PKCCheck.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKCCheck.xcconfig; sourceTree = "<group>"; };
+		9BC8CB7A24EE5D99A96A6F48267245EA /* PKCCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PKCCheck.framework; path = PKCCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D9FCE6B9CB3F52B0BB53E529676F59 /* PKCCheck-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCheck-prefix.pch"; sourceTree = "<group>"; };
+		A27DB6E4A3CF74B74E3D29E2A3E78C7C /* Pods-PKCCrop_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PKCCrop_Example-dummy.m"; sourceTree = "<group>"; };
+		A2E11348A46EB084128F5BA3D7E0BA3F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A903E26281FFEAEFE1C17E498E8C2F60 /* Pods-PKCCrop_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA8CEF8F66AEAAF395F7D342888DEAEF /* PKCCheck-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKCCheck-dummy.m"; sourceTree = "<group>"; };
+		B431FED843EB432FAD7ABB004021C9BC /* Pods-PKCCrop_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Tests-resources.sh"; sourceTree = "<group>"; };
+		C1E7EBD95C6F17B6B372FA4AB415F616 /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PKCCrop_Tests.framework; path = "Pods-PKCCrop_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC60EEDE2DA576BFBC0BED7640685069 /* PKCCrop-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCrop-prefix.pch"; sourceTree = "<group>"; };
+		D5135FD002337F323992E3C02FB53F06 /* Pods-PKCCrop_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DB6E1B694D16E00CD91FF41B39E6D345 /* PKCCrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PKCCrop.framework; path = PKCCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF502F0D68FCCB69165B3470B1600777 /* Pods-PKCCrop_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PKCCrop_Tests.modulemap"; sourceTree = "<group>"; };
+		E1C43CBBF24663C4FD734C28B38D1175 /* Pods_PKCCrop_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PKCCrop_Example.framework; path = "Pods-PKCCrop_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE61F3001AE9C2365488FBE6B883760 /* PKCCrop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PKCCrop.modulemap; sourceTree = "<group>"; };
+		F875D9FB7DFB2A0A5163C671E434A6BA /* Pods-PKCCrop_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PKCCrop_Tests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CB86E8F2C7D8CAD6759D66A3968B263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0B0F7DA51C07AE5DBFB177412D61788 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73BAD4AE6A9F0FCFA5622055B8A4381D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9EE5B12CA0D0673328FAD30E3467C29 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A5B04264B4B579F7021709F841523AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D9F20A29A63FF84831A4CA1CFB53208 /* Foundation.framework in Frameworks */,
+				61EEA04064BB20F4C4917C7506193A7E /* PKCCheck.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9EAD1C374AB8D67EE6D21F75FAE4AE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C935958878643B833647963ECD9B24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D0C1AD4996663132534919BA22623FC /* Pods-PKCCrop_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9864E58F8B8E492B89B2BF18CD6CEBC2 /* Info.plist */,
+				DF502F0D68FCCB69165B3470B1600777 /* Pods-PKCCrop_Tests.modulemap */,
+				8DF75849394A6FA6CAF1BC9AA5204562 /* Pods-PKCCrop_Tests-acknowledgements.markdown */,
+				31E2CF919670459DC1228CE235BE04D0 /* Pods-PKCCrop_Tests-acknowledgements.plist */,
+				F875D9FB7DFB2A0A5163C671E434A6BA /* Pods-PKCCrop_Tests-dummy.m */,
+				7CFF51F9C7491662F737DF9FCED5F747 /* Pods-PKCCrop_Tests-frameworks.sh */,
+				B431FED843EB432FAD7ABB004021C9BC /* Pods-PKCCrop_Tests-resources.sh */,
+				7C1B9A20FCA7C803BA5BBBD1FF8B890E /* Pods-PKCCrop_Tests-umbrella.h */,
+				A903E26281FFEAEFE1C17E498E8C2F60 /* Pods-PKCCrop_Tests.debug.xcconfig */,
+				8BFD0BEBDBC92B5622B0AB9EB5CB4B57 /* Pods-PKCCrop_Tests.release.xcconfig */,
+			);
+			name = "Pods-PKCCrop_Tests";
+			path = "Target Support Files/Pods-PKCCrop_Tests";
+			sourceTree = "<group>";
+		};
+		2F67C93D71FE2A3D9181FDE69AB0696A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BC8CB7A24EE5D99A96A6F48267245EA /* PKCCheck.framework */,
+				DB6E1B694D16E00CD91FF41B39E6D345 /* PKCCrop.framework */,
+				E1C43CBBF24663C4FD734C28B38D1175 /* Pods_PKCCrop_Example.framework */,
+				C1E7EBD95C6F17B6B372FA4AB415F616 /* Pods_PKCCrop_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30F33D9FFACA6C35128095B8DFA85CE8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				26C7EA000C38901B4ABE204AFA97B9EF /* Info.plist */,
+				4EB68AFCFED0FBCF3DEC3D5557484EE4 /* PKCCheck.modulemap */,
+				9A2E5DF180E1A31A5B35A459B458C82E /* PKCCheck.xcconfig */,
+				AA8CEF8F66AEAAF395F7D342888DEAEF /* PKCCheck-dummy.m */,
+				A0D9FCE6B9CB3F52B0BB53E529676F59 /* PKCCheck-prefix.pch */,
+				5F655E292F9F5401CBF9AABB44ECB3AC /* PKCCheck-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PKCCheck";
+			sourceTree = "<group>";
+		};
+		38AF2AF738C81D0AD06E703C40D53433 /* PKCCrop */ = {
+			isa = PBXGroup;
+			children = (
+				72A367907AC2CDC0530933CA5104E2EB /* PKCCrop */,
+				3BBFBA13A448D9277615735DE4A899DD /* Support Files */,
+			);
+			name = PKCCrop;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3BBFBA13A448D9277615735DE4A899DD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2E11348A46EB084128F5BA3D7E0BA3F /* Info.plist */,
+				EAE61F3001AE9C2365488FBE6B883760 /* PKCCrop.modulemap */,
+				5138FA381DC4AB2A1CBA58E7C626BDD5 /* PKCCrop.xcconfig */,
+				31EF83E47C569397A90AC431C6729421 /* PKCCrop-dummy.m */,
+				CC60EEDE2DA576BFBC0BED7640685069 /* PKCCrop-prefix.pch */,
+				426AD31E838FDC430FCA9188A1693008 /* PKCCrop-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PKCCrop";
+			sourceTree = "<group>";
+		};
+		6719A7F94D327542B47ADA11CED86D32 /* Pods-PKCCrop_Example */ = {
+			isa = PBXGroup;
+			children = (
+				236E212F6F98CFDA4452FE5A94D9A6F0 /* Info.plist */,
+				25D911C0A7C19FD81A4569A557D8E6C9 /* Pods-PKCCrop_Example.modulemap */,
+				42122F7705F8D51FB8E5A00145030342 /* Pods-PKCCrop_Example-acknowledgements.markdown */,
+				139C4E729234E56C4878EE45D76519F1 /* Pods-PKCCrop_Example-acknowledgements.plist */,
+				A27DB6E4A3CF74B74E3D29E2A3E78C7C /* Pods-PKCCrop_Example-dummy.m */,
+				722628FA546E503380664DCEA780957A /* Pods-PKCCrop_Example-frameworks.sh */,
+				465001315E0C163D757E880BA18E81F6 /* Pods-PKCCrop_Example-resources.sh */,
+				778AC436DE144D6F0FBDECF0D8FAF4F1 /* Pods-PKCCrop_Example-umbrella.h */,
+				D5135FD002337F323992E3C02FB53F06 /* Pods-PKCCrop_Example.debug.xcconfig */,
+				93EF8BF355DFCAE6448A0FA3265FC379 /* Pods-PKCCrop_Example.release.xcconfig */,
+			);
+			name = "Pods-PKCCrop_Example";
+			path = "Target Support Files/Pods-PKCCrop_Example";
+			sourceTree = "<group>";
+		};
+		72A367907AC2CDC0530933CA5104E2EB /* PKCCrop */ = {
+			isa = PBXGroup;
+			children = (
+				AF2BA977F1FE9348204A805229AA9778 /* Classes */,
+			);
+			name = PKCCrop;
+			path = PKCCrop;
+			sourceTree = "<group>";
+		};
+		78D7EFE8949C2DAB6914F51BDF2F826C /* PKCCheck */ = {
+			isa = PBXGroup;
+			children = (
+				09CA9686C35DCCA0192A1A6DB219C36E /* PKCCheck.swift */,
+				30F33D9FFACA6C35128095B8DFA85CE8 /* Support Files */,
+			);
+			name = PKCCheck;
+			path = PKCCheck;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				AC7B3A6E186B106C51A2916919D23F4A /* Development Pods */,
+				F2394033DF1D97E27FFD2BC5452DBAD8 /* Frameworks */,
+				F606CF91F0EA5FF2E33487E71E4B5423 /* Pods */,
+				2F67C93D71FE2A3D9181FDE69AB0696A /* Products */,
+				93CA760C86A4A0D998422A9A3CC772FF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		93CA760C86A4A0D998422A9A3CC772FF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6719A7F94D327542B47ADA11CED86D32 /* Pods-PKCCrop_Example */,
+				2D0C1AD4996663132534919BA22623FC /* Pods-PKCCrop_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AC7B3A6E186B106C51A2916919D23F4A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38AF2AF738C81D0AD06E703C40D53433 /* PKCCrop */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		AF2BA977F1FE9348204A805229AA9778 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6DDDC06B6F040A42479C7AEF651416EC /* ReplaceMe.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BFD17B96AA1C9C50ED662E502BC2AC49 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F2394033DF1D97E27FFD2BC5452DBAD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A6966893826224803E71846D9419803 /* PKCCheck.framework */,
+				BFD17B96AA1C9C50ED662E502BC2AC49 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F606CF91F0EA5FF2E33487E71E4B5423 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78D7EFE8949C2DAB6914F51BDF2F826C /* PKCCheck */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		22B2F4176D83367831EDCF109675A942 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE67BF42C47EEB812EF1E1890AAA1D0B /* Pods-PKCCrop_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B19CE3E866AD79F7150FDA469D010C6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E86F7878FF786425810EAE9A08FA688 /* PKCCheck-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEE2C3D539916E5ABDD6EC05A2530E79 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB8894BDD14725F2E0AFD6862729C548 /* Pods-PKCCrop_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC022297E8B9F281C8E8653131DCF308 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1680ACB82B05AE7BE838821370AA81FD /* PKCCrop-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		48ABBBADD342F0FE0C2B717CB5B9C8E2 /* PKCCrop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BD2C480B9DBC22D5131CE07982E2105 /* Build configuration list for PBXNativeTarget "PKCCrop" */;
+			buildPhases = (
+				97061B92EF6EEC12E7D2363E564B3456 /* Sources */,
+				9A5B04264B4B579F7021709F841523AC /* Frameworks */,
+				CC022297E8B9F281C8E8653131DCF308 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21E71E452E6D4D67FBEBB1BB2A6FD8FB /* PBXTargetDependency */,
+			);
+			name = PKCCrop;
+			productName = PKCCrop;
+			productReference = DB6E1B694D16E00CD91FF41B39E6D345 /* PKCCrop.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA77CEB2331F59C4BE19EDBA10BF9AE3 /* PKCCheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98CCD03A61F83FD3137ABF198DAFEC1C /* Build configuration list for PBXNativeTarget "PKCCheck" */;
+			buildPhases = (
+				2193BEF0354C6BA49B9E769017881283 /* Sources */,
+				5CB86E8F2C7D8CAD6759D66A3968B263 /* Frameworks */,
+				7B19CE3E866AD79F7150FDA469D010C6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PKCCheck;
+			productName = PKCCheck;
+			productReference = 9BC8CB7A24EE5D99A96A6F48267245EA /* PKCCheck.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8E46DE5CBD06C06C0C2C142C15399D0 /* Pods-PKCCrop_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C8290F398ECA628D86AFE5CA8FD1040 /* Build configuration list for PBXNativeTarget "Pods-PKCCrop_Tests" */;
+			buildPhases = (
+				7EC23F716AC88BDB236DD8519B98A7F9 /* Sources */,
+				A9EAD1C374AB8D67EE6D21F75FAE4AE2 /* Frameworks */,
+				AEE2C3D539916E5ABDD6EC05A2530E79 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PKCCrop_Tests";
+			productName = "Pods-PKCCrop_Tests";
+			productReference = C1E7EBD95C6F17B6B372FA4AB415F616 /* Pods_PKCCrop_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EF27F13FAD196083E4622CE5B5029EBE /* Pods-PKCCrop_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9B98323933DCD03A32E0C6A6C144DB4 /* Build configuration list for PBXNativeTarget "Pods-PKCCrop_Example" */;
+			buildPhases = (
+				9901A90DB3CD51E0C648D02BE0EC143D /* Sources */,
+				73BAD4AE6A9F0FCFA5622055B8A4381D /* Frameworks */,
+				22B2F4176D83367831EDCF109675A942 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B599C091C6BC02E9D53424CC1DAE87F /* PBXTargetDependency */,
+				61A025E1B363477F052DBC77D3A666C8 /* PBXTargetDependency */,
+			);
+			name = "Pods-PKCCrop_Example";
+			productName = "Pods-PKCCrop_Example";
+			productReference = E1C43CBBF24663C4FD734C28B38D1175 /* Pods_PKCCrop_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2F67C93D71FE2A3D9181FDE69AB0696A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA77CEB2331F59C4BE19EDBA10BF9AE3 /* PKCCheck */,
+				48ABBBADD342F0FE0C2B717CB5B9C8E2 /* PKCCrop */,
+				EF27F13FAD196083E4622CE5B5029EBE /* Pods-PKCCrop_Example */,
+				E8E46DE5CBD06C06C0C2C142C15399D0 /* Pods-PKCCrop_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2193BEF0354C6BA49B9E769017881283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D71BE5518FF4D989C528FB2020259A /* PKCCheck-dummy.m in Sources */,
+				7950F462A9921E5504319B38611F19A0 /* PKCCheck.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EC23F716AC88BDB236DD8519B98A7F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E785678C91DC5BF7DDC9849F94D55B /* Pods-PKCCrop_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97061B92EF6EEC12E7D2363E564B3456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60254E045EC99A55C5FEE778BFA2BA0 /* PKCCrop-dummy.m in Sources */,
+				C0AB09BE03B479FC5FA3804F2B4B8EED /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9901A90DB3CD51E0C648D02BE0EC143D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA19B0DBA01CFA657414692B9D702AB1 /* Pods-PKCCrop_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21E71E452E6D4D67FBEBB1BB2A6FD8FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PKCCheck;
+			target = AA77CEB2331F59C4BE19EDBA10BF9AE3 /* PKCCheck */;
+			targetProxy = 64B997F76BFA4B628B62C92051FF0265 /* PBXContainerItemProxy */;
+		};
+		2B599C091C6BC02E9D53424CC1DAE87F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PKCCheck;
+			target = AA77CEB2331F59C4BE19EDBA10BF9AE3 /* PKCCheck */;
+			targetProxy = 4B6D321C70FFA8373665BCC1A9EAFF79 /* PBXContainerItemProxy */;
+		};
+		61A025E1B363477F052DBC77D3A666C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PKCCrop;
+			target = 48ABBBADD342F0FE0C2B717CB5B9C8E2 /* PKCCrop */;
+			targetProxy = AE4529CF73DEB54D9DE3B187F53F7F6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0EB3F5B5EC1394E5AFEADAEBF5D545CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5138FA381DC4AB2A1CBA58E7C626BDD5 /* PKCCrop.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PKCCrop/PKCCrop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKCCrop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKCCrop/PKCCrop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PKCCrop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		18CB692C945D4C5D942024415E90B375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BFD0BEBDBC92B5622B0AB9EB5CB4B57 /* Pods-PKCCrop_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PKCCrop_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PKCCrop_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		350D3914011712445AAD6BA7E197E8C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5135FD002337F323992E3C02FB53F06 /* Pods-PKCCrop_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PKCCrop_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PKCCrop_Example/Pods-PKCCrop_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PKCCrop_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		791D653D38E58B4C4C1FD8063FCA9E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A903E26281FFEAEFE1C17E498E8C2F60 /* Pods-PKCCrop_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PKCCrop_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PKCCrop_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BA9BE6A723C78E8A90D214115EA9C4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5138FA381DC4AB2A1CBA58E7C626BDD5 /* PKCCrop.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PKCCrop/PKCCrop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKCCrop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKCCrop/PKCCrop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PKCCrop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DAA123A32770871F80F0D39887FE2D8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A2E5DF180E1A31A5B35A459B458C82E /* PKCCheck.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PKCCheck/PKCCheck-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKCCheck/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKCCheck/PKCCheck.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PKCCheck;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD95E4E5C10367630CE67A27F371E538 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93EF8BF355DFCAE6448A0FA3265FC379 /* Pods-PKCCrop_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PKCCrop_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PKCCrop_Example/Pods-PKCCrop_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PKCCrop_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA55822FFCA6DA68DCA47AE255952AF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A2E5DF180E1A31A5B35A459B458C82E /* PKCCheck.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PKCCheck/PKCCheck-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKCCheck/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKCCheck/PKCCheck.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PKCCheck;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
+				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C8290F398ECA628D86AFE5CA8FD1040 /* Build configuration list for PBXNativeTarget "Pods-PKCCrop_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				791D653D38E58B4C4C1FD8063FCA9E5F /* Debug */,
+				18CB692C945D4C5D942024415E90B375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BD2C480B9DBC22D5131CE07982E2105 /* Build configuration list for PBXNativeTarget "PKCCrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EB3F5B5EC1394E5AFEADAEBF5D545CF /* Debug */,
+				9BA9BE6A723C78E8A90D214115EA9C4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98CCD03A61F83FD3137ABF198DAFEC1C /* Build configuration list for PBXNativeTarget "PKCCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA55822FFCA6DA68DCA47AE255952AF9 /* Debug */,
+				DAA123A32770871F80F0D39887FE2D8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9B98323933DCD03A32E0C6A6C144DB4 /* Build configuration list for PBXNativeTarget "Pods-PKCCrop_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				350D3914011712445AAD6BA7E197E8C4 /* Debug */,
+				DD95E4E5C10367630CE67A27F371E538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

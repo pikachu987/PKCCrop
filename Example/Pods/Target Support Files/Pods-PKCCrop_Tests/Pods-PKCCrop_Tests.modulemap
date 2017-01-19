@@ -1,0 +1,6 @@
+framework module Pods_PKCCrop_Tests {
+  umbrella header "Pods-PKCCrop_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

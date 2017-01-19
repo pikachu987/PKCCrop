@@ -1,0 +1,13 @@
+use_frameworks!
+
+pod "PKCCheck"
+
+target 'PKCCrop_Example' do
+  pod 'PKCCrop', :path => '../'
+
+  target 'PKCCrop_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
