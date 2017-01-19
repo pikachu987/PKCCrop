@@ -10,7 +10,7 @@ import Foundation
 
 
 class Test {
-    func aaa{
+    func aaa(){
         print("bbbb");
     }
 }
