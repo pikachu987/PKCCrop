@@ -1,5 +1,9 @@
 # PKCCrop
 
+# Currently under preparation.
+
+# 현재 준비중입니다.
+
 [![CI Status](http://img.shields.io/travis/pikachu987/PKCCrop.svg?style=flat)](https://travis-ci.org/pikachu987/PKCCrop)
 [![Version](https://img.shields.io/cocoapods/v/PKCCrop.svg?style=flat)](http://cocoapods.org/pods/PKCCrop)
 [![License](https://img.shields.io/cocoapods/l/PKCCrop.svg?style=flat)](http://cocoapods.org/pods/PKCCrop)

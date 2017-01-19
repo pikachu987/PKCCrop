@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import PKCCrop
 
 class ViewController: UIViewController {
-
+    let pkcCrop = PKCCrop()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        pkcCrop.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,5 +24,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func cameraAction(_ sender: Any) {
+        self.pkcCrop.cameraOpen()
+    }
+    @IBAction func galleryAction(_ sender: Any) {
+        self.pkcCrop.photoOpen()
+    }
+}
+
+extension ViewController: PKCCropDelegate{
+    func pkcCropAccessPermissionsChange() -> Bool {
+        
+        return true
+    }
+    func pkcCropAccessPermissionsDenied() {
+        
+    }
+    
+    func pkcCropController() -> UIViewController {
+        return self
+    }
 }
 
