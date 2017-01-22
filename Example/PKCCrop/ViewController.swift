@@ -12,11 +12,13 @@ import PKCCrop
 class ViewController: UIViewController {
     let pkcCrop = PKCCrop()
     
+    @IBOutlet var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         pkcCrop.delegate = self
+        //PKCCropManager.shared.isZoom = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +31,9 @@ class ViewController: UIViewController {
     }
     @IBAction func galleryAction(_ sender: Any) {
         self.pkcCrop.photoOpen()
+    }
+    @IBAction func otherAction(_ sender: Any) {
+        self.pkcCrop.otherOpen(UIImage(named: "test.png")!)
     }
 }
 
@@ -44,5 +49,8 @@ extension ViewController: PKCCropDelegate{
     func pkcCropController() -> UIViewController {
         return self
     }
+    
+    func pkcCropImage(_ image: UIImage) {
+        self.imageView.image = image
+    }
 }
-

@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		6E953EA01E34C47000FA757F /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E953E9F1E34C47000FA757F /* test.png */; };
 		D720FF82317D658E70AA5294 /* Pods_PKCCrop_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08CF2A4F75CE1622827EDED /* Pods_PKCCrop_Example.framework */; };
 		DF5AF233D3672DC9AE436BF5 /* Pods_PKCCrop_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023A7845824871A76D3010A9 /* Pods_PKCCrop_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		607FACE51AFB9204008FA782 /* PKCCrop_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKCCrop_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		6E953E9F1E34C47000FA757F /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		749CFD6868E4BB7F6C643F33 /* Pods-PKCCrop_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAC2DA8B81A04174CF51FA2F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AAEE8254EF9088560B23E50B /* PKCCrop.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PKCCrop.podspec; path = ../PKCCrop.podspec; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				6E953E9F1E34C47000FA757F /* test.png */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -253,6 +256,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				6E953EA01E34C47000FA757F /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,11 +22,18 @@ class PKCCameraViewController: UIViewController{
     @IBOutlet var cameraView: UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var noneCaptureView: UIView!
+    
     @IBOutlet var light: UIButton!
+    @IBOutlet var filter: UIButton!
+    @IBOutlet var filterView: UIView!
+    @IBOutlet var filterRight: NSLayoutConstraint!
+    @IBOutlet var filterTableView: UITableView!
     
     @IBOutlet var captureBtn1: UIButton!
     @IBOutlet var captureBtn2: UIButton!
     @IBOutlet var captureBtn3: UIButton!
+    
+    var isLoading = true
     
     lazy var touchView : UIView = {
         var tv = UIView()
@@ -40,6 +47,7 @@ class PKCCameraViewController: UIViewController{
     }()
     
     // MARK: - properties
+    let interactor = Interactor()
     var delegate: PKCCropPictureDelegate?
     fileprivate var cameraFilters: [Filter]!
     fileprivate var filterIdx = 0
@@ -61,25 +69,38 @@ class PKCCameraViewController: UIViewController{
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         self.mainView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         self.view.layoutIfNeeded()
         self.view.setNeedsLayout()
         
-        self.noneCaptureView.addSubview(self.touchView)
-        
         self.cameraFilters = PKCCropManager.shared.cameraFilters
         if self.cameraFilters == nil{
-            self.cameraFilters = [Filter(name: "Normal", filter: CIFilter(name: "CIColorControls")!)]
+            self.cameraFilters = [Filter(name: "Normal", filter: CIFilter(name: "CIColorControls")!, image: UIImage())]
+        }
+        if self.cameraFilters.count != 1{
+            self.filterTableView.register(UINib(nibName: "PKCCameraFilterCell", bundle: Bundle(for: PKCCrop.self)), forCellReuseIdentifier: "PKCCameraFilterCell")
+            self.filterTableView.rowHeight = UITableViewAutomaticDimension
+            self.filterTableView.estimatedRowHeight = 100
+            self.filterTableView.separatorStyle = .none
+            self.filterTableView.delegate = self
+            self.filterTableView.dataSource = self
+        }else{
+            self.filter.isHidden = true
         }
         
-        //self.captureBtn1.color
+        self.noneCaptureView.addSubview(self.touchView)
         
-        DispatchQueue.global().async {
-            DispatchQueue.main.async {
-                self.cameraSelected()
-            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.cameraSelected()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.isLoading = false
+            self.imageView.isHidden = false
+            Thread.sleep(forTimeInterval: 0.1)
+            self.cameraView.isHidden = true
         }
     }
     
@@ -90,6 +111,7 @@ class PKCCameraViewController: UIViewController{
     
     // MARK: - actions
     @IBAction func leftGestureAction(_ sender: Any){
+        self.captureBtnOriginColor()
         if self.filterIdx == 0{
             self.filterIdx = self.cameraFilters.count-1
         }else{
@@ -98,12 +120,14 @@ class PKCCameraViewController: UIViewController{
     }
     
     @IBAction func rightGestureAction(_ sender: Any){
+        self.captureBtnOriginColor()
         if self.filterIdx == self.cameraFilters.count-1{
             self.filterIdx = 0
         }else{
             self.filterIdx += 1
         }
     }
+    
     
     
     @IBAction func backAction(_ sender: Any) {
@@ -128,6 +152,41 @@ class PKCCameraViewController: UIViewController{
             }
         }
     }
+    @IBAction func filterAction(_ sender: Any) {
+        UIView.animate(withDuration: 0.5) { 
+            self.filterRight.constant = 0
+            self.noneCaptureView.layoutIfNeeded()
+            self.noneCaptureView.setNeedsLayout()
+        }
+    }
+    @IBAction func filterCloseAction(_ sender: Any) {
+        UIView.animate(withDuration: 0.5) {
+            self.filterRight.constant = -100
+            self.noneCaptureView.layoutIfNeeded()
+            self.noneCaptureView.setNeedsLayout()
+        }
+    }
+    @IBAction func filterGestureAction(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .ended{
+            let translation = sender.translation(in: self.filterTableView)
+            let progress = MenuHelper.calculateProgress(translation, viewBounds: self.filterTableView.bounds, direction: .right)
+            if self.filterRight.constant < -50{
+                self.filterRight.constant = -100
+                self.noneCaptureView.layoutIfNeeded()
+                self.noneCaptureView.setNeedsLayout()
+            }else{
+                self.filterRight.constant = 0
+                self.noneCaptureView.layoutIfNeeded()
+                self.noneCaptureView.setNeedsLayout()
+            }
+        }else{
+            let translation = sender.translation(in: self.filterTableView)
+            let progress = MenuHelper.calculateProgress(translation, viewBounds: self.filterTableView.bounds, direction: .right)
+            self.filterRight.constant = -self.filterTableView.frame.width*progress
+            self.noneCaptureView.layoutIfNeeded()
+            self.noneCaptureView.setNeedsLayout()
+        }
+    }
     
     @IBAction func reverseAction(_ sender: Any) {
         switch self.cameraDirection {
@@ -140,16 +199,18 @@ class PKCCameraViewController: UIViewController{
         self.cameraSelected()
     }
     
-    @IBAction func captureAction(_ sender: Any) {
-        self.saveToCamera()
+    func captureBtnOriginColor(){
         self.captureBtn1.backgroundColor = UIColor.white
         self.captureBtn2.backgroundColor = UIColor.lightGray
         self.captureBtn3.backgroundColor = UIColor.white
     }
+    
+    @IBAction func captureAction(_ sender: Any) {
+        self.saveToCamera()
+        self.captureBtnOriginColor()
+    }
     @IBAction func captureTouchUp(_ sender: Any) {
-        self.captureBtn1.backgroundColor = UIColor.white
-        self.captureBtn2.backgroundColor = UIColor.lightGray
-        self.captureBtn3.backgroundColor = UIColor.white
+        self.captureBtnOriginColor()
     }
     @IBAction func captureTouchDown(_ sender: Any) {
         self.captureBtn1.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
@@ -181,6 +242,14 @@ class PKCCameraViewController: UIViewController{
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.filterView.isHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.filterView.isHidden = true
+    }
 }
 
 
@@ -199,7 +268,7 @@ extension PKCCameraViewController{
                     }
                 }else{
                     self.light.isHidden = false
-                    self.light.setImage(UIImage(named: "pkc_check_light_off.png", in: Bundle(for: PKCCrop.self), compatibleWith: UITraitCollection(displayScale: 1)), for: .normal)
+                    self.light.setImage(UIImage(named: "pkc_crop_light_off.png", in: Bundle(for: PKCCrop.self), compatibleWith: UITraitCollection(displayScale: 1)), for: .normal)
                     if((device as AnyObject).position == AVCaptureDevicePosition.back) {
                         self.captureDevice = device as? AVCaptureDevice
                         self.setCaptureCamera()
@@ -232,6 +301,7 @@ extension PKCCameraViewController{
             try self.captureDeviceInput = AVCaptureDeviceInput(device: self.captureDevice)
             self.captureSession.addInput(captureDeviceInput)
             
+            
             let videoOutput = AVCaptureVideoDataOutput()
             videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sample buffer delegate", attributes: []))
             if captureSession.canAddOutput(videoOutput){
@@ -254,11 +324,18 @@ extension PKCCameraViewController{
     }
     
     
+    
+    // MARK: - saveToCamera
     func saveToCamera() {
-        let captureSize = CGSize(width: self.view.frame.width, height: self.view.frame.height)
-        let captureRect = self.view.bounds
+        if self.isLoading{
+            return
+        }
+        self.isLoading = true
+        let captureSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        let captureRect = UIScreen.main.bounds
+        
         UIGraphicsBeginImageContextWithOptions(captureSize, false, 0.0)
-        self.captureView.drawHierarchy(in: captureRect, afterScreenUpdates: false)
+        self.imageView.drawHierarchy(in: captureRect, afterScreenUpdates: false)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -266,7 +343,7 @@ extension PKCCameraViewController{
         pkcCropViewController.delegate = self
         pkcCropViewController.image = image
         pkcCropViewController.cropType = CropType.camera
-        self.present(pkcCropViewController, animated: false, completion: nil)
+        self.show(pkcCropViewController, sender: nil)
         
         if self.cameraDirection == .back{
             if let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo), device.hasTorch {
@@ -281,6 +358,7 @@ extension PKCCameraViewController{
                 }
             }
         }
+        self.isLoading = false
     }
 }
 
@@ -329,6 +407,32 @@ extension PKCCameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate{
 extension PKCCameraViewController: PKCCropPictureDelegate{
     func pkcCropPicture(_ image: UIImage) {
         self.delegate?.pkcCropPicture(image)
-        self.dismiss(animated: true, completion: nil)
     }
+}
+
+
+
+
+extension PKCCameraViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.cameraFilters.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row = self.cameraFilters[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PKCCameraFilterCell", for: indexPath) as! PKCCameraFilterCell
+        cell.img.image = row.image
+        cell.txt.text = row.name
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tableCellTouch(_:))))
+        return cell
+    }
+    func tableCellTouch(_ sender: UITapGestureRecognizer){
+        if let cell = sender.view as? UITableViewCell{
+            let indexPath = self.filterTableView.indexPath(for: cell)
+            self.filterIdx = (indexPath?.row)!
+        }
+    }
+}
+extension PKCCameraViewController: UITableViewDelegate{
+    
 }

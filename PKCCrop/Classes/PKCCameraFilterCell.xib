@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PKCCameraFilterCell" rowHeight="100" id="WdP-JL-PfS" customClass="PKCCameraFilterCell" customModule="PKCCrop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WdP-JL-PfS" id="mua-cU-aWj">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cZj-Q3-GAA">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="79"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="79" id="G35-7G-Mw3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmO-sE-O3B">
+                        <rect key="frame" x="0.0" y="79" width="100" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="jdy-vE-E98"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="cZj-Q3-GAA" secondAttribute="trailing" id="4KT-AW-iTR"/>
+                    <constraint firstAttribute="bottom" secondItem="WmO-sE-O3B" secondAttribute="bottom" id="F42-XQ-kwQ"/>
+                    <constraint firstItem="WmO-sE-O3B" firstAttribute="leading" secondItem="mua-cU-aWj" secondAttribute="leading" id="Msk-uO-kg7"/>
+                    <constraint firstItem="WmO-sE-O3B" firstAttribute="top" secondItem="cZj-Q3-GAA" secondAttribute="bottom" id="YOZ-9o-gsJ"/>
+                    <constraint firstItem="cZj-Q3-GAA" firstAttribute="top" secondItem="mua-cU-aWj" secondAttribute="top" id="oNZ-0k-xst"/>
+                    <constraint firstAttribute="trailing" secondItem="WmO-sE-O3B" secondAttribute="trailing" id="v2p-M2-uu5"/>
+                    <constraint firstItem="cZj-Q3-GAA" firstAttribute="leading" secondItem="mua-cU-aWj" secondAttribute="leading" id="zNR-dy-v2o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="img" destination="cZj-Q3-GAA" id="VO5-FI-yj7"/>
+                <outlet property="txt" destination="WmO-sE-O3B" id="gwz-kS-K4S"/>
+            </connections>
+            <point key="canvasLocation" x="-411" y="121"/>
+        </tableViewCell>
+    </objects>
+</document>
