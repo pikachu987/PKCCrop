@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PKCPhotoCell" id="w8D-qz-muh" customClass="PKCPhotoCell" customModule="PKCCrop">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QFL-Wh-MEk">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="QFL-Wh-MEk" firstAttribute="top" secondItem="w8D-qz-muh" secondAttribute="top" id="dk5-OE-DCT"/>
+                <constraint firstAttribute="trailing" secondItem="QFL-Wh-MEk" secondAttribute="trailing" id="dtQ-Xl-ErQ"/>
+                <constraint firstItem="QFL-Wh-MEk" firstAttribute="leading" secondItem="w8D-qz-muh" secondAttribute="leading" id="tCg-Yw-tmQ"/>
+                <constraint firstAttribute="bottom" secondItem="QFL-Wh-MEk" secondAttribute="bottom" id="zUJ-EG-ITL"/>
+            </constraints>
+            <size key="customSize" width="100" height="100"/>
+            <connections>
+                <outlet property="img" destination="QFL-Wh-MEk" id="XXi-bM-A9j"/>
+            </connections>
+            <point key="canvasLocation" x="-20" y="79"/>
+        </collectionViewCell>
+    </objects>
+</document>

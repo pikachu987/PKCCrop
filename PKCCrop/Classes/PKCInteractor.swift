@@ -105,11 +105,11 @@ class MenuHelper: Helper {
         let positiveMovementOnAxis:Float
         let positiveMovementOnAxisPercent:Float
         switch direction {
-        case .right, .down: // positive
+        case .right, .down:
             positiveMovementOnAxis = fmaxf(Float(movementOnAxis), 0.0)
             positiveMovementOnAxisPercent = fminf(positiveMovementOnAxis, 1.0)
             return CGFloat(positiveMovementOnAxisPercent)
-        case .up, .left: // negative
+        case .up, .left:
             positiveMovementOnAxis = fminf(Float(movementOnAxis), 0.0)
             positiveMovementOnAxisPercent = fmaxf(positiveMovementOnAxis, -1.0)
             return CGFloat(-positiveMovementOnAxisPercent)

@@ -18,7 +18,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         pkcCrop.delegate = self
-        //PKCCropManager.shared.isZoom = false
+        let success = PKCCropManager.shared.setRate(rateWidth: 16, rateHeight: 9)
+        PKCCropManager.shared.cropType = .rateAndNoneMargin
+        //PKCCropManager.shared.isZoomAnimation = false
+        PKCCropManager.shared.isZoom = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,13 +30,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func cameraAction(_ sender: Any) {
-        self.pkcCrop.cameraOpen()
+        self.pkcCrop.cameraCrop()
+        self.imageView.image = nil
     }
     @IBAction func galleryAction(_ sender: Any) {
-        self.pkcCrop.photoOpen()
+        self.pkcCrop.photoCrop()
+        self.imageView.image = nil
     }
     @IBAction func otherAction(_ sender: Any) {
-        self.pkcCrop.otherOpen(UIImage(named: "test.png")!)
+        self.pkcCrop.otherCrop(UIImage(named: "test.png")!)
+        self.imageView.image = nil
     }
 }
 

@@ -7,95 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0638E1641561695832DBE08B9943502C /* pkc_crop_filter_transfer.png in Resources */ = {isa = PBXBuildFile; fileRef = BF16DBC6D96E281AFB6E435E24723718 /* pkc_crop_filter_transfer.png */; };
-		075D90E2B8FC87DD2BC1382E9807F371 /* pkc_crop_filter_mono.png in Resources */ = {isa = PBXBuildFile; fileRef = FAFA0A2AAF444B942C4E91E2CA1A0168 /* pkc_crop_filter_mono.png */; };
-		0924A7C943BFB2B8044D2CB9693B1643 /* pkc_crop_filter_noir.png in Resources */ = {isa = PBXBuildFile; fileRef = 084E1F7AD0A56AF5DBFA17627A2E526B /* pkc_crop_filter_noir.png */; };
-		0E6316FA89E04AC631536B94F3380EED /* PKCCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5415C30135A5AAB2546088BB6DBA20F8 /* PKCCrop.swift */; };
-		12D51C76FE1F0ACBA7FC9A10583F8957 /* pkc_crop_filter_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A7046AFEBCCF69EA491B5426BB750B31 /* pkc_crop_filter_arrow.png */; };
-		13CA593BDB33D47FB00F4CED1ECAC75D /* pkc_crop_filter_nomal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B9AC96E167474117518B40D2A8B36 /* pkc_crop_filter_nomal.png */; };
-		15DF0ABE5AC7EC39773021EA9BA3A96D /* pkc_crop_bottom_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E2D12AF5F58CCD096D2E99A657992 /* pkc_crop_bottom_right.png */; };
-		17653126EA07DBAB22F48F6EC99CBEBF /* pkc_crop_bottom_left.png in Resources */ = {isa = PBXBuildFile; fileRef = C59A8D498B8B3C28FDA33CF60422A38E /* pkc_crop_bottom_left.png */; };
-		1B9652EDB5D6C91C27A5E21141EEC68E /* pkc_crop_filter_instant.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */; };
-		1BA18EB87B26FACC26D1A14125C2C55D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC2D6C817DFE596A8A9243EB7053BD0 /* Extension.swift */; };
-		2419D5F1B1007FC1FE7AA55F6B9DF1B2 /* pkc_crop_down_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9A1A7D75864BB7B2F78E82FF29779B /* pkc_crop_down_left.png */; };
-		28E11B82FB1A05B3167070A5EF3B35C6 /* PKCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678CE4B1901EC6CEEBE6536208912DA2 /* PKCInteractor.swift */; };
-		2C50FE563A75427A1EBF50D6303EED9D /* pkc_crop_top_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD261C23EF529441708C8FA60A350FC /* pkc_crop_top_left.png */; };
-		31CC044CBF900D712797C8CA01AA5DFE /* Extension.swift in Resources */ = {isa = PBXBuildFile; fileRef = EEC2D6C817DFE596A8A9243EB7053BD0 /* Extension.swift */; };
-		3270334A50661D52545736AFE6231DE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */; };
-		3F1B60E58DE1286A272BBEA58165BF49 /* pkc_crop_reverse.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DB484DD370E78757CE22F7ECF2A9E3 /* pkc_crop_reverse.png */; };
-		42CA5AF3BC7086FB86A8D405655B4193 /* PKCCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C761006EDC2DA9EEB850D7C12342D2C3 /* PKCCropViewController.xib */; };
-		42CC46FE7C6BB8304E59F0E23CEC5D62 /* PKCPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 740B86CE164BD39E6367ED8F00BC2782 /* PKCPhotoViewController.xib */; };
-		4DD44CC3200455C3FF46B07AFEF3325E /* pkc_crop_filter_transfer.png in Resources */ = {isa = PBXBuildFile; fileRef = BF16DBC6D96E281AFB6E435E24723718 /* pkc_crop_filter_transfer.png */; };
-		4E4764B6C60351B755549D97624B8E33 /* pkc_crop_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 0298A95C220FA36A92DEFA88E66EC564 /* pkc_crop_check.png */; };
-		4E6AF62C1D5424FFCCB7CBF6F53A6382 /* pkc_crop_filter_instant.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */; };
-		5061298C2806E91761F7058A0919C0BD /* pkc_crop_filter_tonal.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FB5916179E23DCCD0166D0FA9AE758 /* pkc_crop_filter_tonal.png */; };
-		533C4F77EAA7D43FA48DB934D2175299 /* PKCCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5E28B653C482927A69F73063B68F20 /* PKCCropViewController.swift */; };
-		5418CB2085A2FE1D6D36CA1B3439D8B1 /* pkc_crop_reverse.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DB484DD370E78757CE22F7ECF2A9E3 /* pkc_crop_reverse.png */; };
-		56EDF33FBEB61430EA26DEAFCE0482C7 /* PKCPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB77146520EFC39C571F0B01019902 /* PKCPhotoViewController.swift */; };
-		573A13D6AD2DFC898FB08B0CAAA11556 /* pkc_crop_light_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 360D3177E3B8671E0473EFF26A45E001 /* pkc_crop_light_off.png */; };
-		5E10884850295E30D5F005FFBB1F8CAF /* pkc_crop_top_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD261C23EF529441708C8FA60A350FC /* pkc_crop_top_left.png */; };
-		60E60F708D49A396A8F1554AD6A3CED3 /* pkc_crop_filter_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A7046AFEBCCF69EA491B5426BB750B31 /* pkc_crop_filter_arrow.png */; };
-		6140501DD48E241AE7DD5DCAC0ACB432 /* pkc_crop_bottom_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E2D12AF5F58CCD096D2E99A657992 /* pkc_crop_bottom_right.png */; };
-		63C3F86AEA7DFF000B9C66ED0D94DBD8 /* pkc_crop_filter_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */; };
-		6811A90EFD8DFF720068A8ED65082272 /* pkc_crop_filter_process.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6B64CB9F99315DEC60908C3F221ED9 /* pkc_crop_filter_process.png */; };
-		69665541800FA81BF0F1F02F211CEA29 /* pkc_crop_exit.png in Resources */ = {isa = PBXBuildFile; fileRef = D4736551A818301522B21EE94D6FBD3B /* pkc_crop_exit.png */; };
-		6CC69FDAD4AAA563FEA0B0657E522B39 /* pkc_crop_filter_chrome.png in Resources */ = {isa = PBXBuildFile; fileRef = 667DD404A83C78A83E292D0E3D542D4B /* pkc_crop_filter_chrome.png */; };
+		02A301B92C8F7A7F4923FE01170FF2E9 /* pkc_crop_filter_noir.png in Resources */ = {isa = PBXBuildFile; fileRef = 084E1F7AD0A56AF5DBFA17627A2E526B /* pkc_crop_filter_noir.png */; };
+		030426CA83291310068BD4C33D301B7C /* pkc_crop_bottom_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E2D12AF5F58CCD096D2E99A657992 /* pkc_crop_bottom_right.png */; };
+		0483AAE006ABF52CFDEB001828D85D1D /* pkc_crop_filter_nomal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B9AC96E167474117518B40D2A8B36 /* pkc_crop_filter_nomal.png */; };
+		06C8AFC8DA72C3A5AE87BCF4BABBB5BC /* pkc_crop_bottom_left.png in Resources */ = {isa = PBXBuildFile; fileRef = C59A8D498B8B3C28FDA33CF60422A38E /* pkc_crop_bottom_left.png */; };
+		10EE2EC717D2EE71610595AFBD7805B8 /* pkc_crop_top_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 15FA65B0857DA5292F3FF87F3F30A1BD /* pkc_crop_top_right.png */; };
+		22ECF06DE14EEC6266F9E84C5CDA21F9 /* pkc_crop_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDFA43AB7B185C7B0076529C098F973 /* pkc_crop_crop.png */; };
+		257627A128A343CD4076577771997F3A /* pkc_crop_top_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD261C23EF529441708C8FA60A350FC /* pkc_crop_top_left.png */; };
+		2CDE667865E0B4B98F43693FDD8B7A73 /* pkc_crop_filter_chrome.png in Resources */ = {isa = PBXBuildFile; fileRef = 667DD404A83C78A83E292D0E3D542D4B /* pkc_crop_filter_chrome.png */; };
+		2F784623C9DA9465F79BDAB83F70EC8B /* pkc_crop_filter_noir.png in Resources */ = {isa = PBXBuildFile; fileRef = 084E1F7AD0A56AF5DBFA17627A2E526B /* pkc_crop_filter_noir.png */; };
+		3403DF7D4AA0C78C0D248CC58F268304 /* PKCCrop.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33D7182B13BF82DFC5F0B265D2FFC606 /* PKCCrop.bundle */; };
+		342C350A2101D8788C4804A2275B2D58 /* pkc_crop_light_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BAFA34E15FC2037B97697CB2B04084 /* pkc_crop_light_on.png */; };
+		36016D284095ED5A2E16059B119A590C /* PKCCrop.swift in Resources */ = {isa = PBXBuildFile; fileRef = 9E90F9F24C955E0D0FB17216F6CC1907 /* PKCCrop.swift */; };
+		373995A40C2217D83523159AAE9A3212 /* pkc_crop_filter_process.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6B64CB9F99315DEC60908C3F221ED9 /* pkc_crop_filter_process.png */; };
+		37B6E9E75485751EEBB3B9370775FA9C /* pkc_crop_filter_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A7046AFEBCCF69EA491B5426BB750B31 /* pkc_crop_filter_arrow.png */; };
+		3AC3470BDB9C1A72C93B5BC26C823C84 /* pkc_crop_filter.png in Resources */ = {isa = PBXBuildFile; fileRef = ECD575381528D3BAE86E1025213D5109 /* pkc_crop_filter.png */; };
+		3BACBED00DF63EA996C6CB73EFDA8D60 /* pkc_crop_filter_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A7046AFEBCCF69EA491B5426BB750B31 /* pkc_crop_filter_arrow.png */; };
+		3D137C091DBACD4EE551CCBFAECA4BDA /* PKCCameraFilterCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7815072B9F34526676FB913F7ECF0 /* PKCCameraFilterCell.xib */; };
+		43A3870EEBA2DF6BDB4F4CEA7AC737ED /* pkc_crop_filter_transfer.png in Resources */ = {isa = PBXBuildFile; fileRef = BF16DBC6D96E281AFB6E435E24723718 /* pkc_crop_filter_transfer.png */; };
+		454B4653A1D7B8DA103ED46875FA86BD /* PKCCameraFilterCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = B27637C6EF92BCA0981E75340DF9CAD0 /* PKCCameraFilterCell.swift */; };
+		459B67FA79B781FDE3B406424D375512 /* pkc_crop_light_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 360D3177E3B8671E0473EFF26A45E001 /* pkc_crop_light_off.png */; };
+		4B8A544FC9E07F96BEEEA3AF5E3A3C91 /* PKCCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90F9F24C955E0D0FB17216F6CC1907 /* PKCCrop.swift */; };
+		53AD6876049931F2D2E7D6431154DFBD /* PKCPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07373BAB88E17ABACE8CA314F1A0F967 /* PKCPhotoCell.swift */; };
+		53F89C34F9F681905882B502B0486316 /* PKCPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AAE8ED2A4DEAAD185B9FFCBFE3B229 /* PKCPhotoViewController.swift */; };
+		5CF7B2254FA68755670D6B16821265F1 /* pkc_crop_filter_nomal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B9AC96E167474117518B40D2A8B36 /* pkc_crop_filter_nomal.png */; };
+		60CA94D7A0734ED23A09AFDE8FE18A89 /* pkc_crop_top_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD261C23EF529441708C8FA60A350FC /* pkc_crop_top_left.png */; };
+		639DBABB696A504A603E651C5DB8760B /* PKCPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E7E748428DC30238E6E046FD290BA45 /* PKCPhotoViewController.xib */; };
+		63D179BFABC9BE0F4989B53A82CE5DE1 /* PKCCropViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 0D1E8782EDF2575A71778C9813746777 /* PKCCropViewController.swift */; };
+		690D8E2C35CD13F205D6363B05F6BF4D /* pkc_crop_down_right.png in Resources */ = {isa = PBXBuildFile; fileRef = EA54C61D94C75639EC4D5195EBC3DE53 /* pkc_crop_down_right.png */; };
 		6E86F7878FF786425810EAE9A08FA688 /* PKCCheck-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F655E292F9F5401CBF9AABB44ECB3AC /* PKCCheck-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70B393DB9B60796C92E4ED63A837A68C /* PKCCameraFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B5B07AE1746D8A5C7D39FBCA7DEF46 /* PKCCameraFilterCell.swift */; };
-		72DD0A43A40B08C3B3158A4551B0F7C3 /* PKCCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6966893826224803E71846D9419803 /* PKCCheck.framework */; };
+		741F603FA9C624E22E35105412AFF14F /* pkc_crop_filter_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */; };
+		74AE575E2D757582237C0E4974480439 /* pkc_crop_filter_instant.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */; };
+		758900EB64C6FE59E9D13962F7FA06C0 /* PKCPhotoViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 48AAE8ED2A4DEAAD185B9FFCBFE3B229 /* PKCPhotoViewController.swift */; };
 		76E785678C91DC5BF7DDC9849F94D55B /* Pods-PKCCrop_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F875D9FB7DFB2A0A5163C671E434A6BA /* Pods-PKCCrop_Tests-dummy.m */; };
-		7707B06E862AC3E3B993ED995166EAD7 /* PKCInteractor.swift in Resources */ = {isa = PBXBuildFile; fileRef = 678CE4B1901EC6CEEBE6536208912DA2 /* PKCInteractor.swift */; };
-		782F099EF52C6E699EFD5DC0FB91F3DD /* pkc_crop_up_right.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */; };
 		7950F462A9921E5504319B38611F19A0 /* PKCCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA9686C35DCCA0192A1A6DB219C36E /* PKCCheck.swift */; };
-		797BC605E482F7B1BAA40DE26C9AFBFB /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF0C4ACCE26B2391EE4B86FB6DE69D8 /* Assets */; };
 		79D71BE5518FF4D989C528FB2020259A /* PKCCheck-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8CEF8F66AEAAF395F7D342888DEAEF /* PKCCheck-dummy.m */; };
-		7C48FF136A3914EEAA899915B1D51877 /* pkc_crop_up_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */; };
-		7C5ECD6EA4AF5DEA58D80133B3A59AE0 /* pkc_crop_down_right.png in Resources */ = {isa = PBXBuildFile; fileRef = EA54C61D94C75639EC4D5195EBC3DE53 /* pkc_crop_down_right.png */; };
-		8A2DF7B0E4A206BD3BA95C884D57124B /* pkc_crop_filter_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */; };
-		8BC27ECACDC5999B8B51EF176E770B1B /* pkc_crop_up_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */; };
-		91F3DA805949C2DBAD722E4807D7D672 /* pkc_crop_up_right.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */; };
-		937162C080957C79EBF8680AA9FE4802 /* PKCCameraFilterCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = B6B5B07AE1746D8A5C7D39FBCA7DEF46 /* PKCCameraFilterCell.swift */; };
-		94E0BF1A70B843CC0056C9428109A914 /* pkc_crop_filter.png in Resources */ = {isa = PBXBuildFile; fileRef = ECD575381528D3BAE86E1025213D5109 /* pkc_crop_filter.png */; };
-		966562AF2D27154F8B9B6464CDD99B61 /* pkc_crop_filter_nomal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B9AC96E167474117518B40D2A8B36 /* pkc_crop_filter_nomal.png */; };
-		9BC7F8AD1B53CDFC5A838A17F59350E3 /* pkc_crop_down_right.png in Resources */ = {isa = PBXBuildFile; fileRef = EA54C61D94C75639EC4D5195EBC3DE53 /* pkc_crop_down_right.png */; };
-		9EF5D0CE00FEE406BCAADBC753EC420B /* PKCCropViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = C761006EDC2DA9EEB850D7C12342D2C3 /* PKCCropViewController.xib */; };
-		A13530559E384005D1F915854CFC29FA /* pkc_crop_exit.png in Resources */ = {isa = PBXBuildFile; fileRef = D4736551A818301522B21EE94D6FBD3B /* pkc_crop_exit.png */; };
-		A2880FAEB3A9714DC61C5FFA796AF702 /* PKCCameraViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 5E46774A7FFF6D3C5190EF0275650243 /* PKCCameraViewController.swift */; };
-		A7FA70A09974DF5F83020B2C42C907EE /* pkc_crop_filter_chrome.png in Resources */ = {isa = PBXBuildFile; fileRef = 667DD404A83C78A83E292D0E3D542D4B /* pkc_crop_filter_chrome.png */; };
+		7F0D2EFD2E99CF12F43340FADA5E8023 /* PKCCropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E8782EDF2575A71778C9813746777 /* PKCCropViewController.swift */; };
+		80485882C12EEE3850AAAFDF58CB967F /* pkc_crop_light_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 360D3177E3B8671E0473EFF26A45E001 /* pkc_crop_light_off.png */; };
+		886B354A64C9A3C70ADC664D9D2BB3B1 /* PKCInteractor.swift in Resources */ = {isa = PBXBuildFile; fileRef = 3D9875CA1FCE56D28452B703028EB914 /* PKCInteractor.swift */; };
+		8AA19B3A946EE2249F9110042DF853FA /* pkc_crop_filter_mono.png in Resources */ = {isa = PBXBuildFile; fileRef = FAFA0A2AAF444B942C4E91E2CA1A0168 /* pkc_crop_filter_mono.png */; };
+		8DE5AA695D844B768C07EE132BFA58CD /* pkc_crop_up_right.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */; };
+		92732EB3F0EE1822FF6D9A295C4E092F /* pkc_crop_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 0298A95C220FA36A92DEFA88E66EC564 /* pkc_crop_check.png */; };
+		98AA8359428D827EE9B183AA93B80E84 /* PKCPhotoViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 5E7E748428DC30238E6E046FD290BA45 /* PKCPhotoViewController.xib */; };
+		9EDB407B9CEEF314675F2869A9B2B568 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 63D8DC43EAAFB284832823B6C9AA84CE /* Classes */; };
+		A1E821658E861E1DC33C2E978EF836C9 /* pkc_crop_filter.png in Resources */ = {isa = PBXBuildFile; fileRef = ECD575381528D3BAE86E1025213D5109 /* pkc_crop_filter.png */; };
+		A4A33EE1F5650ECE9ECBBDC1DE28B243 /* pkc_crop_up_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */; };
+		A5B53707B0D97239774AFD87BEDA6A9E /* pkc_crop_up_right.png in Resources */ = {isa = PBXBuildFile; fileRef = DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */; };
+		A73B6634EB1B36BC247E2E410CC2091C /* pkc_crop_reverse.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DB484DD370E78757CE22F7ECF2A9E3 /* pkc_crop_reverse.png */; };
 		A9EE5B12CA0D0673328FAD30E3467C29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */; };
 		AA19B0DBA01CFA657414692B9D702AB1 /* Pods-PKCCrop_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A27DB6E4A3CF74B74E3D29E2A3E78C7C /* Pods-PKCCrop_Example-dummy.m */; };
-		B910E338691D10E2882BBE35199174BC /* PKCCropViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8F5E28B653C482927A69F73063B68F20 /* PKCCropViewController.swift */; };
-		BACC4BFBD4D67D57A55038775EA02C22 /* pkc_crop_filter_process.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6B64CB9F99315DEC60908C3F221ED9 /* pkc_crop_filter_process.png */; };
-		C3F783956D184E33F26242669BC72EC6 /* PKCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E46774A7FFF6D3C5190EF0275650243 /* PKCCameraViewController.swift */; };
-		C6D6A02C7E624807F7A3FCB8C7EA929D /* PKCCrop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D33EAC1FDB1FE05031C014AF4775249E /* PKCCrop-dummy.m */; };
-		C7528FB81B0C3AB660E1780533A1AD4F /* pkc_crop_top_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 15FA65B0857DA5292F3FF87F3F30A1BD /* pkc_crop_top_right.png */; };
-		CCEE6A360A8BA3C63366DAB683D39EB1 /* pkc_crop_filter_tonal.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FB5916179E23DCCD0166D0FA9AE758 /* pkc_crop_filter_tonal.png */; };
-		CDD649D56329F3E2C8BB0695D3721535 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 63D8DC43EAAFB284832823B6C9AA84CE /* Classes */; };
-		CEC091BEB10EA840A89C373BB69F1FA2 /* PKCCameraViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 095FE7CB3EBB7BB0BE546B2EBF6CA189 /* PKCCameraViewController.xib */; };
-		CF0513A308F3BC17C62B78E133B83638 /* PKCCrop-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13CE29330EC6AC49E7FAE29369692B9D /* PKCCrop-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D09B3D5B44A65D41EEF0E6E6D8B73361 /* pkc_crop_light_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BAFA34E15FC2037B97697CB2B04084 /* pkc_crop_light_on.png */; };
-		D113C650E907038EB1988BEBF1270CC7 /* pkc_crop_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDFA43AB7B185C7B0076529C098F973 /* pkc_crop_crop.png */; };
-		D735A1C1CA160D59A834A8F644EFD804 /* PKCCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095FE7CB3EBB7BB0BE546B2EBF6CA189 /* PKCCameraViewController.xib */; };
-		DDD135FAF5F3F74ED53202D70D1BA41A /* pkc_crop_filter_noir.png in Resources */ = {isa = PBXBuildFile; fileRef = 084E1F7AD0A56AF5DBFA17627A2E526B /* pkc_crop_filter_noir.png */; };
+		AA49E80A8AA651809DFFFF7A820C5587 /* PKCCameraFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27637C6EF92BCA0981E75340DF9CAD0 /* PKCCameraFilterCell.swift */; };
+		AC6C6D93041E9EE3B8C270C14C69C8AE /* pkc_crop_filter_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */; };
+		AD7198E87E901E87D50016F042FC113F /* pkc_crop_filter_mono.png in Resources */ = {isa = PBXBuildFile; fileRef = FAFA0A2AAF444B942C4E91E2CA1A0168 /* pkc_crop_filter_mono.png */; };
+		AE63E3D7D5DBE877D35569C9F4606BDE /* PKCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9875CA1FCE56D28452B703028EB914 /* PKCInteractor.swift */; };
+		B5D98BFF156500DB98A721F3E2732F83 /* pkc_crop_top_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 15FA65B0857DA5292F3FF87F3F30A1BD /* pkc_crop_top_right.png */; };
+		BA15565FE782AEB7DAF28C9EDB0869B3 /* pkc_crop_filter_chrome.png in Resources */ = {isa = PBXBuildFile; fileRef = 667DD404A83C78A83E292D0E3D542D4B /* pkc_crop_filter_chrome.png */; };
+		BA405706BD42595486D6C8A9AE5185CD /* pkc_crop_light_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BAFA34E15FC2037B97697CB2B04084 /* pkc_crop_light_on.png */; };
+		BCD57F3C6396038222D85D775864B985 /* PKCCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF98A09990A880DA15A0750D2A4A40E /* PKCCameraViewController.swift */; };
+		C1341C75C04DF933D7E0BC8BF8D7D9DD /* PKCCameraViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = FDF98A09990A880DA15A0750D2A4A40E /* PKCCameraViewController.swift */; };
+		C1E734E3064F77E3340AF7799F53FDA6 /* pkc_crop_filter_tonal.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FB5916179E23DCCD0166D0FA9AE758 /* pkc_crop_filter_tonal.png */; };
+		C2987B8BAEBB77BE5B6072B1B3F74B0F /* PKCCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6966893826224803E71846D9419803 /* PKCCheck.framework */; };
+		C2C238FF37E1F6EA9A56FD999DA215EA /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF0C4ACCE26B2391EE4B86FB6DE69D8 /* Assets */; };
+		C6B52978D59B2A17ADB6F3DDA6039A1F /* pkc_crop_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDFA43AB7B185C7B0076529C098F973 /* pkc_crop_crop.png */; };
+		C941AA388F0E90DC682A9BC3FFA220D8 /* pkc_crop_up_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */; };
+		CED96B97CFC2AF1BA1D9C08CBC438B4F /* pkc_crop_filter_tonal.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FB5916179E23DCCD0166D0FA9AE758 /* pkc_crop_filter_tonal.png */; };
+		CEDC1B32CAE7C660DD0FA97EC40B083F /* pkc_crop_filter_transfer.png in Resources */ = {isa = PBXBuildFile; fileRef = BF16DBC6D96E281AFB6E435E24723718 /* pkc_crop_filter_transfer.png */; };
+		CFBB44B1DC4466D9B4CD993F9B62F532 /* PKCCameraViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4886E56811BBC1DD874E8C2F2BEB2D98 /* PKCCameraViewController.xib */; };
+		D280484586118EE66DC8098497B67EA1 /* pkc_crop_reverse.png in Resources */ = {isa = PBXBuildFile; fileRef = D6DB484DD370E78757CE22F7ECF2A9E3 /* pkc_crop_reverse.png */; };
+		D3974D0A4388051A4D164828F14D1886 /* pkc_crop_exit.png in Resources */ = {isa = PBXBuildFile; fileRef = D4736551A818301522B21EE94D6FBD3B /* pkc_crop_exit.png */; };
+		D3B239BC0A8A1128C9BD5FD79BF81504 /* PKCCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 772B0D178614DCC705829297767D610C /* PKCCropViewController.xib */; };
+		D4D616E0F6A092EE1EAB526392378812 /* PKCCrop-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 13CE29330EC6AC49E7FAE29369692B9D /* PKCCrop-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D64D8EC8B6B132DECF7FC0B5DFAC89C2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C56546D54B6AD3D7C839767712E6EDC /* Extension.swift */; };
+		DB00DF87CBD33074A335A344052B8ABE /* Extension.swift in Resources */ = {isa = PBXBuildFile; fileRef = 3C56546D54B6AD3D7C839767712E6EDC /* Extension.swift */; };
+		DBB4D24574C83EF8171D14D8869E6F09 /* pkc_crop_filter_instant.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */; };
 		E0B0F7DA51C07AE5DBFB177412D61788 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */; };
-		E181CA37602011AA7CC4AB7555D10467 /* PKCPhotoViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 740B86CE164BD39E6367ED8F00BC2782 /* PKCPhotoViewController.xib */; };
-		E18FD63376FB5DA6941541259127C6DC /* pkc_crop_top_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 15FA65B0857DA5292F3FF87F3F30A1BD /* pkc_crop_top_right.png */; };
-		E46D55D2B086C70435E2291B898B8589 /* PKCCameraFilterCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = C18766C71B21F7CFAE978F1516449863 /* PKCCameraFilterCell.xib */; };
-		E4D6F0EC3F6FAC2DF30D9A2C2D8806A6 /* pkc_crop_crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDFA43AB7B185C7B0076529C098F973 /* pkc_crop_crop.png */; };
-		E544DF0C05110F7882588F459127A6CD /* pkc_crop_filter.png in Resources */ = {isa = PBXBuildFile; fileRef = ECD575381528D3BAE86E1025213D5109 /* pkc_crop_filter.png */; };
-		E913744D319EBE2869C774D0AA84C00A /* pkc_crop_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 0298A95C220FA36A92DEFA88E66EC564 /* pkc_crop_check.png */; };
-		E929633213045FDD8E16E07FD40FB429 /* PKCCrop.swift in Resources */ = {isa = PBXBuildFile; fileRef = 5415C30135A5AAB2546088BB6DBA20F8 /* PKCCrop.swift */; };
-		EFFF0A29AAB555AE461659CF2330A919 /* pkc_crop_down_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9A1A7D75864BB7B2F78E82FF29779B /* pkc_crop_down_left.png */; };
-		F09D450FA951243013994D7649AFE7F9 /* PKCCrop.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33D7182B13BF82DFC5F0B265D2FFC606 /* PKCCrop.bundle */; };
-		F1084034E634B2C2280638C0952AB256 /* pkc_crop_bottom_left.png in Resources */ = {isa = PBXBuildFile; fileRef = C59A8D498B8B3C28FDA33CF60422A38E /* pkc_crop_bottom_left.png */; };
+		E3DCDB261512F0DC0F3439CE39A6B5BC /* pkc_crop_bottom_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F5E2D12AF5F58CCD096D2E99A657992 /* pkc_crop_bottom_right.png */; };
+		E4D58D3F2E2AD65728318FF8AE274327 /* pkc_crop_down_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9A1A7D75864BB7B2F78E82FF29779B /* pkc_crop_down_left.png */; };
+		E52C9912E2A9AF2DC32D4016C6F50D24 /* PKCCameraFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD7815072B9F34526676FB913F7ECF0 /* PKCCameraFilterCell.xib */; };
+		E69F2202B2C096668277C92FB592A898 /* pkc_crop_bottom_left.png in Resources */ = {isa = PBXBuildFile; fileRef = C59A8D498B8B3C28FDA33CF60422A38E /* pkc_crop_bottom_left.png */; };
+		E888BFEA204747D16C2F16FA3EA90944 /* pkc_crop_down_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D9A1A7D75864BB7B2F78E82FF29779B /* pkc_crop_down_left.png */; };
+		E8BFDF02E808405CC375590F23636E6B /* PKCCrop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D33EAC1FDB1FE05031C014AF4775249E /* PKCCrop-dummy.m */; };
+		EA9D0A188C8F6C196B99B947193EF018 /* PKCPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B985BA9FE84DC8D9F75F647596AF9186 /* PKCPhotoCell.xib */; };
+		EBAF8A6BA98A2C55A8AB38C9ED68BAEE /* PKCCropViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 772B0D178614DCC705829297767D610C /* PKCCropViewController.xib */; };
+		F04869F9734D99A6647278186BC0389D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */; };
+		F1861E2EF8EDBE0656542BEAB87A7B18 /* PKCPhotoCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = 07373BAB88E17ABACE8CA314F1A0F967 /* PKCPhotoCell.swift */; };
 		F1C935958878643B833647963ECD9B24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */; };
-		F2D4DF0913B1A9B7EA08849DABF4D8F0 /* pkc_crop_filter_mono.png in Resources */ = {isa = PBXBuildFile; fileRef = FAFA0A2AAF444B942C4E91E2CA1A0168 /* pkc_crop_filter_mono.png */; };
-		F6F9CD7C2644192287BDA1FCF61E0CBF /* pkc_crop_light_on.png in Resources */ = {isa = PBXBuildFile; fileRef = C9BAFA34E15FC2037B97697CB2B04084 /* pkc_crop_light_on.png */; };
-		F7ADB4FFBF954F0DC7444F35946CD227 /* PKCPhotoViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 7EAB77146520EFC39C571F0B01019902 /* PKCPhotoViewController.swift */; };
-		F9D6FBE205B0204D25AC39E45F248C59 /* pkc_crop_light_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 360D3177E3B8671E0473EFF26A45E001 /* pkc_crop_light_off.png */; };
+		FAF2469B46C66714AFFE205D22D32A7E /* pkc_crop_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 0298A95C220FA36A92DEFA88E66EC564 /* pkc_crop_check.png */; };
+		FB5F0BB7E63F4FCCC332A1651CDDCFC6 /* pkc_crop_exit.png in Resources */ = {isa = PBXBuildFile; fileRef = D4736551A818301522B21EE94D6FBD3B /* pkc_crop_exit.png */; };
 		FB8894BDD14725F2E0AFD6862729C548 /* Pods-PKCCrop_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1B9A20FCA7C803BA5BBBD1FF8B890E /* Pods-PKCCrop_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC9F271C8958A0192E7336B2E583CF0F /* PKCCameraFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18766C71B21F7CFAE978F1516449863 /* PKCCameraFilterCell.xib */; };
+		FBF55697E3A4E95B24E788C03019CFEC /* PKCCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4886E56811BBC1DD874E8C2F2BEB2D98 /* PKCCameraViewController.xib */; };
+		FD3026AF77304455994EF7C5DECED5F8 /* pkc_crop_down_right.png in Resources */ = {isa = PBXBuildFile; fileRef = EA54C61D94C75639EC4D5195EBC3DE53 /* pkc_crop_down_right.png */; };
 		FE67BF42C47EEB812EF1E1890AAA1D0B /* Pods-PKCCrop_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 778AC436DE144D6F0FBDECF0D8FAF4F1 /* Pods-PKCCrop_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF2E0B96D8F25D23527888EDA81B0E7F /* pkc_crop_filter_process.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E6B64CB9F99315DEC60908C3F221ED9 /* pkc_crop_filter_process.png */; };
+		FFB1EC912E7911077DFDE494DE43997A /* PKCPhotoCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = B985BA9FE84DC8D9F75F647596AF9186 /* PKCPhotoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +110,14 @@
 			remoteGlobalIDString = AA77CEB2331F59C4BE19EDBA10BF9AE3;
 			remoteInfo = PKCCheck;
 		};
-		84B2948CD5F58B6C0CF76E4EAFE0F0DE /* PBXContainerItemProxy */ = {
+		81352CACE051139D17B9A098F498A938 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57E32446DCDDA703C9CC58D1FDBDD8C0;
+			remoteInfo = "PKCCrop-PKCCrop";
+		};
+		9F6FAD08E8E0864A8D04B23EEDEEEDB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -117,99 +128,94 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A5710291BC5B56BAADA8F30F901D56D7;
+			remoteGlobalIDString = 96A2CC4C0556D4F2541F36EC8C6FA9E9;
 			remoteInfo = PKCCrop;
-		};
-		F20B68B69FB49671BF82A6198983458D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 215129BE759666D8DC67FBCC93A6C076;
-			remoteInfo = "PKCCrop-PKCCrop";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0298A95C220FA36A92DEFA88E66EC564 /* pkc_crop_check.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_check.png; sourceTree = "<group>"; };
-		084E1F7AD0A56AF5DBFA17627A2E526B /* pkc_crop_filter_noir.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_noir.png; sourceTree = "<group>"; };
-		095FE7CB3EBB7BB0BE546B2EBF6CA189 /* PKCCameraViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCameraViewController.xib; sourceTree = "<group>"; };
+		0298A95C220FA36A92DEFA88E66EC564 /* pkc_crop_check.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_check.png; sourceTree = "<group>"; };
+		07373BAB88E17ABACE8CA314F1A0F967 /* PKCPhotoCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCPhotoCell.swift; sourceTree = "<group>"; };
+		084E1F7AD0A56AF5DBFA17627A2E526B /* pkc_crop_filter_noir.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_noir.png; sourceTree = "<group>"; };
 		09CA9686C35DCCA0192A1A6DB219C36E /* PKCCheck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCCheck.swift; path = PKCCheck/Classes/PKCCheck.swift; sourceTree = "<group>"; };
-		0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_up_left.png; sourceTree = "<group>"; };
+		0AD7815072B9F34526676FB913F7ECF0 /* PKCCameraFilterCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCameraFilterCell.xib; sourceTree = "<group>"; };
+		0D1E8782EDF2575A71778C9813746777 /* PKCCropViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCropViewController.swift; sourceTree = "<group>"; };
+		0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_up_left.png; sourceTree = "<group>"; };
 		139C4E729234E56C4878EE45D76519F1 /* Pods-PKCCrop_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PKCCrop_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		13CE29330EC6AC49E7FAE29369692B9D /* PKCCrop-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCrop-umbrella.h"; sourceTree = "<group>"; };
-		15FA65B0857DA5292F3FF87F3F30A1BD /* pkc_crop_top_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_top_right.png; sourceTree = "<group>"; };
+		15FA65B0857DA5292F3FF87F3F30A1BD /* pkc_crop_top_right.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_top_right.png; sourceTree = "<group>"; };
 		236E212F6F98CFDA4452FE5A94D9A6F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25D911C0A7C19FD81A4569A557D8E6C9 /* Pods-PKCCrop_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PKCCrop_Example.modulemap"; sourceTree = "<group>"; };
+		25D911C0A7C19FD81A4569A557D8E6C9 /* Pods-PKCCrop_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PKCCrop_Example.modulemap"; sourceTree = "<group>"; };
 		26C7EA000C38901B4ABE204AFA97B9EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CF0C4ACCE26B2391EE4B86FB6DE69D8 /* Assets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
-		2E6B64CB9F99315DEC60908C3F221ED9 /* pkc_crop_filter_process.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_process.png; sourceTree = "<group>"; };
-		30FB5916179E23DCCD0166D0FA9AE758 /* pkc_crop_filter_tonal.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_tonal.png; sourceTree = "<group>"; };
-		314C45521C365070197DEF257B34BB41 /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF0C4ACCE26B2391EE4B86FB6DE69D8 /* Assets */ = {isa = PBXFileReference; includeInIndex = 1; path = Assets; sourceTree = "<group>"; };
+		2E6B64CB9F99315DEC60908C3F221ED9 /* pkc_crop_filter_process.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_process.png; sourceTree = "<group>"; };
+		30FB5916179E23DCCD0166D0FA9AE758 /* pkc_crop_filter_tonal.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_tonal.png; sourceTree = "<group>"; };
+		314C45521C365070197DEF257B34BB41 /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PKCCrop_Tests.framework; path = "Pods-PKCCrop_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E2CF919670459DC1228CE235BE04D0 /* Pods-PKCCrop_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PKCCrop_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		33D7182B13BF82DFC5F0B265D2FFC606 /* PKCCrop.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKCCrop.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		360D3177E3B8671E0473EFF26A45E001 /* pkc_crop_light_off.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_light_off.png; sourceTree = "<group>"; };
+		33D7182B13BF82DFC5F0B265D2FFC606 /* PKCCrop.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PKCCrop.bundle; path = PKCCrop.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		360D3177E3B8671E0473EFF26A45E001 /* pkc_crop_light_off.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_light_off.png; sourceTree = "<group>"; };
 		36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3C56546D54B6AD3D7C839767712E6EDC /* Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3D4862B492A767EE003C4F43BE470C79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D9875CA1FCE56D28452B703028EB914 /* PKCInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCInteractor.swift; sourceTree = "<group>"; };
 		42122F7705F8D51FB8E5A00145030342 /* Pods-PKCCrop_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PKCCrop_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		465001315E0C163D757E880BA18E81F6 /* Pods-PKCCrop_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Example-resources.sh"; sourceTree = "<group>"; };
-		49BE67FA94B54982256ACE037C03AD80 /* PKCCrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKCCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB68AFCFED0FBCF3DEC3D5557484EE4 /* PKCCheck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKCCheck.modulemap; sourceTree = "<group>"; };
-		4FDFA43AB7B185C7B0076529C098F973 /* pkc_crop_crop.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_crop.png; sourceTree = "<group>"; };
-		5415C30135A5AAB2546088BB6DBA20F8 /* PKCCrop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCrop.swift; sourceTree = "<group>"; };
-		5B8B9AC96E167474117518B40D2A8B36 /* pkc_crop_filter_nomal.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_nomal.png; sourceTree = "<group>"; };
-		5C4D62452B56E596206F3D4161D3874E /* PKCCrop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKCCrop.modulemap; sourceTree = "<group>"; };
-		5E46774A7FFF6D3C5190EF0275650243 /* PKCCameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCameraViewController.swift; sourceTree = "<group>"; };
+		4886E56811BBC1DD874E8C2F2BEB2D98 /* PKCCameraViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCameraViewController.xib; sourceTree = "<group>"; };
+		48AAE8ED2A4DEAAD185B9FFCBFE3B229 /* PKCPhotoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCPhotoViewController.swift; sourceTree = "<group>"; };
+		49BE67FA94B54982256ACE037C03AD80 /* PKCCrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PKCCrop.framework; path = PKCCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB68AFCFED0FBCF3DEC3D5557484EE4 /* PKCCheck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PKCCheck.modulemap; sourceTree = "<group>"; };
+		4FDFA43AB7B185C7B0076529C098F973 /* pkc_crop_crop.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_crop.png; sourceTree = "<group>"; };
+		5B8B9AC96E167474117518B40D2A8B36 /* pkc_crop_filter_nomal.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_nomal.png; sourceTree = "<group>"; };
+		5C4D62452B56E596206F3D4161D3874E /* PKCCrop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PKCCrop.modulemap; sourceTree = "<group>"; };
+		5E7E748428DC30238E6E046FD290BA45 /* PKCPhotoViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCPhotoViewController.xib; sourceTree = "<group>"; };
 		5F655E292F9F5401CBF9AABB44ECB3AC /* PKCCheck-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCheck-umbrella.h"; sourceTree = "<group>"; };
-		63D8DC43EAAFB284832823B6C9AA84CE /* Classes */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
-		667DD404A83C78A83E292D0E3D542D4B /* pkc_crop_filter_chrome.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_chrome.png; sourceTree = "<group>"; };
-		678CE4B1901EC6CEEBE6536208912DA2 /* PKCInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCInteractor.swift; sourceTree = "<group>"; };
-		6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_fade.png; sourceTree = "<group>"; };
-		6CD261C23EF529441708C8FA60A350FC /* pkc_crop_top_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_top_left.png; sourceTree = "<group>"; };
+		63D8DC43EAAFB284832823B6C9AA84CE /* Classes */ = {isa = PBXFileReference; includeInIndex = 1; path = Classes; sourceTree = "<group>"; };
+		667DD404A83C78A83E292D0E3D542D4B /* pkc_crop_filter_chrome.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_chrome.png; sourceTree = "<group>"; };
+		6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_fade.png; sourceTree = "<group>"; };
+		6CD261C23EF529441708C8FA60A350FC /* pkc_crop_top_left.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_top_left.png; sourceTree = "<group>"; };
 		722628FA546E503380664DCEA780957A /* Pods-PKCCrop_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Example-frameworks.sh"; sourceTree = "<group>"; };
-		740B86CE164BD39E6367ED8F00BC2782 /* PKCPhotoViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCPhotoViewController.xib; sourceTree = "<group>"; };
+		772B0D178614DCC705829297767D610C /* PKCCropViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCropViewController.xib; sourceTree = "<group>"; };
 		778AC436DE144D6F0FBDECF0D8FAF4F1 /* Pods-PKCCrop_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PKCCrop_Example-umbrella.h"; sourceTree = "<group>"; };
 		7C1B9A20FCA7C803BA5BBBD1FF8B890E /* Pods-PKCCrop_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PKCCrop_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7CFF51F9C7491662F737DF9FCED5F747 /* Pods-PKCCrop_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		7D9A1A7D75864BB7B2F78E82FF29779B /* pkc_crop_down_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_down_left.png; sourceTree = "<group>"; };
-		7EAB77146520EFC39C571F0B01019902 /* PKCPhotoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCPhotoViewController.swift; sourceTree = "<group>"; };
-		7F5E2D12AF5F58CCD096D2E99A657992 /* pkc_crop_bottom_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_bottom_right.png; sourceTree = "<group>"; };
+		7D9A1A7D75864BB7B2F78E82FF29779B /* pkc_crop_down_left.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_down_left.png; sourceTree = "<group>"; };
+		7F5E2D12AF5F58CCD096D2E99A657992 /* pkc_crop_bottom_right.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_bottom_right.png; sourceTree = "<group>"; };
 		8A6966893826224803E71846D9419803 /* PKCCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKCCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFD0BEBDBC92B5622B0AB9EB5CB4B57 /* Pods-PKCCrop_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8DF75849394A6FA6CAF1BC9AA5204562 /* Pods-PKCCrop_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PKCCrop_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8F5E28B653C482927A69F73063B68F20 /* PKCCropViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCropViewController.swift; sourceTree = "<group>"; };
-		90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_instant.png; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_instant.png; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93EF8BF355DFCAE6448A0FA3265FC379 /* Pods-PKCCrop_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Example.release.xcconfig"; sourceTree = "<group>"; };
 		966A5F6EB58F8F86961AEAE1016DA4E4 /* PKCCrop-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCrop-prefix.pch"; sourceTree = "<group>"; };
 		9864E58F8B8E492B89B2BF18CD6CEBC2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A2E5DF180E1A31A5B35A459B458C82E /* PKCCheck.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKCCheck.xcconfig; sourceTree = "<group>"; };
+		9E90F9F24C955E0D0FB17216F6CC1907 /* PKCCrop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCrop.swift; sourceTree = "<group>"; };
 		A0D9FCE6B9CB3F52B0BB53E529676F59 /* PKCCheck-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCheck-prefix.pch"; sourceTree = "<group>"; };
 		A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKCCrop.xcconfig; sourceTree = "<group>"; };
 		A27DB6E4A3CF74B74E3D29E2A3E78C7C /* Pods-PKCCrop_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PKCCrop_Example-dummy.m"; sourceTree = "<group>"; };
-		A7046AFEBCCF69EA491B5426BB750B31 /* pkc_crop_filter_arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_arrow.png; sourceTree = "<group>"; };
+		A7046AFEBCCF69EA491B5426BB750B31 /* pkc_crop_filter_arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_arrow.png; sourceTree = "<group>"; };
 		A903E26281FFEAEFE1C17E498E8C2F60 /* Pods-PKCCrop_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA8CEF8F66AEAAF395F7D342888DEAEF /* PKCCheck-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKCCheck-dummy.m"; sourceTree = "<group>"; };
-		AD62AF23F5EE8ED3961219E5E8387030 /* PKCCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKCCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD62AF23F5EE8ED3961219E5E8387030 /* PKCCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PKCCheck.framework; path = PKCCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27637C6EF92BCA0981E75340DF9CAD0 /* PKCCameraFilterCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCameraFilterCell.swift; sourceTree = "<group>"; };
 		B431FED843EB432FAD7ABB004021C9BC /* Pods-PKCCrop_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Tests-resources.sh"; sourceTree = "<group>"; };
-		B6B5B07AE1746D8A5C7D39FBCA7DEF46 /* PKCCameraFilterCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCameraFilterCell.swift; sourceTree = "<group>"; };
-		BF16DBC6D96E281AFB6E435E24723718 /* pkc_crop_filter_transfer.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_transfer.png; sourceTree = "<group>"; };
-		C18766C71B21F7CFAE978F1516449863 /* PKCCameraFilterCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCameraFilterCell.xib; sourceTree = "<group>"; };
-		C59A8D498B8B3C28FDA33CF60422A38E /* pkc_crop_bottom_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_bottom_left.png; sourceTree = "<group>"; };
+		B985BA9FE84DC8D9F75F647596AF9186 /* PKCPhotoCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCPhotoCell.xib; sourceTree = "<group>"; };
+		BF16DBC6D96E281AFB6E435E24723718 /* pkc_crop_filter_transfer.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_transfer.png; sourceTree = "<group>"; };
+		C59A8D498B8B3C28FDA33CF60422A38E /* pkc_crop_bottom_left.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_bottom_left.png; sourceTree = "<group>"; };
 		C606756DA2858107164D2E403154EFEE /* ResourceBundle-PKCCrop-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PKCCrop-Info.plist"; sourceTree = "<group>"; };
-		C761006EDC2DA9EEB850D7C12342D2C3 /* PKCCropViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCropViewController.xib; sourceTree = "<group>"; };
-		C9BAFA34E15FC2037B97697CB2B04084 /* pkc_crop_light_on.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_light_on.png; sourceTree = "<group>"; };
+		C9BAFA34E15FC2037B97697CB2B04084 /* pkc_crop_light_on.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_light_on.png; sourceTree = "<group>"; };
 		D33EAC1FDB1FE05031C014AF4775249E /* PKCCrop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKCCrop-dummy.m"; sourceTree = "<group>"; };
-		D4736551A818301522B21EE94D6FBD3B /* pkc_crop_exit.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_exit.png; sourceTree = "<group>"; };
+		D4736551A818301522B21EE94D6FBD3B /* pkc_crop_exit.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_exit.png; sourceTree = "<group>"; };
 		D5135FD002337F323992E3C02FB53F06 /* Pods-PKCCrop_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D6DB484DD370E78757CE22F7ECF2A9E3 /* pkc_crop_reverse.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_reverse.png; sourceTree = "<group>"; };
-		DF502F0D68FCCB69165B3470B1600777 /* Pods-PKCCrop_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PKCCrop_Tests.modulemap"; sourceTree = "<group>"; };
-		DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_up_right.png; sourceTree = "<group>"; };
-		EA54C61D94C75639EC4D5195EBC3DE53 /* pkc_crop_down_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_down_right.png; sourceTree = "<group>"; };
-		ECD575381528D3BAE86E1025213D5109 /* pkc_crop_filter.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter.png; sourceTree = "<group>"; };
-		EEC2D6C817DFE596A8A9243EB7053BD0 /* Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		F7B6A85CE763A2F4C715BE93201CC3A9 /* Pods_PKCCrop_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6DB484DD370E78757CE22F7ECF2A9E3 /* pkc_crop_reverse.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_reverse.png; sourceTree = "<group>"; };
+		DF502F0D68FCCB69165B3470B1600777 /* Pods-PKCCrop_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PKCCrop_Tests.modulemap"; sourceTree = "<group>"; };
+		DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_up_right.png; sourceTree = "<group>"; };
+		EA54C61D94C75639EC4D5195EBC3DE53 /* pkc_crop_down_right.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_down_right.png; sourceTree = "<group>"; };
+		ECD575381528D3BAE86E1025213D5109 /* pkc_crop_filter.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter.png; sourceTree = "<group>"; };
+		F7B6A85CE763A2F4C715BE93201CC3A9 /* Pods_PKCCrop_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PKCCrop_Example.framework; path = "Pods-PKCCrop_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F875D9FB7DFB2A0A5163C671E434A6BA /* Pods-PKCCrop_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PKCCrop_Tests-dummy.m"; sourceTree = "<group>"; };
-		FAFA0A2AAF444B942C4E91E2CA1A0168 /* pkc_crop_filter_mono.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_mono.png; sourceTree = "<group>"; };
+		FAFA0A2AAF444B942C4E91E2CA1A0168 /* pkc_crop_filter_mono.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_mono.png; sourceTree = "<group>"; };
+		FDF98A09990A880DA15A0750D2A4A40E /* PKCCameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,13 +227,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		63FCE534D64D774B759DE3199B503BD1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73BAD4AE6A9F0FCFA5622055B8A4381D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,12 +235,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C3D74AA9A1AA6A64FEC59E95361E5EC /* Frameworks */ = {
+		A11431598C58BE8B40D247E9D1C76BF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3270334A50661D52545736AFE6231DE5 /* Foundation.framework in Frameworks */,
-				72DD0A43A40B08C3B3158A4551B0F7C3 /* PKCCheck.framework in Frameworks */,
+				F04869F9734D99A6647278186BC0389D /* Foundation.framework in Frameworks */,
+				C2987B8BAEBB77BE5B6072B1B3F74B0F /* PKCCheck.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3E5EFB437086FAAA023D749CA46E6B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,14 +262,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02CA1876F077F1678684A804A7B3C032 /* PKCCrop */ = {
-			isa = PBXGroup;
-			children = (
-				6974BECB12136D4BEF29FE501709FE54 /* Classes */,
-			);
-			path = PKCCrop;
-			sourceTree = "<group>";
-		};
 		0D6348C5DB11A11BA0B5A9426F88DFBB /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +314,7 @@
 				0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */,
 				DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */,
 			);
+			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -369,22 +368,13 @@
 			path = "Target Support Files/Pods-PKCCrop_Example";
 			sourceTree = "<group>";
 		};
-		6974BECB12136D4BEF29FE501709FE54 /* Classes */ = {
+		7158855223A003E142471BD3E0FC127D /* PKCCrop */ = {
 			isa = PBXGroup;
 			children = (
-				EEC2D6C817DFE596A8A9243EB7053BD0 /* Extension.swift */,
-				B6B5B07AE1746D8A5C7D39FBCA7DEF46 /* PKCCameraFilterCell.swift */,
-				C18766C71B21F7CFAE978F1516449863 /* PKCCameraFilterCell.xib */,
-				5E46774A7FFF6D3C5190EF0275650243 /* PKCCameraViewController.swift */,
-				095FE7CB3EBB7BB0BE546B2EBF6CA189 /* PKCCameraViewController.xib */,
-				5415C30135A5AAB2546088BB6DBA20F8 /* PKCCrop.swift */,
-				8F5E28B653C482927A69F73063B68F20 /* PKCCropViewController.swift */,
-				C761006EDC2DA9EEB850D7C12342D2C3 /* PKCCropViewController.xib */,
-				678CE4B1901EC6CEEBE6536208912DA2 /* PKCInteractor.swift */,
-				7EAB77146520EFC39C571F0B01019902 /* PKCPhotoViewController.swift */,
-				740B86CE164BD39E6367ED8F00BC2782 /* PKCPhotoViewController.xib */,
+				91558FB5A4775226F4DB9457098EB132 /* Classes */,
 			);
-			path = Classes;
+			name = PKCCrop;
+			path = PKCCrop;
 			sourceTree = "<group>";
 		};
 		78D7EFE8949C2DAB6914F51BDF2F826C /* PKCCheck */ = {
@@ -393,6 +383,7 @@
 				09CA9686C35DCCA0192A1A6DB219C36E /* PKCCheck.swift */,
 				30F33D9FFACA6C35128095B8DFA85CE8 /* Support Files */,
 			);
+			name = PKCCheck;
 			path = PKCCheck;
 			sourceTree = "<group>";
 		};
@@ -408,6 +399,27 @@
 			);
 			sourceTree = "<group>";
 		};
+		91558FB5A4775226F4DB9457098EB132 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3C56546D54B6AD3D7C839767712E6EDC /* Extension.swift */,
+				B27637C6EF92BCA0981E75340DF9CAD0 /* PKCCameraFilterCell.swift */,
+				0AD7815072B9F34526676FB913F7ECF0 /* PKCCameraFilterCell.xib */,
+				FDF98A09990A880DA15A0750D2A4A40E /* PKCCameraViewController.swift */,
+				4886E56811BBC1DD874E8C2F2BEB2D98 /* PKCCameraViewController.xib */,
+				9E90F9F24C955E0D0FB17216F6CC1907 /* PKCCrop.swift */,
+				0D1E8782EDF2575A71778C9813746777 /* PKCCropViewController.swift */,
+				772B0D178614DCC705829297767D610C /* PKCCropViewController.xib */,
+				3D9875CA1FCE56D28452B703028EB914 /* PKCInteractor.swift */,
+				07373BAB88E17ABACE8CA314F1A0F967 /* PKCPhotoCell.swift */,
+				B985BA9FE84DC8D9F75F647596AF9186 /* PKCPhotoCell.xib */,
+				48AAE8ED2A4DEAAD185B9FFCBFE3B229 /* PKCPhotoViewController.swift */,
+				5E7E748428DC30238E6E046FD290BA45 /* PKCPhotoViewController.xib */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		93CA760C86A4A0D998422A9A3CC772FF /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,7 +432,7 @@
 		94DB0FA7F5613DDBCD1A3E7BE4647A8D /* PKCCrop */ = {
 			isa = PBXGroup;
 			children = (
-				02CA1876F077F1678684A804A7B3C032 /* PKCCrop */,
+				7158855223A003E142471BD3E0FC127D /* PKCCrop */,
 				CA233C6F06D814C72DB49D9B3EB9034F /* Resources */,
 				276638E7DF6B805AAD27ED6FB3508E3A /* Support Files */,
 			);
@@ -460,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 			);
+			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -488,6 +501,7 @@
 				2AB702114F09541007A19D83D4C6FA54 /* Assets */,
 				D51DBE571038117CF6A8B4156608E7FB /* Classes */,
 			);
+			name = PKCCrop;
 			path = PKCCrop;
 			sourceTree = "<group>";
 		};
@@ -502,11 +516,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		48F8AEEE36DAA9988B04D274A83E4F28 /* Headers */ = {
+		550A32ED7F2AC5A82DA379611EADD3F6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF0513A308F3BC17C62B78E133B83638 /* PKCCrop-umbrella.h in Headers */,
+				D4D616E0F6A092EE1EAB526392378812 /* PKCCrop-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,13 +543,13 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		215129BE759666D8DC67FBCC93A6C076 /* PKCCrop-PKCCrop */ = {
+		57E32446DCDDA703C9CC58D1FDBDD8C0 /* PKCCrop-PKCCrop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14F89483B3A395CD2D9501ED4A13F536 /* Build configuration list for PBXNativeTarget "PKCCrop-PKCCrop" */;
+			buildConfigurationList = 1CBA2935D5247974F47FE970C28CF861 /* Build configuration list for PBXNativeTarget "PKCCrop-PKCCrop" */;
 			buildPhases = (
-				A5DCC53AFA662FABED0B3F5098AFC5BA /* Sources */,
-				63FCE534D64D774B759DE3199B503BD1 /* Frameworks */,
-				3C2818A5D51B1AD02FAE1D6882A85BB4 /* Resources */,
+				88153E95FEC1C1A3B20CB3D321974B3F /* Sources */,
+				A3E5EFB437086FAAA023D749CA46E6B9 /* Frameworks */,
+				C3D9E477609829EF3838AE59FD07AF04 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -546,20 +560,20 @@
 			productReference = 33D7182B13BF82DFC5F0B265D2FFC606 /* PKCCrop.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		A5710291BC5B56BAADA8F30F901D56D7 /* PKCCrop */ = {
+		96A2CC4C0556D4F2541F36EC8C6FA9E9 /* PKCCrop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E10976E18DCE5791D0CD5B6E4275A08 /* Build configuration list for PBXNativeTarget "PKCCrop" */;
+			buildConfigurationList = D070751FC4B4B3056813B201B86810EE /* Build configuration list for PBXNativeTarget "PKCCrop" */;
 			buildPhases = (
-				0EC606F1BC9B96F52EF385CABD78ABD1 /* Sources */,
-				8C3D74AA9A1AA6A64FEC59E95361E5EC /* Frameworks */,
-				4101CCD043242851BD0B35D78859E394 /* Resources */,
-				48F8AEEE36DAA9988B04D274A83E4F28 /* Headers */,
+				C7F1CB178AE94C39219E874295ABCDA8 /* Sources */,
+				A11431598C58BE8B40D247E9D1C76BF0 /* Frameworks */,
+				C9155B1D34C51C5AB8B3F56A4A8BB851 /* Resources */,
+				550A32ED7F2AC5A82DA379611EADD3F6 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1F4E995A46FD74DBA24B3CF4BEF96562 /* PBXTargetDependency */,
-				BA4AF5210E8A3A685229BE255EC2D503 /* PBXTargetDependency */,
+				046A6314FEEE5C8C1DC449BA7DF4FF94 /* PBXTargetDependency */,
+				6F546997FEF4F4954464D188248FF064 /* PBXTargetDependency */,
 			);
 			name = PKCCrop;
 			productName = PKCCrop;
@@ -641,8 +655,8 @@
 			projectRoot = "";
 			targets = (
 				AA77CEB2331F59C4BE19EDBA10BF9AE3 /* PKCCheck */,
-				A5710291BC5B56BAADA8F30F901D56D7 /* PKCCrop */,
-				215129BE759666D8DC67FBCC93A6C076 /* PKCCrop-PKCCrop */,
+				96A2CC4C0556D4F2541F36EC8C6FA9E9 /* PKCCrop */,
+				57E32446DCDDA703C9CC58D1FDBDD8C0 /* PKCCrop-PKCCrop */,
 				EF27F13FAD196083E4622CE5B5029EBE /* Pods-PKCCrop_Example */,
 				E8E46DE5CBD06C06C0C2C142C15399D0 /* Pods-PKCCrop_Tests */,
 			);
@@ -650,106 +664,89 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3C2818A5D51B1AD02FAE1D6882A85BB4 /* Resources */ = {
+		C3D9E477609829EF3838AE59FD07AF04 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17653126EA07DBAB22F48F6EC99CBEBF /* pkc_crop_bottom_left.png in Resources */,
-				15DF0ABE5AC7EC39773021EA9BA3A96D /* pkc_crop_bottom_right.png in Resources */,
-				4E4764B6C60351B755549D97624B8E33 /* pkc_crop_check.png in Resources */,
-				D113C650E907038EB1988BEBF1270CC7 /* pkc_crop_crop.png in Resources */,
-				2419D5F1B1007FC1FE7AA55F6B9DF1B2 /* pkc_crop_down_left.png in Resources */,
-				9BC7F8AD1B53CDFC5A838A17F59350E3 /* pkc_crop_down_right.png in Resources */,
-				A13530559E384005D1F915854CFC29FA /* pkc_crop_exit.png in Resources */,
-				E544DF0C05110F7882588F459127A6CD /* pkc_crop_filter.png in Resources */,
-				12D51C76FE1F0ACBA7FC9A10583F8957 /* pkc_crop_filter_arrow.png in Resources */,
-				A7FA70A09974DF5F83020B2C42C907EE /* pkc_crop_filter_chrome.png in Resources */,
-				63C3F86AEA7DFF000B9C66ED0D94DBD8 /* pkc_crop_filter_fade.png in Resources */,
-				4E6AF62C1D5424FFCCB7CBF6F53A6382 /* pkc_crop_filter_instant.png in Resources */,
-				F2D4DF0913B1A9B7EA08849DABF4D8F0 /* pkc_crop_filter_mono.png in Resources */,
-				0924A7C943BFB2B8044D2CB9693B1643 /* pkc_crop_filter_noir.png in Resources */,
-				13CA593BDB33D47FB00F4CED1ECAC75D /* pkc_crop_filter_nomal.png in Resources */,
-				BACC4BFBD4D67D57A55038775EA02C22 /* pkc_crop_filter_process.png in Resources */,
-				CCEE6A360A8BA3C63366DAB683D39EB1 /* pkc_crop_filter_tonal.png in Resources */,
-				4DD44CC3200455C3FF46B07AFEF3325E /* pkc_crop_filter_transfer.png in Resources */,
-				573A13D6AD2DFC898FB08B0CAAA11556 /* pkc_crop_light_off.png in Resources */,
-				D09B3D5B44A65D41EEF0E6E6D8B73361 /* pkc_crop_light_on.png in Resources */,
-				5418CB2085A2FE1D6D36CA1B3439D8B1 /* pkc_crop_reverse.png in Resources */,
-				2C50FE563A75427A1EBF50D6303EED9D /* pkc_crop_top_left.png in Resources */,
-				E18FD63376FB5DA6941541259127C6DC /* pkc_crop_top_right.png in Resources */,
-				8BC27ECACDC5999B8B51EF176E770B1B /* pkc_crop_up_left.png in Resources */,
-				91F3DA805949C2DBAD722E4807D7D672 /* pkc_crop_up_right.png in Resources */,
+				06C8AFC8DA72C3A5AE87BCF4BABBB5BC /* pkc_crop_bottom_left.png in Resources */,
+				E3DCDB261512F0DC0F3439CE39A6B5BC /* pkc_crop_bottom_right.png in Resources */,
+				92732EB3F0EE1822FF6D9A295C4E092F /* pkc_crop_check.png in Resources */,
+				22ECF06DE14EEC6266F9E84C5CDA21F9 /* pkc_crop_crop.png in Resources */,
+				E4D58D3F2E2AD65728318FF8AE274327 /* pkc_crop_down_left.png in Resources */,
+				FD3026AF77304455994EF7C5DECED5F8 /* pkc_crop_down_right.png in Resources */,
+				D3974D0A4388051A4D164828F14D1886 /* pkc_crop_exit.png in Resources */,
+				A1E821658E861E1DC33C2E978EF836C9 /* pkc_crop_filter.png in Resources */,
+				37B6E9E75485751EEBB3B9370775FA9C /* pkc_crop_filter_arrow.png in Resources */,
+				BA15565FE782AEB7DAF28C9EDB0869B3 /* pkc_crop_filter_chrome.png in Resources */,
+				741F603FA9C624E22E35105412AFF14F /* pkc_crop_filter_fade.png in Resources */,
+				74AE575E2D757582237C0E4974480439 /* pkc_crop_filter_instant.png in Resources */,
+				8AA19B3A946EE2249F9110042DF853FA /* pkc_crop_filter_mono.png in Resources */,
+				2F784623C9DA9465F79BDAB83F70EC8B /* pkc_crop_filter_noir.png in Resources */,
+				5CF7B2254FA68755670D6B16821265F1 /* pkc_crop_filter_nomal.png in Resources */,
+				FF2E0B96D8F25D23527888EDA81B0E7F /* pkc_crop_filter_process.png in Resources */,
+				CED96B97CFC2AF1BA1D9C08CBC438B4F /* pkc_crop_filter_tonal.png in Resources */,
+				CEDC1B32CAE7C660DD0FA97EC40B083F /* pkc_crop_filter_transfer.png in Resources */,
+				80485882C12EEE3850AAAFDF58CB967F /* pkc_crop_light_off.png in Resources */,
+				342C350A2101D8788C4804A2275B2D58 /* pkc_crop_light_on.png in Resources */,
+				A73B6634EB1B36BC247E2E410CC2091C /* pkc_crop_reverse.png in Resources */,
+				60CA94D7A0734ED23A09AFDE8FE18A89 /* pkc_crop_top_left.png in Resources */,
+				B5D98BFF156500DB98A721F3E2732F83 /* pkc_crop_top_right.png in Resources */,
+				C941AA388F0E90DC682A9BC3FFA220D8 /* pkc_crop_up_left.png in Resources */,
+				8DE5AA695D844B768C07EE132BFA58CD /* pkc_crop_up_right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4101CCD043242851BD0B35D78859E394 /* Resources */ = {
+		C9155B1D34C51C5AB8B3F56A4A8BB851 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				797BC605E482F7B1BAA40DE26C9AFBFB /* Assets in Resources */,
-				CDD649D56329F3E2C8BB0695D3721535 /* Classes in Resources */,
-				31CC044CBF900D712797C8CA01AA5DFE /* Extension.swift in Resources */,
-				F1084034E634B2C2280638C0952AB256 /* pkc_crop_bottom_left.png in Resources */,
-				6140501DD48E241AE7DD5DCAC0ACB432 /* pkc_crop_bottom_right.png in Resources */,
-				E913744D319EBE2869C774D0AA84C00A /* pkc_crop_check.png in Resources */,
-				E4D6F0EC3F6FAC2DF30D9A2C2D8806A6 /* pkc_crop_crop.png in Resources */,
-				EFFF0A29AAB555AE461659CF2330A919 /* pkc_crop_down_left.png in Resources */,
-				7C5ECD6EA4AF5DEA58D80133B3A59AE0 /* pkc_crop_down_right.png in Resources */,
-				69665541800FA81BF0F1F02F211CEA29 /* pkc_crop_exit.png in Resources */,
-				94E0BF1A70B843CC0056C9428109A914 /* pkc_crop_filter.png in Resources */,
-				60E60F708D49A396A8F1554AD6A3CED3 /* pkc_crop_filter_arrow.png in Resources */,
-				6CC69FDAD4AAA563FEA0B0657E522B39 /* pkc_crop_filter_chrome.png in Resources */,
-				8A2DF7B0E4A206BD3BA95C884D57124B /* pkc_crop_filter_fade.png in Resources */,
-				1B9652EDB5D6C91C27A5E21141EEC68E /* pkc_crop_filter_instant.png in Resources */,
-				075D90E2B8FC87DD2BC1382E9807F371 /* pkc_crop_filter_mono.png in Resources */,
-				DDD135FAF5F3F74ED53202D70D1BA41A /* pkc_crop_filter_noir.png in Resources */,
-				966562AF2D27154F8B9B6464CDD99B61 /* pkc_crop_filter_nomal.png in Resources */,
-				6811A90EFD8DFF720068A8ED65082272 /* pkc_crop_filter_process.png in Resources */,
-				5061298C2806E91761F7058A0919C0BD /* pkc_crop_filter_tonal.png in Resources */,
-				0638E1641561695832DBE08B9943502C /* pkc_crop_filter_transfer.png in Resources */,
-				F9D6FBE205B0204D25AC39E45F248C59 /* pkc_crop_light_off.png in Resources */,
-				F6F9CD7C2644192287BDA1FCF61E0CBF /* pkc_crop_light_on.png in Resources */,
-				3F1B60E58DE1286A272BBEA58165BF49 /* pkc_crop_reverse.png in Resources */,
-				5E10884850295E30D5F005FFBB1F8CAF /* pkc_crop_top_left.png in Resources */,
-				C7528FB81B0C3AB660E1780533A1AD4F /* pkc_crop_top_right.png in Resources */,
-				7C48FF136A3914EEAA899915B1D51877 /* pkc_crop_up_left.png in Resources */,
-				782F099EF52C6E699EFD5DC0FB91F3DD /* pkc_crop_up_right.png in Resources */,
-				937162C080957C79EBF8680AA9FE4802 /* PKCCameraFilterCell.swift in Resources */,
-				FC9F271C8958A0192E7336B2E583CF0F /* PKCCameraFilterCell.xib in Resources */,
-				A2880FAEB3A9714DC61C5FFA796AF702 /* PKCCameraViewController.swift in Resources */,
-				D735A1C1CA160D59A834A8F644EFD804 /* PKCCameraViewController.xib in Resources */,
-				F09D450FA951243013994D7649AFE7F9 /* PKCCrop.bundle in Resources */,
-				E929633213045FDD8E16E07FD40FB429 /* PKCCrop.swift in Resources */,
-				B910E338691D10E2882BBE35199174BC /* PKCCropViewController.swift in Resources */,
-				42CA5AF3BC7086FB86A8D405655B4193 /* PKCCropViewController.xib in Resources */,
-				7707B06E862AC3E3B993ED995166EAD7 /* PKCInteractor.swift in Resources */,
-				F7ADB4FFBF954F0DC7444F35946CD227 /* PKCPhotoViewController.swift in Resources */,
-				42CC46FE7C6BB8304E59F0E23CEC5D62 /* PKCPhotoViewController.xib in Resources */,
+				C2C238FF37E1F6EA9A56FD999DA215EA /* Assets in Resources */,
+				9EDB407B9CEEF314675F2869A9B2B568 /* Classes in Resources */,
+				DB00DF87CBD33074A335A344052B8ABE /* Extension.swift in Resources */,
+				E69F2202B2C096668277C92FB592A898 /* pkc_crop_bottom_left.png in Resources */,
+				030426CA83291310068BD4C33D301B7C /* pkc_crop_bottom_right.png in Resources */,
+				FAF2469B46C66714AFFE205D22D32A7E /* pkc_crop_check.png in Resources */,
+				C6B52978D59B2A17ADB6F3DDA6039A1F /* pkc_crop_crop.png in Resources */,
+				E888BFEA204747D16C2F16FA3EA90944 /* pkc_crop_down_left.png in Resources */,
+				690D8E2C35CD13F205D6363B05F6BF4D /* pkc_crop_down_right.png in Resources */,
+				FB5F0BB7E63F4FCCC332A1651CDDCFC6 /* pkc_crop_exit.png in Resources */,
+				3AC3470BDB9C1A72C93B5BC26C823C84 /* pkc_crop_filter.png in Resources */,
+				3BACBED00DF63EA996C6CB73EFDA8D60 /* pkc_crop_filter_arrow.png in Resources */,
+				2CDE667865E0B4B98F43693FDD8B7A73 /* pkc_crop_filter_chrome.png in Resources */,
+				AC6C6D93041E9EE3B8C270C14C69C8AE /* pkc_crop_filter_fade.png in Resources */,
+				DBB4D24574C83EF8171D14D8869E6F09 /* pkc_crop_filter_instant.png in Resources */,
+				AD7198E87E901E87D50016F042FC113F /* pkc_crop_filter_mono.png in Resources */,
+				02A301B92C8F7A7F4923FE01170FF2E9 /* pkc_crop_filter_noir.png in Resources */,
+				0483AAE006ABF52CFDEB001828D85D1D /* pkc_crop_filter_nomal.png in Resources */,
+				373995A40C2217D83523159AAE9A3212 /* pkc_crop_filter_process.png in Resources */,
+				C1E734E3064F77E3340AF7799F53FDA6 /* pkc_crop_filter_tonal.png in Resources */,
+				43A3870EEBA2DF6BDB4F4CEA7AC737ED /* pkc_crop_filter_transfer.png in Resources */,
+				459B67FA79B781FDE3B406424D375512 /* pkc_crop_light_off.png in Resources */,
+				BA405706BD42595486D6C8A9AE5185CD /* pkc_crop_light_on.png in Resources */,
+				D280484586118EE66DC8098497B67EA1 /* pkc_crop_reverse.png in Resources */,
+				257627A128A343CD4076577771997F3A /* pkc_crop_top_left.png in Resources */,
+				10EE2EC717D2EE71610595AFBD7805B8 /* pkc_crop_top_right.png in Resources */,
+				A4A33EE1F5650ECE9ECBBDC1DE28B243 /* pkc_crop_up_left.png in Resources */,
+				A5B53707B0D97239774AFD87BEDA6A9E /* pkc_crop_up_right.png in Resources */,
+				454B4653A1D7B8DA103ED46875FA86BD /* PKCCameraFilterCell.swift in Resources */,
+				E52C9912E2A9AF2DC32D4016C6F50D24 /* PKCCameraFilterCell.xib in Resources */,
+				C1341C75C04DF933D7E0BC8BF8D7D9DD /* PKCCameraViewController.swift in Resources */,
+				FBF55697E3A4E95B24E788C03019CFEC /* PKCCameraViewController.xib in Resources */,
+				3403DF7D4AA0C78C0D248CC58F268304 /* PKCCrop.bundle in Resources */,
+				36016D284095ED5A2E16059B119A590C /* PKCCrop.swift in Resources */,
+				63D179BFABC9BE0F4989B53A82CE5DE1 /* PKCCropViewController.swift in Resources */,
+				D3B239BC0A8A1128C9BD5FD79BF81504 /* PKCCropViewController.xib in Resources */,
+				886B354A64C9A3C70ADC664D9D2BB3B1 /* PKCInteractor.swift in Resources */,
+				F1861E2EF8EDBE0656542BEAB87A7B18 /* PKCPhotoCell.swift in Resources */,
+				EA9D0A188C8F6C196B99B947193EF018 /* PKCPhotoCell.xib in Resources */,
+				758900EB64C6FE59E9D13962F7FA06C0 /* PKCPhotoViewController.swift in Resources */,
+				639DBABB696A504A603E651C5DB8760B /* PKCPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0EC606F1BC9B96F52EF385CABD78ABD1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BA18EB87B26FACC26D1A14125C2C55D /* Extension.swift in Sources */,
-				70B393DB9B60796C92E4ED63A837A68C /* PKCCameraFilterCell.swift in Sources */,
-				E46D55D2B086C70435E2291B898B8589 /* PKCCameraFilterCell.xib in Sources */,
-				C3F783956D184E33F26242669BC72EC6 /* PKCCameraViewController.swift in Sources */,
-				CEC091BEB10EA840A89C373BB69F1FA2 /* PKCCameraViewController.xib in Sources */,
-				C6D6A02C7E624807F7A3FCB8C7EA929D /* PKCCrop-dummy.m in Sources */,
-				0E6316FA89E04AC631536B94F3380EED /* PKCCrop.swift in Sources */,
-				533C4F77EAA7D43FA48DB934D2175299 /* PKCCropViewController.swift in Sources */,
-				9EF5D0CE00FEE406BCAADBC753EC420B /* PKCCropViewController.xib in Sources */,
-				28E11B82FB1A05B3167070A5EF3B35C6 /* PKCInteractor.swift in Sources */,
-				56EDF33FBEB61430EA26DEAFCE0482C7 /* PKCPhotoViewController.swift in Sources */,
-				E181CA37602011AA7CC4AB7555D10467 /* PKCPhotoViewController.xib in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2193BEF0354C6BA49B9E769017881283 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -767,6 +764,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		88153E95FEC1C1A3B20CB3D321974B3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9901A90DB3CD51E0C648D02BE0EC143D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -775,21 +779,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5DCC53AFA662FABED0B3F5098AFC5BA /* Sources */ = {
+		C7F1CB178AE94C39219E874295ABCDA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64D8EC8B6B132DECF7FC0B5DFAC89C2 /* Extension.swift in Sources */,
+				AA49E80A8AA651809DFFFF7A820C5587 /* PKCCameraFilterCell.swift in Sources */,
+				3D137C091DBACD4EE551CCBFAECA4BDA /* PKCCameraFilterCell.xib in Sources */,
+				BCD57F3C6396038222D85D775864B985 /* PKCCameraViewController.swift in Sources */,
+				CFBB44B1DC4466D9B4CD993F9B62F532 /* PKCCameraViewController.xib in Sources */,
+				E8BFDF02E808405CC375590F23636E6B /* PKCCrop-dummy.m in Sources */,
+				4B8A544FC9E07F96BEEEA3AF5E3A3C91 /* PKCCrop.swift in Sources */,
+				7F0D2EFD2E99CF12F43340FADA5E8023 /* PKCCropViewController.swift in Sources */,
+				EBAF8A6BA98A2C55A8AB38C9ED68BAEE /* PKCCropViewController.xib in Sources */,
+				AE63E3D7D5DBE877D35569C9F4606BDE /* PKCInteractor.swift in Sources */,
+				53AD6876049931F2D2E7D6431154DFBD /* PKCPhotoCell.swift in Sources */,
+				FFB1EC912E7911077DFDE494DE43997A /* PKCPhotoCell.xib in Sources */,
+				53F89C34F9F681905882B502B0486316 /* PKCPhotoViewController.swift in Sources */,
+				98AA8359428D827EE9B183AA93B80E84 /* PKCPhotoViewController.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1F4E995A46FD74DBA24B3CF4BEF96562 /* PBXTargetDependency */ = {
+		046A6314FEEE5C8C1DC449BA7DF4FF94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PKCCheck;
 			target = AA77CEB2331F59C4BE19EDBA10BF9AE3 /* PKCCheck */;
-			targetProxy = 84B2948CD5F58B6C0CF76E4EAFE0F0DE /* PBXContainerItemProxy */;
+			targetProxy = 9F6FAD08E8E0864A8D04B23EEDEEEDB4 /* PBXContainerItemProxy */;
 		};
 		2B599C091C6BC02E9D53424CC1DAE87F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -800,35 +818,18 @@
 		61A025E1B363477F052DBC77D3A666C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PKCCrop;
-			target = A5710291BC5B56BAADA8F30F901D56D7 /* PKCCrop */;
+			target = 96A2CC4C0556D4F2541F36EC8C6FA9E9 /* PKCCrop */;
 			targetProxy = AE4529CF73DEB54D9DE3B187F53F7F6A /* PBXContainerItemProxy */;
 		};
-		BA4AF5210E8A3A685229BE255EC2D503 /* PBXTargetDependency */ = {
+		6F546997FEF4F4954464D188248FF064 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "PKCCrop-PKCCrop";
-			target = 215129BE759666D8DC67FBCC93A6C076 /* PKCCrop-PKCCrop */;
-			targetProxy = F20B68B69FB49671BF82A6198983458D /* PBXContainerItemProxy */;
+			target = 57E32446DCDDA703C9CC58D1FDBDD8C0 /* PKCCrop-PKCCrop */;
+			targetProxy = 81352CACE051139D17B9A098F498A938 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		013276BC87DA9B2519F279F5DAE82A3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PKCCrop";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/PKCCrop/ResourceBundle-PKCCrop-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = PKCCrop;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		18CB692C945D4C5D942024415E90B375 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8BFD0BEBDBC92B5622B0AB9EB5CB4B57 /* Pods-PKCCrop_Tests.release.xcconfig */;
@@ -863,39 +864,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		2D96284D954F57FE1FFFD909DC36A289 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PKCCrop/PKCCrop-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PKCCrop/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PKCCrop/PKCCrop.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PKCCrop;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		350D3914011712445AAD6BA7E197E8C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -967,6 +935,23 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		8272B03B2F8C6D6043A1FCE7971E86F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PKCCrop";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PKCCrop/ResourceBundle-PKCCrop-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PKCCrop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1052,6 +1037,56 @@
 			};
 			name = Debug;
 		};
+		CDAA80B669CDB47C2FB9C2965BED0F4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PKCCrop/PKCCrop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKCCrop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKCCrop/PKCCrop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PKCCrop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D56190D0838C888E5C205E140639440D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PKCCrop";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PKCCrop/ResourceBundle-PKCCrop-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PKCCrop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		DAA123A32770871F80F0D39887FE2D8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A2E5DF180E1A31A5B35A459B458C82E /* PKCCheck.xcconfig */;
@@ -1119,55 +1154,6 @@
 			};
 			name = Release;
 		};
-		DE65DDA614BDF4A85B7D1AFE5C020D09 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PKCCrop";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/PKCCrop/ResourceBundle-PKCCrop-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = PKCCrop;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		DEB30425E9FBECCA07AA5D4B7E7EC56C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PKCCrop/PKCCrop-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PKCCrop/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PKCCrop/PKCCrop.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PKCCrop;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		EA55822FFCA6DA68DCA47AE255952AF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A2E5DF180E1A31A5B35A459B458C82E /* PKCCheck.xcconfig */;
@@ -1201,14 +1187,46 @@
 			};
 			name = Debug;
 		};
+		F11DFD5F4469E855B86F4E33129A018C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PKCCrop/PKCCrop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PKCCrop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PKCCrop/PKCCrop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PKCCrop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14F89483B3A395CD2D9501ED4A13F536 /* Build configuration list for PBXNativeTarget "PKCCrop-PKCCrop" */ = {
+		1CBA2935D5247974F47FE970C28CF861 /* Build configuration list for PBXNativeTarget "PKCCrop-PKCCrop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				013276BC87DA9B2519F279F5DAE82A3A /* Debug */,
-				DE65DDA614BDF4A85B7D1AFE5C020D09 /* Release */,
+				D56190D0838C888E5C205E140639440D /* Debug */,
+				8272B03B2F8C6D6043A1FCE7971E86F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1218,15 +1236,6 @@
 			buildConfigurations = (
 				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
 				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2E10976E18DCE5791D0CD5B6E4275A08 /* Build configuration list for PBXNativeTarget "PKCCrop" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D96284D954F57FE1FFFD909DC36A289 /* Debug */,
-				DEB30425E9FBECCA07AA5D4B7E7EC56C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1254,6 +1263,15 @@
 			buildConfigurations = (
 				350D3914011712445AAD6BA7E197E8C4 /* Debug */,
 				DD95E4E5C10367630CE67A27F371E538 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D070751FC4B4B3056813B201B86810EE /* Build configuration list for PBXNativeTarget "PKCCrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDAA80B669CDB47C2FB9C2965BED0F4E /* Debug */,
+				F11DFD5F4469E855B86F4E33129A018C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

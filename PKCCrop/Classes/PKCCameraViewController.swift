@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import AVFoundation
 
-// MARK: - CameraDirection
-enum CameraDirection{
+// MARK: - CameraDirection(카메라 앞, 뒤쪽)
+fileprivate enum CameraDirection{
     case front, back
 }
 
@@ -33,9 +33,25 @@ class PKCCameraViewController: UIViewController{
     @IBOutlet var captureBtn2: UIButton!
     @IBOutlet var captureBtn3: UIButton!
     
-    var isLoading = true
+    // MARK: - properties
+    let interactor = Interactor()
+    var delegate: PKCCropPictureDelegate?
+    fileprivate var cameraFilters: [Filter]!
+    fileprivate var filterIdx = 0
+    fileprivate var isLoading = true
     
-    lazy var touchView : UIView = {
+    //Variables related to camera operation
+    //카메라 작동에 관련된 변수들
+    fileprivate var captureSession = AVCaptureSession()
+    fileprivate var captureDeviceInput : AVCaptureDeviceInput?
+    fileprivate var previewLayer : AVCaptureVideoPreviewLayer?
+    fileprivate var captureDevice : AVCaptureDevice?
+    fileprivate let stillImageOutput = AVCaptureStillImageOutput()
+    fileprivate var cameraDirection : CameraDirection = .front
+    
+    //A UIView to which the scale is applied when the user touches it
+    //사용자가 터치했을때 Scale이 적용되는 UIView
+    fileprivate lazy var touchView : UIView = {
         var tv = UIView()
         tv.frame.size = CGSize(width: 120, height: 120)
         tv.layer.cornerRadius = 60
@@ -46,21 +62,9 @@ class PKCCameraViewController: UIViewController{
         return tv
     }()
     
-    // MARK: - properties
-    let interactor = Interactor()
-    var delegate: PKCCropPictureDelegate?
-    fileprivate var cameraFilters: [Filter]!
-    fileprivate var filterIdx = 0
-    
-    fileprivate var captureSession = AVCaptureSession()
-    fileprivate var captureDeviceInput : AVCaptureDeviceInput?
-    fileprivate var previewLayer : AVCaptureVideoPreviewLayer?
-    fileprivate var captureDevice : AVCaptureDevice?
-    fileprivate let stillImageOutput = AVCaptureStillImageOutput()
-    fileprivate var cameraDirection : CameraDirection = .front
-    
-    
     // MARK: - init
+    //Import PKCCameraViewController xib file
+    //PKCCameraViewController xib파일을 불러온다
     init() {
         super.init(nibName: "PKCCameraViewController", bundle: Bundle(for: PKCCrop.self))
     }
@@ -108,8 +112,33 @@ class PKCCameraViewController: UIViewController{
         return .lightContent
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.filterView.isHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.filterView.isHidden = true
+    }
+    
+    
+    //Capture Button Colored to Original State
+    //캡쳐버튼 색깔 원래 상태로 변환
+    func captureBtnOriginColor(){
+        self.captureBtn1.backgroundColor = UIColor.white
+        self.captureBtn2.backgroundColor = UIColor.lightGray
+        self.captureBtn3.backgroundColor = UIColor.white
+    }
+    
+    
+    
     
     // MARK: - actions
+    
+    
+    
+    
+    //filter right->left gestureAction
+    //Swipe 왼쪽에서 오른쪽 이동 제스쳐, 필터 변환
     @IBAction func leftGestureAction(_ sender: Any){
         self.captureBtnOriginColor()
         if self.filterIdx == 0{
@@ -119,6 +148,8 @@ class PKCCameraViewController: UIViewController{
         }
     }
     
+    //filter left->right gestureAction
+    //Swipe 오른쪽에서 왼쪽 이동 제스쳐, 필터 변환
     @IBAction func rightGestureAction(_ sender: Any){
         self.captureBtnOriginColor()
         if self.filterIdx == self.cameraFilters.count-1{
@@ -129,11 +160,14 @@ class PKCCameraViewController: UIViewController{
     }
     
     
-    
+    //Go back to previous screen
+    //이전화면으로 이동
     @IBAction func backAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //Camera flash
+    //back쪽일때 카메라 플래쉬 적용
     @IBAction func lightAction(_ sender: Any) {
         if let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo), device.hasTorch {
             do {
@@ -152,6 +186,9 @@ class PKCCameraViewController: UIViewController{
             }
         }
     }
+    
+    //Filter button When you touch the filter View View
+    //필터버튼 터치하면 필터View 보임
     @IBAction func filterAction(_ sender: Any) {
         UIView.animate(withDuration: 0.5) { 
             self.filterRight.constant = 0
@@ -159,6 +196,9 @@ class PKCCameraViewController: UIViewController{
             self.noneCaptureView.setNeedsLayout()
         }
     }
+    
+    //<< Touch disappears when you touch the filter
+    //<< 터치하면 필터View 사라짐
     @IBAction func filterCloseAction(_ sender: Any) {
         UIView.animate(withDuration: 0.5) {
             self.filterRight.constant = -100
@@ -166,10 +206,12 @@ class PKCCameraViewController: UIViewController{
             self.noneCaptureView.setNeedsLayout()
         }
     }
+    
+    //Filter View PanGesture
+    //필터View PanGesture
     @IBAction func filterGestureAction(_ sender: UIPanGestureRecognizer) {
         if sender.state == .ended{
             let translation = sender.translation(in: self.filterTableView)
-            let progress = MenuHelper.calculateProgress(translation, viewBounds: self.filterTableView.bounds, direction: .right)
             if self.filterRight.constant < -50{
                 self.filterRight.constant = -100
                 self.noneCaptureView.layoutIfNeeded()
@@ -188,6 +230,8 @@ class PKCCameraViewController: UIViewController{
         }
     }
     
+    //Camera front and back conversion
+    //카메라 앞면과 뒷면 변환
     @IBAction func reverseAction(_ sender: Any) {
         switch self.cameraDirection {
         case .back:
@@ -199,25 +243,35 @@ class PKCCameraViewController: UIViewController{
         self.cameraSelected()
     }
     
-    func captureBtnOriginColor(){
-        self.captureBtn1.backgroundColor = UIColor.white
-        self.captureBtn2.backgroundColor = UIColor.lightGray
-        self.captureBtn3.backgroundColor = UIColor.white
-    }
-    
+    //Capture
+    //캡쳐하기
     @IBAction func captureAction(_ sender: Any) {
         self.saveToCamera()
         self.captureBtnOriginColor()
     }
+    
+    
+    //Capture button touch end
+    //Convert Capture Button Color to Original
+    //캡쳐버튼 터치 끝
+    //캡쳐버튼 색 원래대로 변환
     @IBAction func captureTouchUp(_ sender: Any) {
         self.captureBtnOriginColor()
     }
+    
+    //Capture button touch end
+    //Capture button color conversion
+    //캡쳐버튼 터치 끝
+    //캡쳐버튼 색 변환
     @IBAction func captureTouchDown(_ sender: Any) {
         self.captureBtn1.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
         self.captureBtn2.backgroundColor = UIColor.darkGray
         self.captureBtn3.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
     }
     
+    
+    //Touch the camera. TouchView resize
+    //카메라 터치. TouchView 크기 변환
     @IBAction func imageTouchAction(_ sender: UITapGestureRecognizer) {
         let point = sender.location(in: self.view)
         if let device = self.captureDevice {
@@ -243,18 +297,14 @@ class PKCCameraViewController: UIViewController{
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.filterView.isHidden = false
-    }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        self.filterView.isHidden = true
-    }
 }
 
 
 // MARK: - API
 extension PKCCameraViewController{
+    //Front and rear camera settings
+    //카메라 앞, 뒷면 설정
     dynamic fileprivate func cameraSelected(){
         let devices = AVCaptureDevice.devices()
         for device in devices! {
@@ -279,6 +329,8 @@ extension PKCCameraViewController{
         }
     }
     
+    //Camera settings
+    //카메라 설정
     dynamic fileprivate func setCaptureCamera(){
         if self.cameraDirection == .back{
             if let device = self.captureDevice {
@@ -326,6 +378,8 @@ extension PKCCameraViewController{
     
     
     // MARK: - saveToCamera
+    //Capture the image view and move to the crop screen. If the camera is on the back and the flash is activated, it will turn off automatically
+    //이미지뷰를 캡쳐를 한 다음 크롭화면으로 이동. 카메라가 뒷면이고 플래시가 작동되어 있으면 자동으로 off를 한다
     func saveToCamera() {
         if self.isLoading{
             return
@@ -404,6 +458,8 @@ extension PKCCameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate{
 
 
 // MARK: - extension PKCCropPictureDelegate
+//Receive the image and pass it to the delegate.
+//이미지를 받아서 delegate에 연결된 곳으로 전달한다.
 extension PKCCameraViewController: PKCCropPictureDelegate{
     func pkcCropPicture(_ image: UIImage) {
         self.delegate?.pkcCropPicture(image)
