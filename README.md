@@ -81,7 +81,7 @@ pkcCrop.otherCrop(_ image: UIImage)
 
 ~~~~
 
-@extension ViewController: PKCCropDelegate{
+extension ViewController: PKCCropDelegate{
     //If this function is set to false, 
     //the setting window will not be 
     //displayed automatically when the user does not give permission. 
