@@ -1,12 +1,4 @@
 language: objective-c
-
-branches:
- only:
- - master
-
-xcode_workspace: PKCCrop.xcworkspace
-xcode_scheme: PKCCrop
-xcode_project: PKCCrop.xcodeproj
-
+osx_image: xcode8.2.1
 script:
-- xcodebuild clean build test -project PKCCrop.xcodeproj -scheme PKCCropTests
+ - xcodebuild -workspace Example/PKCCrop.xcworkspace -scheme PKCCrop-Example
