@@ -2,4 +2,3 @@ language: objective-c
 osx_image: xcode8.2.1
 script:
  - xcodebuild test -workspace Example/PKCCrop.xcworkspace -scheme PKCCrop-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO
- - pod lib lint
