@@ -7,7 +7,7 @@ before_install:
  - gem uninstall cocoapods -a
  - gem install cocoapods -v 1.2.0.rc.1
  - gem install xcpretty
- - pod install --repo-update
+ - pod install
 
 script:
  - set -o pipefail && xcodebuild test -workspace Example/PKCCrop.xcworkspace -scheme PKCCrop-Example -destination 'platform=IOS Simulator,name=iPhone 7' test
