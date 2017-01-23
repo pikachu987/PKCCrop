@@ -155,15 +155,15 @@ public enum PKCCropType{
     
     //Ratio is a circle crop that allows cropping and spacing.
     //비율크롭과 공백을 허용한 동그라미 크롭입니다.
-    case freeRateAndMarginCircle
+    case rateAndMarginCircle
     
     //Ratio is a circle crop that does not allow cropping and spacing.
     //비율크롭과 공백을 허용하지 않는 동그라미 크롭입니다.
-    case freeRateAndNoneMarginCircle
+    case rateAndNoneMarginCircle
     
     //It is a circle crop which can rotate ratio and image.
     //비율크롭과 이미지를 회전할수 있는 동그라미 크롭입니다.
-    case freeRateAndRotateCircle
+    case rateAndRotateCircle
 }
 
 public class PKCCropManager{
@@ -200,8 +200,8 @@ public class PKCCropManager{
     
     
     
-    //Added in rateAndRotate and freeRateAndRotate. If this value is set to true, the image rotation function is added.
-    //rateAndRotate과 freeRateAndRotate에서 추가된 기능입니다. 이 값을 true로 하면 이미지 회전 기능이 추가됩니다.
+    //Added in rateAndRotate and freeRateAndRotate and rateAndRotateCircle. If this value is set to true, the image rotation function is added.
+    //rateAndRotate, rateAndRotateCircle freeRateAndRotate에서 추가된 기능입니다. 이 값을 true로 하면 이미지 회전 기능이 추가됩니다.
     open var isRotate : Bool = true
     
     

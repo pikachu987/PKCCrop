@@ -42,6 +42,7 @@ class PKCCropViewController: UIViewController{
     @IBOutlet var cropView: UIView!
     //maskView
     @IBOutlet var maskRectView: UIView!
+    @IBOutlet var radiusImageView: UIImageView!
     
     //Constraint of Cropview
     //Cropview의 Constraint
@@ -207,8 +208,8 @@ class PKCCropViewController: UIViewController{
         if PKCCropManager.shared.cropType == .freeRateAndMargin ||
             PKCCropManager.shared.cropType == .freeRateAndNoneMargin ||
             PKCCropManager.shared.cropType == .freeRateAndRotate{
-            //freeCrop
-            //자율크롭
+            //freeRateCrop
+            //자유 비율 크롭
             let iframe = self.imageView.frameForImageInImageViewAspectFit()
             let isRate = iframe.width/UIScreen.main.bounds.width < iframe.height/UIScreen.main.bounds.height
             if isRate && iframe.width < 250{
@@ -217,6 +218,11 @@ class PKCCropViewController: UIViewController{
                 cropCont(w: iframe.height, h: iframe.height)
             }
         }else{
+            if PKCCropManager.shared.cropType == .rateAndMarginCircle ||
+                PKCCropManager.shared.cropType == .rateAndNoneMarginCircle ||
+                PKCCropManager.shared.cropType == .rateAndRotateCircle{
+                let _ = PKCCropManager.shared.setRate(rateWidth: 1, rateHeight: 1)
+            }
             //rateCrop
             //비율크롭
             let iframe = self.imageView.frameForImageInImageViewAspectFit()
@@ -252,12 +258,19 @@ class PKCCropViewController: UIViewController{
             cropCont(w: widthValue, h: heightValue)
         }
         
-        if PKCCropManager.shared.cropType == .freeRateAndMargin || PKCCropManager.shared.cropType == .rateAndMargin{
+        
+        
+        
+        if PKCCropManager.shared.cropType == .freeRateAndMargin ||
+            PKCCropManager.shared.cropType == .rateAndMargin ||
+            PKCCropManager.shared.cropType == .rateAndMarginCircle{
             //margin
             //공백있게
             self.cropWidthValue = -20
             self.cropHeightValue = -20
-        }else if PKCCropManager.shared.cropType == .freeRateAndNoneMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
+        }else if PKCCropManager.shared.cropType == .freeRateAndNoneMargin ||
+            PKCCropManager.shared.cropType == .rateAndNoneMargin ||
+            PKCCropManager.shared.cropType == .rateAndNoneMarginCircle{
             //noneMargin
             //공백없게
             var iframe = self.imageView.frameForImageInImageViewAspectFit()
@@ -299,7 +312,13 @@ class PKCCropViewController: UIViewController{
         self.maskLeft.constant = self.cropLeft.constant+15
         self.maskRight.constant = self.cropRight.constant+15
         self.maskBottom.constant = self.cropBottom.constant+15
-        self.setMaskRect(CGRect(x: self.cropLeft.constant+20, y: self.cropTop.constant+20, width: UIScreen.main.bounds.width-self.cropLeft.constant-self.cropRight.constant-40, height: UIScreen.main.bounds.height-self.cropTop.constant-self.cropBottom.constant-40))
+        var corner : CGFloat = 0
+        if PKCCropManager.shared.cropType == .rateAndNoneMarginCircle ||
+            PKCCropManager.shared.cropType == .rateAndRotateCircle ||
+            PKCCropManager.shared.cropType == .rateAndMarginCircle{
+            corner = self.cropWidth()/2
+        }
+        self.setMaskRect(CGRect(x: self.cropLeft.constant+21, y: self.cropTop.constant+21, width: UIScreen.main.bounds.width-self.cropLeft.constant-self.cropRight.constant-40 - 2, height: UIScreen.main.bounds.height-self.cropTop.constant-self.cropBottom.constant-40 - 2), corner: corner)
         self.cropView.layoutIfNeeded()
         self.cropView.setNeedsLayout()
         self.maskRectView.layoutIfNeeded()
@@ -317,14 +336,88 @@ class PKCCropViewController: UIViewController{
         self.maskRectView.layer.mask = maskLayer
     }
     
+    
+    
+    
+    //Turns the rotation view on or off.
+    //rotation view를 보이게 하거나 안보이게 합니다.
     @IBAction func rotateViewAction(_ sender: Any) {
+        if self.rotateBottomCont.constant == 0{
+            self.rotateHide()
+        }else{
+            self.rotateShow()
+        }
+    }
+    @IBAction func rotateDownGestureAction(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: self.rotateView)
+        let progress = MenuHelper.calculateProgress(translation, viewBounds: self.rotateView.bounds, direction: .down)
+        if sender.state == .ended{
+            if progress > 0{
+                if self.rotateView.frame.origin.y > UIScreen.main.bounds.height-self.rotateView.frame.height/3*2{
+                    self.rotateHide(0.2)
+                }else{
+                    self.rotateShow(0.2)
+                }
+            }
+        }else{
+            self.rotateBottomCont.constant = -(self.rotateView.frame.height-20)*progress
+            self.mainView.layoutIfNeeded()
+            self.mainView.setNeedsLayout()
+            if progress == 1{
+                self.rotateImage.image = UIImage(named: "pkc_crop_rotate_up.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)
+            }
+        }
+    }
+    func rotateHide(_ time: TimeInterval = 0.4){
+        UIView.animate(withDuration: time, animations: {
+            self.rotateBottomCont.constant = -80
+            self.mainView.layoutIfNeeded()
+            self.mainView.setNeedsLayout()
+        }) { (_) in
+            self.rotateImage.image = UIImage(named: "pkc_crop_rotate_up.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)
+        }
+    }
+    func rotateShow(_ time: TimeInterval = 0.4){
+        UIView.animate(withDuration: time, animations: {
+            self.rotateBottomCont.constant = 0
+            self.mainView.layoutIfNeeded()
+            self.mainView.setNeedsLayout()
+        }) { (_) in
+            self.rotateImage.image = UIImage(named: "pkc_crop_rotate_down.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)
+        }
     }
     
-    @IBAction func rotateAction(_ sender: Any) {
+    
+    //Rotate the image.
+    //이미지를 회전합니다.
+    @IBAction func rotateAction(_ sender: UISlider) {
+        self.rotateLbl.text = "\(Int(self.rotateSlider.value))˚"
+        //x degree = x * π / 180 radian
+        //x radian = x * 180 / π degree
+        self.imageView.transform = CGAffineTransform(rotationAngle: CGFloat(self.rotateSlider.value * Float(M_PI)/180))
     }
     
+    //Rotate the image 90 degrees to the left.
+    //이미지를 90도 왼쪽으로 회전합니다.
+    @IBAction func rotateLeftAction(_ sender: Any) {
+        if self.rotateSlider.value > 90{
+            self.rotateSlider.value -= 90
+        }else{
+            self.rotateSlider.value = 0
+        }
+        self.rotateAction(self.rotateSlider)
+    }
     
-    
+    //Rotate the image 90 degrees to the right.
+    //이미지를 90도 오른쪽으로 회전합니다.
+    @IBAction func rotateRightAction(_ sender: Any) {
+        if self.rotateSlider.value < 270{
+            self.rotateSlider.value += 90
+        }else{
+            self.rotateSlider.value = 360
+        }
+        self.rotateAction(self.rotateSlider)
+    }
     
     
     
@@ -395,14 +488,36 @@ class PKCCropViewController: UIViewController{
             width: self.captureView.frame.width,
             height: self.captureView.frame.height
         )
-        
         UIGraphicsBeginImageContextWithOptions(captureSize, false, 0.0)
         self.captureView.drawHierarchy(in: captureRect, afterScreenUpdates: false)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
-        self.delegate?.pkcCropPicture(image!)
-        self.dismiss(animated: true, completion: nil)
+        if PKCCropManager.shared.cropType == .rateAndNoneMarginCircle ||
+            PKCCropManager.shared.cropType == .rateAndRotateCircle ||
+            PKCCropManager.shared.cropType == .rateAndMarginCircle{
+            self.radiusImageView.frame = CGRect(x: 0, y: 0, width: (image?.size.width)!, height: (image?.size.height)!)
+            self.radiusImageView.image = image
+            let path = UIBezierPath(roundedRect: self.radiusImageView.bounds, cornerRadius: self.cropWidth()/2)
+            let maskLayer = CAShapeLayer()
+            maskLayer.path = path.cgPath
+            self.radiusImageView.layer.mask = maskLayer
+            
+            DispatchQueue.global().async {
+                Thread.sleep(forTimeInterval: 0.1)
+                DispatchQueue.main.async {
+                    UIGraphicsBeginImageContextWithOptions(self.radiusImageView.frame.size, false, 0.0)
+                    self.radiusImageView.drawHierarchy(in: CGRect(x: 0, y: 0, width: self.self.radiusImageView.frame.width, height: self.radiusImageView.frame.height), afterScreenUpdates: false)
+                    let image = UIGraphicsGetImageFromCurrentImageContext()
+                    UIGraphicsEndImageContext()
+                    self.radiusImageView.removeFromSuperview()
+                    self.delegate?.pkcCropPicture(image!)
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }else{
+            self.delegate?.pkcCropPicture(image!)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -454,7 +569,14 @@ extension PKCCropViewController{
             var addWidth = self.touchPoint.x - point.x
             var addHeight = self.touchPoint.y - point.y
             self.touchPoint = point
-            if dragType != .center && (PKCCropManager.shared.cropType == .rateAndMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin){
+            if dragType != .center && (
+                PKCCropManager.shared.cropType == .rateAndMargin ||
+                    PKCCropManager.shared.cropType == .rateAndNoneMargin ||
+                    PKCCropManager.shared.cropType == .rateAndRotate ||
+                    PKCCropManager.shared.cropType == .rateAndMarginCircle ||
+                    PKCCropManager.shared.cropType == .rateAndRotateCircle ||
+                    PKCCropManager.shared.cropType == .rateAndNoneMarginCircle
+                ){
                 if abs(addWidth) > abs(addHeight){
                     if dragType == .topRight || dragType == .bottomLeft{
                         addHeight = -addWidth*PKCCropManager.shared.rateHeight/PKCCropManager.shared.rateWidth
@@ -554,7 +676,12 @@ extension PKCCropViewController{
     
     //top
     @IBAction func topDragAction(_ sender: UIButton, forEvent event: UIEvent) {
-        if PKCCropManager.shared.cropType == .rateAndMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
+        if PKCCropManager.shared.cropType == .rateAndMargin ||
+            PKCCropManager.shared.cropType == .rateAndNoneMargin ||
+            PKCCropManager.shared.cropType == .rateAndRotate ||
+            PKCCropManager.shared.cropType == .rateAndMarginCircle ||
+            PKCCropManager.shared.cropType == .rateAndRotateCircle ||
+            PKCCropManager.shared.cropType == .rateAndNoneMarginCircle{
             return
         }
         guard let ts = self.touchPoint(sender, forEvent: event, dragType: .top) else {
@@ -594,7 +721,12 @@ extension PKCCropViewController{
     
     //left
     @IBAction func leftDragAction(_ sender: UIButton, forEvent event: UIEvent) {
-        if PKCCropManager.shared.cropType == .rateAndMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
+        if PKCCropManager.shared.cropType == .rateAndMargin ||
+            PKCCropManager.shared.cropType == .rateAndNoneMargin ||
+            PKCCropManager.shared.cropType == .rateAndRotate ||
+            PKCCropManager.shared.cropType == .rateAndMarginCircle ||
+            PKCCropManager.shared.cropType == .rateAndRotateCircle ||
+            PKCCropManager.shared.cropType == .rateAndNoneMarginCircle{
             return
         }
         guard let ts = self.touchPoint(sender, forEvent: event, dragType: .left) else {
@@ -613,7 +745,12 @@ extension PKCCropViewController{
     
     //right
     @IBAction func rightDragAction(_ sender: UIButton, forEvent event: UIEvent) {
-        if PKCCropManager.shared.cropType == .rateAndMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
+        if PKCCropManager.shared.cropType == .rateAndMargin ||
+            PKCCropManager.shared.cropType == .rateAndNoneMargin ||
+            PKCCropManager.shared.cropType == .rateAndRotate ||
+            PKCCropManager.shared.cropType == .rateAndMarginCircle ||
+            PKCCropManager.shared.cropType == .rateAndRotateCircle ||
+            PKCCropManager.shared.cropType == .rateAndNoneMarginCircle{
             return
         }
         guard let ts = self.touchPoint(sender, forEvent: event, dragType: .right) else {
@@ -652,7 +789,12 @@ extension PKCCropViewController{
     
     //bottom
     @IBAction func bottomDragAction(_ sender: UIButton, forEvent event: UIEvent) {
-        if PKCCropManager.shared.cropType == .rateAndMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
+        if PKCCropManager.shared.cropType == .rateAndMargin ||
+            PKCCropManager.shared.cropType == .rateAndNoneMargin ||
+            PKCCropManager.shared.cropType == .rateAndRotate ||
+            PKCCropManager.shared.cropType == .rateAndMarginCircle ||
+            PKCCropManager.shared.cropType == .rateAndRotateCircle ||
+            PKCCropManager.shared.cropType == .rateAndNoneMarginCircle{
             return
         }
         guard let ts = self.touchPoint(sender, forEvent: event, dragType: .bottom) else {

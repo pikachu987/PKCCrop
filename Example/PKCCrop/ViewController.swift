@@ -259,44 +259,44 @@ extension ViewController: UITableViewDataSource{
             }
         }else if indexPath.section == 6{
             if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .freeRateAndMarginCircle
+                PKCCropManager.shared.cropType = .rateAndMarginCircle
                 self.pkcCrop.cameraCrop()
             }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .freeRateAndMarginCircle
+                PKCCropManager.shared.cropType = .rateAndMarginCircle
                 self.pkcCrop.photoCrop()
             }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .freeRateAndMarginCircle
+                PKCCropManager.shared.cropType = .rateAndMarginCircle
                 self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
             }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .freeRateAndMarginCircle
+                PKCCropManager.shared.cropType = .rateAndMarginCircle
                 self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
             }
         }else if indexPath.section == 7{
             if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .freeRateAndNoneMarginCircle
+                PKCCropManager.shared.cropType = .rateAndNoneMarginCircle
                 self.pkcCrop.cameraCrop()
             }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .freeRateAndNoneMarginCircle
+                PKCCropManager.shared.cropType = .rateAndNoneMarginCircle
                 self.pkcCrop.photoCrop()
             }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .freeRateAndNoneMarginCircle
+                PKCCropManager.shared.cropType = .rateAndNoneMarginCircle
                 self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
             }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .freeRateAndNoneMarginCircle
+                PKCCropManager.shared.cropType = .rateAndNoneMarginCircle
                 self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
             }
         }else if indexPath.section == 8{
             if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .freeRateAndRotateCircle
+                PKCCropManager.shared.cropType = .rateAndRotateCircle
                 self.pkcCrop.cameraCrop()
             }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .freeRateAndRotateCircle
+                PKCCropManager.shared.cropType = .rateAndRotateCircle
                 self.pkcCrop.photoCrop()
             }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .freeRateAndRotateCircle
+                PKCCropManager.shared.cropType = .rateAndRotateCircle
                 self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
             }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .freeRateAndRotateCircle
+                PKCCropManager.shared.cropType = .rateAndRotateCircle
                 self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
             }
         }

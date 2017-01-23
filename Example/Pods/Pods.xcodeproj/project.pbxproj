@@ -38,6 +38,8 @@
 		6E86F7878FF786425810EAE9A08FA688 /* PKCCheck-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F655E292F9F5401CBF9AABB44ECB3AC /* PKCCheck-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E92345C1E35C88E00E1AFF9 /* pkc_crop_rotate_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E92345A1E35C88E00E1AFF9 /* pkc_crop_rotate_down.png */; };
 		6E92345D1E35C88E00E1AFF9 /* pkc_crop_rotate_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E92345B1E35C88E00E1AFF9 /* pkc_crop_rotate_up.png */; };
+		6E9234601E35E73A00E1AFF9 /* pkc_crop_rotate_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E92345E1E35E73A00E1AFF9 /* pkc_crop_rotate_left.png */; };
+		6E9234611E35E73A00E1AFF9 /* pkc_crop_rotate_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E92345F1E35E73A00E1AFF9 /* pkc_crop_rotate_right.png */; };
 		741F603FA9C624E22E35105412AFF14F /* pkc_crop_filter_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */; };
 		74AE575E2D757582237C0E4974480439 /* pkc_crop_filter_instant.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */; };
 		758900EB64C6FE59E9D13962F7FA06C0 /* PKCPhotoViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 48AAE8ED2A4DEAAD185B9FFCBFE3B229 /* PKCPhotoViewController.swift */; };
@@ -177,6 +179,8 @@
 		6CD261C23EF529441708C8FA60A350FC /* pkc_crop_top_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_top_left.png; sourceTree = "<group>"; };
 		6E92345A1E35C88E00E1AFF9 /* pkc_crop_rotate_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pkc_crop_rotate_down.png; sourceTree = "<group>"; };
 		6E92345B1E35C88E00E1AFF9 /* pkc_crop_rotate_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pkc_crop_rotate_up.png; sourceTree = "<group>"; };
+		6E92345E1E35E73A00E1AFF9 /* pkc_crop_rotate_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pkc_crop_rotate_left.png; sourceTree = "<group>"; };
+		6E92345F1E35E73A00E1AFF9 /* pkc_crop_rotate_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pkc_crop_rotate_right.png; sourceTree = "<group>"; };
 		722628FA546E503380664DCEA780957A /* Pods-PKCCrop_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Example-frameworks.sh"; sourceTree = "<group>"; };
 		772B0D178614DCC705829297767D610C /* PKCCropViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCropViewController.xib; sourceTree = "<group>"; };
 		778AC436DE144D6F0FBDECF0D8FAF4F1 /* Pods-PKCCrop_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PKCCrop_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 				90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */,
 				FAFA0A2AAF444B942C4E91E2CA1A0168 /* pkc_crop_filter_mono.png */,
 				084E1F7AD0A56AF5DBFA17627A2E526B /* pkc_crop_filter_noir.png */,
+				6E92345E1E35E73A00E1AFF9 /* pkc_crop_rotate_left.png */,
+				6E92345F1E35E73A00E1AFF9 /* pkc_crop_rotate_right.png */,
 				5B8B9AC96E167474117518B40D2A8B36 /* pkc_crop_filter_nomal.png */,
 				2E6B64CB9F99315DEC60908C3F221ED9 /* pkc_crop_filter_process.png */,
 				30FB5916179E23DCCD0166D0FA9AE758 /* pkc_crop_filter_tonal.png */,
@@ -701,6 +707,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C238FF37E1F6EA9A56FD999DA215EA /* Assets in Resources */,
+				6E9234611E35E73A00E1AFF9 /* pkc_crop_rotate_right.png in Resources */,
 				9EDB407B9CEEF314675F2869A9B2B568 /* Classes in Resources */,
 				DB00DF87CBD33074A335A344052B8ABE /* Extension.swift in Resources */,
 				E69F2202B2C096668277C92FB592A898 /* pkc_crop_bottom_left.png in Resources */,
@@ -724,6 +731,7 @@
 				459B67FA79B781FDE3B406424D375512 /* pkc_crop_light_off.png in Resources */,
 				BA405706BD42595486D6C8A9AE5185CD /* pkc_crop_light_on.png in Resources */,
 				D280484586118EE66DC8098497B67EA1 /* pkc_crop_reverse.png in Resources */,
+				6E9234601E35E73A00E1AFF9 /* pkc_crop_rotate_left.png in Resources */,
 				257627A128A343CD4076577771997F3A /* pkc_crop_top_left.png in Resources */,
 				10EE2EC717D2EE71610595AFBD7805B8 /* pkc_crop_top_right.png in Resources */,
 				A4A33EE1F5650ECE9ECBBDC1DE28B243 /* pkc_crop_up_left.png in Resources */,
