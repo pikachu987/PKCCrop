@@ -1,0 +1,11 @@
+language: objective-c
+
+branches:
+ only:
+ - master
+
+xcode_project: PKCCrop.xcodeproj
+xcode_scheme: PKCCropTests
+
+script:
+- xcodebuild clean build test -project PKCCrop.xcodeproj -scheme PKCCropTests
