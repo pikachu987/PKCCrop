@@ -1,12 +1,8 @@
 language: objective-c
-
-branches:
- only:
- - master
-
-xcode_workspace: PKCCrop.xcworkspace
-xcode_scheme: PKCCrop
+osx_image: xcode8.2.1
 xcode_project: PKCCrop.xcodeproj
+xcode_scheme: PKCCrop
+xcode_sdk: iphonesimulator10.2
 
 script:
 - xcodebuild clean build test -project PKCCrop.xcodeproj -scheme PKCCropTests
