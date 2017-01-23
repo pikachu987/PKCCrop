@@ -15,8 +15,13 @@ class PKCCropViewController: UIViewController{
     var image: UIImage!
     var imageView: UIImageView!
     var cropType: CropType!
+    
+    //This is a required variable when cropping. Compares the point of the current drag to that point.
+    //크롭할때 필요한 변수입니다. 현재 드래그의 포인트와 해당 포인트를 비교합니다.
     var touchPoint: CGPoint!
     
+    //Specify where cropping is possible. If there is a space, it is up to -20. If there is no space, it depends on the image size.
+    //어디서부터 크롭이 가능한지를 지정합니다. 공백있음으로 하면 -20까지 되고 공백없음으로 하면 이미지 사이즈에 따라 달라집니다.
     var cropWidthValue: CGFloat!
     var cropHeightValue: CGFloat!
     
@@ -25,40 +30,73 @@ class PKCCropViewController: UIViewController{
     
     //Crop View
     @IBOutlet var captureView: UIView!
+    
+    //scrollView
     @IBOutlet var scrollView: UIScrollView!
+    
+    //The top constraint of the scrollView. Images imported from a camera or gallery will have their values ​​set to 0 when they are imported directly into the -20 image.
+    //scrollView의 top constraint입니다. 카메라 또는 갤러리에서 가져온 이미지는 해당 값을 -20 이미지를 직접 가져오면 해당값을 0으로 합니다.
     @IBOutlet var scrollTop: NSLayoutConstraint!
     
+    //cropView
     @IBOutlet var cropView: UIView!
+    //maskView
     @IBOutlet var maskRectView: UIView!
     
+    //Constraint of Cropview
+    //Cropview의 Constraint
     @IBOutlet var cropTop: NSLayoutConstraint!
     @IBOutlet var cropLeft: NSLayoutConstraint!
     @IBOutlet var cropRight: NSLayoutConstraint!
     @IBOutlet var cropBottom: NSLayoutConstraint!
     
+    //Constraint of maskView
+    //maskView의 Constraint
     @IBOutlet var maskTop: NSLayoutConstraint!
     @IBOutlet var maskLeft: NSLayoutConstraint!
     @IBOutlet var maskRight: NSLayoutConstraint!
     @IBOutlet var maskBottom: NSLayoutConstraint!
     
+    //Zoom animation related
+    //zoom 애니메이션 관련
     @IBOutlet var zoomHelpWidth: NSLayoutConstraint!
     @IBOutlet var zoomHelpHeight: NSLayoutConstraint!
     @IBOutlet var zoomHelpView: UIView!
     
+    //Image of crop vertex
+    //crop 꼭지점의 이미지
     @IBOutlet var cropTopLeft: UIImageView!
     @IBOutlet var cropTopRight: UIImageView!
     @IBOutlet var cropBottomLeft: UIImageView!
     @IBOutlet var cropBottomRight: UIImageView!
+    
+    
+    //Button at the crop vertex. Button to check whether the property is touched when changing the image color
+    //crop 꼭지점의 버튼. 이미지 색을 바꿀때 해당 프로퍼티를 터치했는지 확인하는 버튼
     @IBOutlet var cropTopLeftBtn: UIButton!
     @IBOutlet var cropTopRightBtn: UIButton!
     @IBOutlet var cropBottomLeftBtn: UIButton!
     @IBOutlet var cropBottomRightBtn: UIButton!
     
-    //PKCCropCrop
+    //Variable related to rotation
+    //회전 관련한 변수
+    @IBOutlet var rotateView: UIView!
+    @IBOutlet var rotateImage: UIImageView!
+    @IBOutlet var rotateBottomCont: NSLayoutConstraint!
+    @IBOutlet var rotateLbl: UILabel!
+    @IBOutlet var rotateSlider: UISlider!
+    
+    //Right upper crop button
+    //우측 상단 크롭 버튼
     @IBOutlet var crop: UIButton!
+    
+    //Make sure you are in crop or zoom status
+    //현재 크롭상태인지 줌상태인지 확인
     var isCurrentCrop = false
     
     // MARK: - init
+    //Import PKCCropViewController xib file
+    //PKCCropViewController xib파일을 불러온다
     init() {
         super.init(nibName: "PKCCropViewController", bundle: Bundle(for: PKCCrop.self))
     }
@@ -77,9 +115,13 @@ class PKCCropViewController: UIViewController{
         self.view.setNeedsLayout()
         self.mainView.layoutIfNeeded()
         self.mainView.setNeedsLayout()
+        
+        
         self.imageView = UIImageView(image: self.image)
         self.imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         self.imageView.contentMode = .scaleAspectFit
+        
+        
         self.scrollView.delegate = self
         self.scrollView.minimumZoomScale = 1
         self.scrollView.maximumZoomScale = 5
@@ -89,13 +131,21 @@ class PKCCropViewController: UIViewController{
         self.scrollView.flashScrollIndicators()
         self.scrollView.subviews.forEach({$0.removeFromSuperview()})
         self.scrollView.addSubview(self.imageView)
+        
+        
         self.maskRectView.frame.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        
+        
         self.cropTopLeft.image = UIImage(named: "pkc_crop_top_left.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         self.cropTopRight.image = UIImage(named: "pkc_crop_top_right.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         self.cropBottomLeft.image = UIImage(named: "pkc_crop_bottom_left.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
         self.cropBottomRight.image = UIImage(named: "pkc_crop_bottom_right.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)?.withRenderingMode(.alwaysTemplate)
+        
+        
         self.touchImageNomal()
         
+        //Check the zoom status and execute the corresponding event.
+        //줌상태를 체크해 해당 이벤트를 실행합니다.
         if !PKCCropManager.shared.isZoom{
             self.scrollView.isUserInteractionEnabled = false
             self.crop.setImage(UIImage(named: "pkc_crop_check.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil), for: .normal)
@@ -107,14 +157,31 @@ class PKCCropViewController: UIViewController{
             self.crop.setImage(UIImage(named: "pkc_crop_crop.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil), for: .normal)
             if PKCCropManager.shared.isZoomAnimation{
                 DispatchQueue.main.asyncAfter(deadline: .now()+0.1, execute: {
-                    self.zoomAnimation()
+                    UIView.animate(withDuration: 1, animations: {
+                        self.zoomHelpWidth.constant = UIScreen.main.bounds.width
+                        self.zoomHelpHeight.constant = UIScreen.main.bounds.width
+                        self.mainView.layoutIfNeeded()
+                        self.mainView.setNeedsLayout()
+                    }, completion: { (_) in
+                        UIView.animate(withDuration: 0.5, animations: {
+                            self.zoomHelpView.alpha = 0
+                        }, completion: { (_) in
+                            self.zoomHelpView.isHidden = true
+                        })
+                    })
                 })
             }else{
                 self.zoomHelpView.isHidden = true
             }
         }
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
+    
+    //After adding the image from the gallery, zoom in and crop the image.
+    //갤러리에서 받아온 이미지를 추가 후 줌 상태에 때라 crop 진행합니다.
     func changeImage(_ image: UIImage){
         self.image = image
         self.imageView.image = self.image
@@ -123,6 +190,8 @@ class PKCCropViewController: UIViewController{
         }
     }
     
+    //Crop initial start
+    //crop 처음 시작
     func cropStart(){
         self.scrollView.isUserInteractionEnabled = false
         self.maskRectView.isHidden = false
@@ -135,7 +204,10 @@ class PKCCropViewController: UIViewController{
             self.cropBottom.constant = (UIScreen.main.bounds.height - h)/2
         }
         
-        if PKCCropManager.shared.cropType == .freeRateAndMargin || PKCCropManager.shared.cropType == .freeRateAndNoneMargin{
+        if PKCCropManager.shared.cropType == .freeRateAndMargin ||
+            PKCCropManager.shared.cropType == .freeRateAndNoneMargin ||
+            PKCCropManager.shared.cropType == .freeRateAndRotate{
+            //freeCrop
             //자율크롭
             let iframe = self.imageView.frameForImageInImageViewAspectFit()
             let isRate = iframe.width/UIScreen.main.bounds.width < iframe.height/UIScreen.main.bounds.height
@@ -145,6 +217,7 @@ class PKCCropViewController: UIViewController{
                 cropCont(w: iframe.height, h: iframe.height)
             }
         }else{
+            //rateCrop
             //비율크롭
             let iframe = self.imageView.frameForImageInImageViewAspectFit()
             let widthRate = iframe.width/PKCCropManager.shared.rateWidth
@@ -179,11 +252,13 @@ class PKCCropViewController: UIViewController{
             cropCont(w: widthValue, h: heightValue)
         }
         
-        if PKCCropManager.shared.cropType == .freeRateAndMargin || PKCCropManager.shared.cropType == .freeRateAndNoneMargin{
+        if PKCCropManager.shared.cropType == .freeRateAndMargin || PKCCropManager.shared.cropType == .rateAndMargin{
+            //margin
             //공백있게
             self.cropWidthValue = -20
             self.cropHeightValue = -20
-        }else{
+        }else if PKCCropManager.shared.cropType == .freeRateAndNoneMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
+            //noneMargin
             //공백없게
             var iframe = self.imageView.frameForImageInImageViewAspectFit()
             let cropWidth = UIScreen.main.bounds.width - self.cropLeft.constant - self.cropRight.constant
@@ -203,11 +278,22 @@ class PKCCropViewController: UIViewController{
             
             self.cropWidthValue = -20+(UIScreen.main.bounds.width-iframe.width)/2
             self.cropHeightValue = -20+(UIScreen.main.bounds.height-iframe.height)/2
+        }else{
+            //rotate
+            //회전
+            self.imageView.contentMode = .scaleAspectFill
+            if PKCCropManager.shared.isRotate{
+                self.rotateView.isHidden = false
+            }
+            self.cropWidthValue = -20
+            self.cropHeightValue = -20
         }
         
         self.resize()
     }
     
+    //It will be called continuously the first time you start a crop and receive a user event. Change the contrast of the maskView, change the mask state, and then change the layout.
+    //처음 크롭시작과 사용자 이벤트를 받을때 계속 호출됩니다. maskView의 contstraint를 바꾸며 mask 상태를 바꾼 후 layout를 바꿉니다.
     func resize(){
         self.maskTop.constant = self.cropTop.constant+15
         self.maskLeft.constant = self.cropLeft.constant+15
@@ -219,7 +305,8 @@ class PKCCropViewController: UIViewController{
         self.maskRectView.layoutIfNeeded()
         self.maskRectView.setNeedsLayout()
     }
-    
+    //Replace maskView's mask with frame.
+    //maskView의 mask를 frame에 따라 바꿉니다.
     func setMaskRect(_ frame: CGRect, corner: CGFloat = 0){
         let path = UIBezierPath(roundedRect: frame, cornerRadius: corner)
         path.append(UIBezierPath(rect: self.maskRectView.frame))
@@ -230,31 +317,26 @@ class PKCCropViewController: UIViewController{
         self.maskRectView.layer.mask = maskLayer
     }
     
-    func zoomAnimation(){
-        UIView.animate(withDuration: 1, animations: {
-            self.zoomHelpWidth.constant = UIScreen.main.bounds.width
-            self.zoomHelpHeight.constant = UIScreen.main.bounds.width
-            self.mainView.layoutIfNeeded()
-            self.mainView.setNeedsLayout()
-        }, completion: { (_) in
-            UIView.animate(withDuration: 0.5, animations: {
-                self.zoomHelpView.alpha = 0
-            }, completion: { (_) in
-                self.zoomHelpView.isHidden = true
-            })
-        })
+    @IBAction func rotateViewAction(_ sender: Any) {
+    }
+    
+    @IBAction func rotateAction(_ sender: Any) {
     }
     
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    
+    
+    
+    
+    
+    //Back button action. Checks whether or not the current zoom state is present, then goes back to zoom state, and changes to zoom state if not zoom state.
+    //뒤로가기 버튼 액션입니다. 현재 줌상태인지 아닌지 체크한 다음 줌상태면 뒤로가기, 줌상태가 아니면 줌상태로 변환합니다.
     @IBAction func backAction(_ sender: Any) {
         if !PKCCropManager.shared.isZoom{
             if self.cropType == CropType.other{
                 self.dismiss(animated: true, completion: nil)
             }else{
-                self.navigationController?.popViewController(animated: true)
+                self.navigationController!.popViewController(animated: true)
             }
         }else{
             if self.isCurrentCrop{
@@ -274,13 +356,14 @@ class PKCCropViewController: UIViewController{
                 if self.cropType == CropType.other{
                     self.dismiss(animated: true, completion: nil)
                 }else{
-                    self.navigationController?.popViewController(animated: true)
+                    self.navigationController!.popViewController(animated: true)
                 }
             }
         }
     }
     
-    
+    //Crop action. Crops the current zoom state, and calls the image crop method if it is a cropped state.
+    //크롭 액션입니다. 현재 줌상태면 크롭상태로, 크롭상태면 이미지 크롭 메서드를 호출합니다.
     @IBAction func cropAction(_ sender: Any) {
         if !PKCCropManager.shared.isZoom{
             self.imageCrop()
@@ -302,7 +385,8 @@ class PKCCropViewController: UIViewController{
         }
     }
     
-    
+    //After you crop the image, call the delegate and close the page.
+    //이미지를 크롭 후 delegate를 호출하고 페이지를 닫습니다.
     func imageCrop(){
         let captureSize = CGSize(width: self.cropWidth()-40, height: self.cropHeight()-40)
         let captureRect = CGRect(
@@ -331,11 +415,14 @@ class PKCCropViewController: UIViewController{
 
 
 // MARK: - CropTouchAction
+//Crop touch actions
 extension PKCCropViewController{
+    //touchCancel
     @IBAction func touchCancelAction(_ sender: UIButton, forEvent event: UIEvent) {
         self.touchPoint = nil
         self.touchImageNomal()
     }
+    //touchStart
     @IBAction func touchDownAction(_ sender: UIButton, forEvent event: UIEvent) {
         if let touch = event.touches(for: sender)?.first {
             self.touchPoint = touch.previousLocation(in: self.cropView)
@@ -414,6 +501,9 @@ extension PKCCropViewController{
     
     
     
+    
+    
+    //center
     @IBAction func centerDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         guard let touchSize = self.touchPoint(sender, forEvent: event, dragType: .center) else {
             return
@@ -437,6 +527,10 @@ extension PKCCropViewController{
         self.cropBottom.constant = self.cropBottom.constant+height
         self.resize()
     }
+    
+    
+    
+    //topLeft
     @IBAction func topLeftDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         guard let ts = self.touchPoint(sender, forEvent: event, dragType: .topLeft) else {
             return
@@ -455,6 +549,10 @@ extension PKCCropViewController{
         self.cropTop.constant = self.cropTop.constant-ts.height
         self.resize()
     }
+    
+    
+    
+    //top
     @IBAction func topDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         if PKCCropManager.shared.cropType == .rateAndMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
             return
@@ -470,6 +568,10 @@ extension PKCCropViewController{
         self.cropTop.constant = self.cropTop.constant-ts.height
         self.resize()
     }
+    
+    
+    
+    //topRight
     @IBAction func topRightDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         guard let ts = self.touchPoint(sender, forEvent: event, dragType: .topRight) else {
             return
@@ -487,6 +589,10 @@ extension PKCCropViewController{
         self.cropTop.constant = self.cropTop.constant-ts.height
         self.resize()
     }
+    
+    
+    
+    //left
     @IBAction func leftDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         if PKCCropManager.shared.cropType == .rateAndMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
             return
@@ -502,6 +608,10 @@ extension PKCCropViewController{
         self.cropLeft.constant = self.cropLeft.constant-ts.width
         self.resize()
     }
+    
+    
+    
+    //right
     @IBAction func rightDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         if PKCCropManager.shared.cropType == .rateAndMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
             return
@@ -517,6 +627,9 @@ extension PKCCropViewController{
         self.cropRight.constant = self.cropRight.constant+ts.width
         self.resize()
     }
+    
+    
+    //bottomLeft
     @IBAction func bottomLeftDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         guard let ts = self.touchPoint(sender, forEvent: event, dragType: .bottomLeft) else {
             return
@@ -534,6 +647,10 @@ extension PKCCropViewController{
         self.cropBottom.constant = self.cropBottom.constant+ts.height
         self.resize()
     }
+    
+    
+    
+    //bottom
     @IBAction func bottomDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         if PKCCropManager.shared.cropType == .rateAndMargin || PKCCropManager.shared.cropType == .rateAndNoneMargin{
             return
@@ -549,6 +666,9 @@ extension PKCCropViewController{
         self.cropBottom.constant = self.cropBottom.constant+ts.height
         self.resize()
     }
+    
+    
+    //bottomRight
     @IBAction func bottomRightDragAction(_ sender: UIButton, forEvent event: UIEvent) {
         guard let ts = self.touchPoint(sender, forEvent: event, dragType: .bottomRight) else {
             return
@@ -569,6 +689,13 @@ extension PKCCropViewController{
 }
 
 
+
+
+
+
+
+//Type enum used in crop drag
+//crop drag에서 사용하는 type enum
 enum DragType{
     case center
     case top
@@ -583,7 +710,11 @@ enum DragType{
 
 
 
+
+
 // MARK: - CropZoom
+//Image zoom related scrollView delegate
+//image zoom 관련 scrollView delegate
 extension PKCCropViewController: UIScrollViewDelegate{
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imageView

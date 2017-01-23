@@ -211,7 +211,6 @@ class PKCCameraViewController: UIViewController{
     //필터View PanGesture
     @IBAction func filterGestureAction(_ sender: UIPanGestureRecognizer) {
         if sender.state == .ended{
-            let translation = sender.translation(in: self.filterTableView)
             if self.filterRight.constant < -50{
                 self.filterRight.constant = -100
                 self.noneCaptureView.layoutIfNeeded()

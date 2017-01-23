@@ -36,6 +36,8 @@
 		63D179BFABC9BE0F4989B53A82CE5DE1 /* PKCCropViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 0D1E8782EDF2575A71778C9813746777 /* PKCCropViewController.swift */; };
 		690D8E2C35CD13F205D6363B05F6BF4D /* pkc_crop_down_right.png in Resources */ = {isa = PBXBuildFile; fileRef = EA54C61D94C75639EC4D5195EBC3DE53 /* pkc_crop_down_right.png */; };
 		6E86F7878FF786425810EAE9A08FA688 /* PKCCheck-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F655E292F9F5401CBF9AABB44ECB3AC /* PKCCheck-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E92345C1E35C88E00E1AFF9 /* pkc_crop_rotate_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E92345A1E35C88E00E1AFF9 /* pkc_crop_rotate_down.png */; };
+		6E92345D1E35C88E00E1AFF9 /* pkc_crop_rotate_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E92345B1E35C88E00E1AFF9 /* pkc_crop_rotate_up.png */; };
 		741F603FA9C624E22E35105412AFF14F /* pkc_crop_filter_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */; };
 		74AE575E2D757582237C0E4974480439 /* pkc_crop_filter_instant.png in Resources */ = {isa = PBXBuildFile; fileRef = 90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */; };
 		758900EB64C6FE59E9D13962F7FA06C0 /* PKCPhotoViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 48AAE8ED2A4DEAAD185B9FFCBFE3B229 /* PKCPhotoViewController.swift */; };
@@ -134,26 +136,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0298A95C220FA36A92DEFA88E66EC564 /* pkc_crop_check.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_check.png; sourceTree = "<group>"; };
+		0298A95C220FA36A92DEFA88E66EC564 /* pkc_crop_check.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_check.png; sourceTree = "<group>"; };
 		07373BAB88E17ABACE8CA314F1A0F967 /* PKCPhotoCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCPhotoCell.swift; sourceTree = "<group>"; };
-		084E1F7AD0A56AF5DBFA17627A2E526B /* pkc_crop_filter_noir.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_noir.png; sourceTree = "<group>"; };
+		084E1F7AD0A56AF5DBFA17627A2E526B /* pkc_crop_filter_noir.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_noir.png; sourceTree = "<group>"; };
 		09CA9686C35DCCA0192A1A6DB219C36E /* PKCCheck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCCheck.swift; path = PKCCheck/Classes/PKCCheck.swift; sourceTree = "<group>"; };
 		0AD7815072B9F34526676FB913F7ECF0 /* PKCCameraFilterCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCameraFilterCell.xib; sourceTree = "<group>"; };
 		0D1E8782EDF2575A71778C9813746777 /* PKCCropViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCropViewController.swift; sourceTree = "<group>"; };
-		0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_up_left.png; sourceTree = "<group>"; };
+		0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_up_left.png; sourceTree = "<group>"; };
 		139C4E729234E56C4878EE45D76519F1 /* Pods-PKCCrop_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PKCCrop_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		13CE29330EC6AC49E7FAE29369692B9D /* PKCCrop-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCrop-umbrella.h"; sourceTree = "<group>"; };
-		15FA65B0857DA5292F3FF87F3F30A1BD /* pkc_crop_top_right.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_top_right.png; sourceTree = "<group>"; };
+		15FA65B0857DA5292F3FF87F3F30A1BD /* pkc_crop_top_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_top_right.png; sourceTree = "<group>"; };
 		236E212F6F98CFDA4452FE5A94D9A6F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25D911C0A7C19FD81A4569A557D8E6C9 /* Pods-PKCCrop_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PKCCrop_Example.modulemap"; sourceTree = "<group>"; };
+		25D911C0A7C19FD81A4569A557D8E6C9 /* Pods-PKCCrop_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PKCCrop_Example.modulemap"; sourceTree = "<group>"; };
 		26C7EA000C38901B4ABE204AFA97B9EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CF0C4ACCE26B2391EE4B86FB6DE69D8 /* Assets */ = {isa = PBXFileReference; includeInIndex = 1; path = Assets; sourceTree = "<group>"; };
-		2E6B64CB9F99315DEC60908C3F221ED9 /* pkc_crop_filter_process.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_process.png; sourceTree = "<group>"; };
-		30FB5916179E23DCCD0166D0FA9AE758 /* pkc_crop_filter_tonal.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_tonal.png; sourceTree = "<group>"; };
-		314C45521C365070197DEF257B34BB41 /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PKCCrop_Tests.framework; path = "Pods-PKCCrop_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF0C4ACCE26B2391EE4B86FB6DE69D8 /* Assets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		2E6B64CB9F99315DEC60908C3F221ED9 /* pkc_crop_filter_process.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_process.png; sourceTree = "<group>"; };
+		30FB5916179E23DCCD0166D0FA9AE758 /* pkc_crop_filter_tonal.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_tonal.png; sourceTree = "<group>"; };
+		314C45521C365070197DEF257B34BB41 /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E2CF919670459DC1228CE235BE04D0 /* Pods-PKCCrop_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PKCCrop_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		33D7182B13BF82DFC5F0B265D2FFC606 /* PKCCrop.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PKCCrop.bundle; path = PKCCrop.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		360D3177E3B8671E0473EFF26A45E001 /* pkc_crop_light_off.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_light_off.png; sourceTree = "<group>"; };
+		33D7182B13BF82DFC5F0B265D2FFC606 /* PKCCrop.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKCCrop.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		360D3177E3B8671E0473EFF26A45E001 /* pkc_crop_light_off.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_light_off.png; sourceTree = "<group>"; };
 		36E81A74BBAF2FBC05B2D2F251817E5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3C56546D54B6AD3D7C839767712E6EDC /* Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3D4862B492A767EE003C4F43BE470C79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,29 +164,31 @@
 		465001315E0C163D757E880BA18E81F6 /* Pods-PKCCrop_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Example-resources.sh"; sourceTree = "<group>"; };
 		4886E56811BBC1DD874E8C2F2BEB2D98 /* PKCCameraViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCameraViewController.xib; sourceTree = "<group>"; };
 		48AAE8ED2A4DEAAD185B9FFCBFE3B229 /* PKCPhotoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCPhotoViewController.swift; sourceTree = "<group>"; };
-		49BE67FA94B54982256ACE037C03AD80 /* PKCCrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PKCCrop.framework; path = PKCCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB68AFCFED0FBCF3DEC3D5557484EE4 /* PKCCheck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PKCCheck.modulemap; sourceTree = "<group>"; };
-		4FDFA43AB7B185C7B0076529C098F973 /* pkc_crop_crop.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_crop.png; sourceTree = "<group>"; };
-		5B8B9AC96E167474117518B40D2A8B36 /* pkc_crop_filter_nomal.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_nomal.png; sourceTree = "<group>"; };
-		5C4D62452B56E596206F3D4161D3874E /* PKCCrop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PKCCrop.modulemap; sourceTree = "<group>"; };
+		49BE67FA94B54982256ACE037C03AD80 /* PKCCrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKCCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB68AFCFED0FBCF3DEC3D5557484EE4 /* PKCCheck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKCCheck.modulemap; sourceTree = "<group>"; };
+		4FDFA43AB7B185C7B0076529C098F973 /* pkc_crop_crop.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_crop.png; sourceTree = "<group>"; };
+		5B8B9AC96E167474117518B40D2A8B36 /* pkc_crop_filter_nomal.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_nomal.png; sourceTree = "<group>"; };
+		5C4D62452B56E596206F3D4161D3874E /* PKCCrop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKCCrop.modulemap; sourceTree = "<group>"; };
 		5E7E748428DC30238E6E046FD290BA45 /* PKCPhotoViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCPhotoViewController.xib; sourceTree = "<group>"; };
 		5F655E292F9F5401CBF9AABB44ECB3AC /* PKCCheck-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCheck-umbrella.h"; sourceTree = "<group>"; };
-		63D8DC43EAAFB284832823B6C9AA84CE /* Classes */ = {isa = PBXFileReference; includeInIndex = 1; path = Classes; sourceTree = "<group>"; };
-		667DD404A83C78A83E292D0E3D542D4B /* pkc_crop_filter_chrome.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_chrome.png; sourceTree = "<group>"; };
-		6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_fade.png; sourceTree = "<group>"; };
-		6CD261C23EF529441708C8FA60A350FC /* pkc_crop_top_left.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_top_left.png; sourceTree = "<group>"; };
+		63D8DC43EAAFB284832823B6C9AA84CE /* Classes */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
+		667DD404A83C78A83E292D0E3D542D4B /* pkc_crop_filter_chrome.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_chrome.png; sourceTree = "<group>"; };
+		6B960D9C03006D48B7F1A1603F9E11DD /* pkc_crop_filter_fade.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_fade.png; sourceTree = "<group>"; };
+		6CD261C23EF529441708C8FA60A350FC /* pkc_crop_top_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_top_left.png; sourceTree = "<group>"; };
+		6E92345A1E35C88E00E1AFF9 /* pkc_crop_rotate_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pkc_crop_rotate_down.png; sourceTree = "<group>"; };
+		6E92345B1E35C88E00E1AFF9 /* pkc_crop_rotate_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pkc_crop_rotate_up.png; sourceTree = "<group>"; };
 		722628FA546E503380664DCEA780957A /* Pods-PKCCrop_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Example-frameworks.sh"; sourceTree = "<group>"; };
 		772B0D178614DCC705829297767D610C /* PKCCropViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCropViewController.xib; sourceTree = "<group>"; };
 		778AC436DE144D6F0FBDECF0D8FAF4F1 /* Pods-PKCCrop_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PKCCrop_Example-umbrella.h"; sourceTree = "<group>"; };
 		7C1B9A20FCA7C803BA5BBBD1FF8B890E /* Pods-PKCCrop_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PKCCrop_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7CFF51F9C7491662F737DF9FCED5F747 /* Pods-PKCCrop_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		7D9A1A7D75864BB7B2F78E82FF29779B /* pkc_crop_down_left.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_down_left.png; sourceTree = "<group>"; };
-		7F5E2D12AF5F58CCD096D2E99A657992 /* pkc_crop_bottom_right.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_bottom_right.png; sourceTree = "<group>"; };
+		7D9A1A7D75864BB7B2F78E82FF29779B /* pkc_crop_down_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_down_left.png; sourceTree = "<group>"; };
+		7F5E2D12AF5F58CCD096D2E99A657992 /* pkc_crop_bottom_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_bottom_right.png; sourceTree = "<group>"; };
 		8A6966893826224803E71846D9419803 /* PKCCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKCCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFD0BEBDBC92B5622B0AB9EB5CB4B57 /* Pods-PKCCrop_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8DF75849394A6FA6CAF1BC9AA5204562 /* Pods-PKCCrop_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PKCCrop_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_instant.png; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		90B59D71222EF4101E28334F62F24DC2 /* pkc_crop_filter_instant.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_instant.png; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93EF8BF355DFCAE6448A0FA3265FC379 /* Pods-PKCCrop_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Example.release.xcconfig"; sourceTree = "<group>"; };
 		966A5F6EB58F8F86961AEAE1016DA4E4 /* PKCCrop-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCrop-prefix.pch"; sourceTree = "<group>"; };
 		9864E58F8B8E492B89B2BF18CD6CEBC2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,28 +197,28 @@
 		A0D9FCE6B9CB3F52B0BB53E529676F59 /* PKCCheck-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCheck-prefix.pch"; sourceTree = "<group>"; };
 		A184E4E94E15B417E8A434738F3831BC /* PKCCrop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PKCCrop.xcconfig; sourceTree = "<group>"; };
 		A27DB6E4A3CF74B74E3D29E2A3E78C7C /* Pods-PKCCrop_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PKCCrop_Example-dummy.m"; sourceTree = "<group>"; };
-		A7046AFEBCCF69EA491B5426BB750B31 /* pkc_crop_filter_arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_arrow.png; sourceTree = "<group>"; };
+		A7046AFEBCCF69EA491B5426BB750B31 /* pkc_crop_filter_arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_arrow.png; sourceTree = "<group>"; };
 		A903E26281FFEAEFE1C17E498E8C2F60 /* Pods-PKCCrop_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA8CEF8F66AEAAF395F7D342888DEAEF /* PKCCheck-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKCCheck-dummy.m"; sourceTree = "<group>"; };
-		AD62AF23F5EE8ED3961219E5E8387030 /* PKCCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PKCCheck.framework; path = PKCCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD62AF23F5EE8ED3961219E5E8387030 /* PKCCheck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKCCheck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27637C6EF92BCA0981E75340DF9CAD0 /* PKCCameraFilterCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCameraFilterCell.swift; sourceTree = "<group>"; };
 		B431FED843EB432FAD7ABB004021C9BC /* Pods-PKCCrop_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Tests-resources.sh"; sourceTree = "<group>"; };
 		B985BA9FE84DC8D9F75F647596AF9186 /* PKCPhotoCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCPhotoCell.xib; sourceTree = "<group>"; };
-		BF16DBC6D96E281AFB6E435E24723718 /* pkc_crop_filter_transfer.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_transfer.png; sourceTree = "<group>"; };
-		C59A8D498B8B3C28FDA33CF60422A38E /* pkc_crop_bottom_left.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_bottom_left.png; sourceTree = "<group>"; };
+		BF16DBC6D96E281AFB6E435E24723718 /* pkc_crop_filter_transfer.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_transfer.png; sourceTree = "<group>"; };
+		C59A8D498B8B3C28FDA33CF60422A38E /* pkc_crop_bottom_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_bottom_left.png; sourceTree = "<group>"; };
 		C606756DA2858107164D2E403154EFEE /* ResourceBundle-PKCCrop-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PKCCrop-Info.plist"; sourceTree = "<group>"; };
-		C9BAFA34E15FC2037B97697CB2B04084 /* pkc_crop_light_on.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_light_on.png; sourceTree = "<group>"; };
+		C9BAFA34E15FC2037B97697CB2B04084 /* pkc_crop_light_on.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_light_on.png; sourceTree = "<group>"; };
 		D33EAC1FDB1FE05031C014AF4775249E /* PKCCrop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKCCrop-dummy.m"; sourceTree = "<group>"; };
-		D4736551A818301522B21EE94D6FBD3B /* pkc_crop_exit.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_exit.png; sourceTree = "<group>"; };
+		D4736551A818301522B21EE94D6FBD3B /* pkc_crop_exit.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_exit.png; sourceTree = "<group>"; };
 		D5135FD002337F323992E3C02FB53F06 /* Pods-PKCCrop_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D6DB484DD370E78757CE22F7ECF2A9E3 /* pkc_crop_reverse.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_reverse.png; sourceTree = "<group>"; };
-		DF502F0D68FCCB69165B3470B1600777 /* Pods-PKCCrop_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PKCCrop_Tests.modulemap"; sourceTree = "<group>"; };
-		DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_up_right.png; sourceTree = "<group>"; };
-		EA54C61D94C75639EC4D5195EBC3DE53 /* pkc_crop_down_right.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_down_right.png; sourceTree = "<group>"; };
-		ECD575381528D3BAE86E1025213D5109 /* pkc_crop_filter.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter.png; sourceTree = "<group>"; };
-		F7B6A85CE763A2F4C715BE93201CC3A9 /* Pods_PKCCrop_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PKCCrop_Example.framework; path = "Pods-PKCCrop_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6DB484DD370E78757CE22F7ECF2A9E3 /* pkc_crop_reverse.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_reverse.png; sourceTree = "<group>"; };
+		DF502F0D68FCCB69165B3470B1600777 /* Pods-PKCCrop_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PKCCrop_Tests.modulemap"; sourceTree = "<group>"; };
+		DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_up_right.png; sourceTree = "<group>"; };
+		EA54C61D94C75639EC4D5195EBC3DE53 /* pkc_crop_down_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_down_right.png; sourceTree = "<group>"; };
+		ECD575381528D3BAE86E1025213D5109 /* pkc_crop_filter.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter.png; sourceTree = "<group>"; };
+		F7B6A85CE763A2F4C715BE93201CC3A9 /* Pods_PKCCrop_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F875D9FB7DFB2A0A5163C671E434A6BA /* Pods-PKCCrop_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PKCCrop_Tests-dummy.m"; sourceTree = "<group>"; };
-		FAFA0A2AAF444B942C4E91E2CA1A0168 /* pkc_crop_filter_mono.png */ = {isa = PBXFileReference; includeInIndex = 1; path = pkc_crop_filter_mono.png; sourceTree = "<group>"; };
+		FAFA0A2AAF444B942C4E91E2CA1A0168 /* pkc_crop_filter_mono.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_filter_mono.png; sourceTree = "<group>"; };
 		FDF98A09990A880DA15A0750D2A4A40E /* PKCCameraViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -313,8 +317,9 @@
 				15FA65B0857DA5292F3FF87F3F30A1BD /* pkc_crop_top_right.png */,
 				0F21E09DDBC2A60962E2E77C2EBFE5F5 /* pkc_crop_up_left.png */,
 				DF9E784E7B3B7DD9089B209901D0A1DA /* pkc_crop_up_right.png */,
+				6E92345A1E35C88E00E1AFF9 /* pkc_crop_rotate_down.png */,
+				6E92345B1E35C88E00E1AFF9 /* pkc_crop_rotate_up.png */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -373,7 +378,6 @@
 			children = (
 				91558FB5A4775226F4DB9457098EB132 /* Classes */,
 			);
-			name = PKCCrop;
 			path = PKCCrop;
 			sourceTree = "<group>";
 		};
@@ -383,7 +387,6 @@
 				09CA9686C35DCCA0192A1A6DB219C36E /* PKCCheck.swift */,
 				30F33D9FFACA6C35128095B8DFA85CE8 /* Support Files */,
 			);
-			name = PKCCheck;
 			path = PKCCheck;
 			sourceTree = "<group>";
 		};
@@ -416,7 +419,6 @@
 				48AAE8ED2A4DEAAD185B9FFCBFE3B229 /* PKCPhotoViewController.swift */,
 				5E7E748428DC30238E6E046FD290BA45 /* PKCPhotoViewController.xib */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -472,7 +474,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -501,7 +502,6 @@
 				2AB702114F09541007A19D83D4C6FA54 /* Assets */,
 				D51DBE571038117CF6A8B4156608E7FB /* Classes */,
 			);
-			name = PKCCrop;
 			path = PKCCrop;
 			sourceTree = "<group>";
 		};
@@ -727,6 +727,7 @@
 				257627A128A343CD4076577771997F3A /* pkc_crop_top_left.png in Resources */,
 				10EE2EC717D2EE71610595AFBD7805B8 /* pkc_crop_top_right.png in Resources */,
 				A4A33EE1F5650ECE9ECBBDC1DE28B243 /* pkc_crop_up_left.png in Resources */,
+				6E92345D1E35C88E00E1AFF9 /* pkc_crop_rotate_up.png in Resources */,
 				A5B53707B0D97239774AFD87BEDA6A9E /* pkc_crop_up_right.png in Resources */,
 				454B4653A1D7B8DA103ED46875FA86BD /* PKCCameraFilterCell.swift in Resources */,
 				E52C9912E2A9AF2DC32D4016C6F50D24 /* PKCCameraFilterCell.xib in Resources */,
@@ -741,6 +742,7 @@
 				EA9D0A188C8F6C196B99B947193EF018 /* PKCPhotoCell.xib in Resources */,
 				758900EB64C6FE59E9D13962F7FA06C0 /* PKCPhotoViewController.swift in Resources */,
 				639DBABB696A504A603E651C5DB8760B /* PKCPhotoViewController.xib in Resources */,
+				6E92345C1E35C88E00E1AFF9 /* pkc_crop_rotate_down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

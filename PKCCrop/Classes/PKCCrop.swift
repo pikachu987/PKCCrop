@@ -132,15 +132,38 @@ public enum PKCCropType{
     //freeRate And margin possible
     //자유크롭과 공백을 허용합니다.
     case freeRateAndMargin
+    
     //freeRate And margin impossible
     //자유크롭과 공백을 허용하지 않습니다.
     case freeRateAndNoneMargin
+    
     //rate And margin impossible
     //비율크롭과 공백을 허용합니다.
     case rateAndMargin
+    
     //rate And margin impossible
     //비율크롭과 공백을 허용하지 않습니다.
     case rateAndNoneMargin
+    
+    //Rate crop and rotate the image. The image is in aspectFill format and the margins disappear. In addition, the rotation function is added. If you want to disable rotation, you can set isRotate to false in PKCCropManager.
+    //비율크롭과 이미지를 회전할 수 있습니다. 이미지가 aspectFill 형태로 되며 여백이 사라집니다. 또한 회전기능이 추가됩니다. 회전 기능을 빼시려면 PKCCropManager 에서 isRotate를 false로 하시면 됩니다.
+    case rateAndRotate
+    
+    //Free crop and rotate images. The image is in aspectFill format and the margins disappear. In addition, the rotation function is added. If you want to disable rotation, you can set isRotate to false in PKCCropManager.
+    //자유크롭과 이미지를 회전할 수 있습니다. 이미지가 aspectFill 형태로 되며 여백이 사라집니다. 또한 회전기능이 추가됩니다. 회전 기능을 빼시려면 PKCCropManager 에서 isRotate를 false로 하시면 됩니다.
+    case freeRateAndRotate
+    
+    //Ratio is a circle crop that allows cropping and spacing.
+    //비율크롭과 공백을 허용한 동그라미 크롭입니다.
+    case freeRateAndMarginCircle
+    
+    //Ratio is a circle crop that does not allow cropping and spacing.
+    //비율크롭과 공백을 허용하지 않는 동그라미 크롭입니다.
+    case freeRateAndNoneMarginCircle
+    
+    //It is a circle crop which can rotate ratio and image.
+    //비율크롭과 이미지를 회전할수 있는 동그라미 크롭입니다.
+    case freeRateAndRotateCircle
 }
 
 public class PKCCropManager{
@@ -164,16 +187,31 @@ public class PKCCropManager{
     }()
     
     
-    
     //Zoom the image before cropping.
     //크롭 이전에 줌을 합니다.
     open var isZoom : Bool = true
+    
+    
+    
     //An arrow animation appears on the Zoom screen.
     //줌화면에서 화살표 애니메이션이 나옵니다.
     open var isZoomAnimation: Bool = true
+    
+    
+    
+    
+    //Added in rateAndRotate and freeRateAndRotate. If this value is set to true, the image rotation function is added.
+    //rateAndRotate과 freeRateAndRotate에서 추가된 기능입니다. 이 값을 true로 하면 이미지 회전 기능이 추가됩니다.
+    open var isRotate : Bool = true
+    
+    
+    
     //Set the crop type
     //크롭 타입을 설정합니다.
     open var cropType: PKCCropType = PKCCropType.freeRateAndMargin
+    
+    
+    
     //Set the crop ratio.
     //크롭비율을 설정합니다.
     open func setRate(rateWidth: CGFloat, rateHeight: CGFloat) -> Bool{
