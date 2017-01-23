@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PKCCrop'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Images of cameras, galleries, etc. crop'
   s.description      = 'There are many options that can be used to easily put images into crops.'
   s.homepage         = 'https://github.com/pikachu987/PKCCrop'
