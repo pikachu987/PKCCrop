@@ -50,6 +50,7 @@ pkcCrop.cameraCrop()
 ~~~~
 
 Extract images to crop from the camera.
+
 카메라에서 크롭할 이미지를 추출합니다.
 
 <br><br>
@@ -59,6 +60,7 @@ pkcCrop.photoCrop()
 ~~~~
 
 Extract the image to crop from the photobook.
+
 사진첩에서 크롭할 이미지를 추출합니다.
 
 <br><br>
@@ -68,6 +70,7 @@ pkcCrop.otherCrop(_ image: UIImage)
 ~~~~
 
 Insert the image and run the crop.
+
 이미지를 넣고 크롭을 실행합니다.
 
 <br><br><br><br>
@@ -133,6 +136,7 @@ PKCCropManager.shared.cropType
 ~~~~
 
 This option is an enum and sets the crop type.
+
 해당 옵션은 enum이며 크롭 타입을 설정합니다. 
 
 ~~~~
@@ -188,6 +192,7 @@ public enum PKCCropType{
 ~~~~
 
 The structure of CropType is like this.
+
 CropType 의 구조는 이렇게 되어 있습니다.
 
 
@@ -199,6 +204,7 @@ PKCCropManager.shared.cameraFilters
 ~~~~
 
 This option is Array [Filter] and you can give a list of filters when you run the camera.
+
 해당 옵션은 Array[Filter] 이며 카메라를 실행 시켰을 때 필터 리스트를 줄 수 있습니다. 
 
 ~~~~
@@ -210,6 +216,7 @@ public struct Filter{
 ~~~~
 
 The structure of the Filter is as follows.
+
 Filter의 구조는 이렇게 되어 있습니다.
 
 <br>
@@ -220,6 +227,7 @@ PKCCropManager.shared.isZoom
 ~~~~
 
 This option is Bool and sets whether the Zoom option is enabled or not.
+
 해당 옵션은 Bool 이며 Zoom 옵션을 실행할지 실행하지 않을지 설정합니다. 
 
 
@@ -231,6 +239,7 @@ PKCCropManager.shared.isZoomAnimation
 ~~~~
 
 This option is Bool and sets whether the Zoom animation is enabled or not when the Zoom option is true.
+
 해당 옵션은 Bool 이며 Zoom 옵션이 true일 경우 Zoom 애니메이션이 실행할지 실행하지 않을지 설정합니다.
 
 <br>
@@ -241,6 +250,7 @@ PKCCropManager.shared.isRotate
 ~~~~
 
 The function is Bool and asks if you want to rotate the image. CropType is only applicable to rateAndRotate, freeRateAndRotate, rateAndRotateCircle.
+
 해당 기능은 Bool 이며 이미지를 회전할지 여부를 묻습니다. CropType이 rateAndRotate, freeRateAndRotate, rateAndRotateCircle 에서만 적용 가능 합니다.
 
 <br>
@@ -250,6 +260,7 @@ PKCCropManager.shared.setRate(rateWidth: CGFloat, rateHeight: CGFloat) -> Bool
 ~~~~
 
 The method sets the ratio when the ratio is Crop. The maximum difference between width and height should not be greater than 2. CropType is only applicable to rateAndMargin, rateAndNoneMargin, rateAndRotate.
+
 해당 method 는 비율 크롭일때 비율을 설정합니다. width와 height의 최대 차이가 2를 넘어가게 하면 안됩니다. CropType이 rateAndMargin, rateAndNoneMargin, rateAndRotate 에서만 적용 가능 합니다.
 
 <br>
@@ -266,6 +277,7 @@ The method sets the ratio when the ratio is Crop. The maximum difference between
 ## Requirements
 
 PKCCheck is automatically added.
+
 자동으로 PKCCheck가 추가됩니다.
 
 ## Installation
