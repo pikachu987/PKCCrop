@@ -221,12 +221,10 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 95YHHS8BGP;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 95YHHS8BGP;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -501,7 +499,7 @@
 			baseConfigurationReference = EE64DCA4B351F501D954004D /* Pods-PKCCrop_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PKCCrop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -516,7 +514,7 @@
 			baseConfigurationReference = 2550A37E4FF043F99E10E49C /* Pods-PKCCrop_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PKCCrop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -530,7 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 749CFD6868E4BB7F6C643F33 /* Pods-PKCCrop_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -551,7 +549,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F0344608F3EB34C41D4A165A /* Pods-PKCCrop_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 95YHHS8BGP;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

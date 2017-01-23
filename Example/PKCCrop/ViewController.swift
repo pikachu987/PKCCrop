@@ -12,61 +12,6 @@ import PKCCrop
 class ViewController: UIViewController {
     let pkcCrop = PKCCrop()
     
-    //Test
-    //test입니다.
-    @IBOutlet var detailTestTableView: UITableView!
-    @IBOutlet var imageView: UIImageView!
-    var testArray : [[String]] = [
-        [
-            "free rate And margin Camera(자율크롭과 공백있게 카메라)",
-            "free rate And margin Photo(자율크롭과 공백있게 사진)",
-            "free rate And margin Other1(자율크롭과 공백있게 기타1)",
-            "free rate And margin Other2(자율크롭과 공백있게 기타2)"
-        ],[
-            "free rate And none margin Camera(자율크롭과 공백없게 카메라)",
-            "free rate And none margin Photo(자율크롭과 공백없게 사진)",
-            "free rate And none margin Other1(자율크롭과 공백없게 기타1)",
-            "free rate And none margin Other2(자율크롭과 공백없게 기타2)",
-        ],[
-            "free rate And rotate Camera(자율크롭과 회전 카메라)",
-            "free rate And rotate Photo(자율크롭과 회전 사진)",
-            "free rate And rotate Other1(자율크롭과 회전 기타1)",
-            "free rate And rotate Other2(자율크롭과 회전 기타2)"
-        ],[
-            "rate And margin Camera(비율크롭과 공백있게 카메라)",
-            "rate And margin Photo(비율크롭과 공백있게 사진)",
-            "rate And margin Other1(비율크롭과 공백있게 기타1)",
-            "rate And margin Other2(비율크롭과 공백있게 기타2)",
-        ],[
-            "rate And none margin Camera(비율크롭과 공백없게 카메라)",
-            "rate And none margin Photo(비율크롭과 공백없게 사진)",
-            "rate And none margin Other1(비율크롭과 공백없게 기타1)",
-            "rate And none margin Other2(비율크롭과 공백없게 기타2)",
-        ],[
-            "rate And rotate Camera(비율크롭과 회전 카메라)",
-            "rate And rotate Photo(비율크롭과 회전 사진)",
-            "rate And rotate Other1(비율크롭과 회전 기타1)",
-            "rate And rotate Other2(비율크롭과 회전 기타2)"
-        ],[
-            "rate And margin circle Camera(비율크롭과 공백있는 동그라미 크롭 카메라)",
-            "rate And margin circle Photo(비율크롭과 공백있는 동그라미 크롭 사진)",
-            "rate And margin circle Other1(비율크롭과 공백있는 동그라미 크롭 기타1)",
-            "rate And margin circle Other2(비율크롭과 공백있는 동그라미 크롭 기타2)",
-        ],[
-            "rate And none margin circle Camera(비율크롭과 공백없는 동그라미 크롭 카메라)",
-            "rate And none margin circle Photo(비율크롭과 공백없는 동그라미 크롭 사진)",
-            "rate And none margin circle Other1(비율크롭과 공백없는 동그라미 크롭 기타1)",
-            "rate And none margin circle Other2(비율크롭과 공백없는 동그라미 크롭 기타2)",
-        ],[
-            "rate And rotate circle Camera(비율크롭과 회전 동그라미 크롭 카메라)",
-            "rate And rotate circle Photo(비율크롭과 회전 동그라미 크롭 사진)",
-            "rate And rotate circle Other1(비율크롭과 회전 동그라미 크롭 기타1)",
-            "rate And rotate circle Other2(비율크롭과 회전 동그라미 크롭 기타2)"
-        ]
-    ]
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -97,6 +42,62 @@ class ViewController: UIViewController {
         self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
         self.imageView.image = nil
     }
+    
+    
+    
+    
+    //Test
+    //test입니다.
+    @IBOutlet var detailTestTableView: UITableView!
+    @IBOutlet var imageView: UIImageView!
+    var testArray : [[String]] = [
+        [
+            "free rate And margin Camera(자율크롭과 공백있게 카메라)",
+            "free rate And margin Photo(자율크롭과 공백있게 사진)",
+            "free rate And margin Other1(자율크롭과 공백있게 기타1)",
+            "free rate And margin Other2(자율크롭과 공백있게 기타2)"
+        ],[
+            "free rate And none margin Camera(자율크롭과 공백없게 카메라)",
+            "free rate And none margin Photo(자율크롭과 공백없게 사진)",
+            "free rate And none margin Other1(자율크롭과 공백없게 기타1)",
+            "free rate And none margin Other2(자율크롭과 공백없게 기타2)",
+            ],[
+                "free rate And rotate Camera(자율크롭과 회전 카메라)",
+                "free rate And rotate Photo(자율크롭과 회전 사진)",
+                "free rate And rotate Other1(자율크롭과 회전 기타1)",
+                "free rate And rotate Other2(자율크롭과 회전 기타2)"
+        ],[
+            "rate And margin Camera(비율크롭과 공백있게 카메라)",
+            "rate And margin Photo(비율크롭과 공백있게 사진)",
+            "rate And margin Other1(비율크롭과 공백있게 기타1)",
+            "rate And margin Other2(비율크롭과 공백있게 기타2)",
+            ],[
+                "rate And none margin Camera(비율크롭과 공백없게 카메라)",
+                "rate And none margin Photo(비율크롭과 공백없게 사진)",
+                "rate And none margin Other1(비율크롭과 공백없게 기타1)",
+                "rate And none margin Other2(비율크롭과 공백없게 기타2)",
+                ],[
+                    "rate And rotate Camera(비율크롭과 회전 카메라)",
+                    "rate And rotate Photo(비율크롭과 회전 사진)",
+                    "rate And rotate Other1(비율크롭과 회전 기타1)",
+                    "rate And rotate Other2(비율크롭과 회전 기타2)"
+        ],[
+            "rate And margin circle Camera(비율크롭과 공백있는 동그라미 크롭 카메라)",
+            "rate And margin circle Photo(비율크롭과 공백있는 동그라미 크롭 사진)",
+            "rate And margin circle Other1(비율크롭과 공백있는 동그라미 크롭 기타1)",
+            "rate And margin circle Other2(비율크롭과 공백있는 동그라미 크롭 기타2)",
+            ],[
+                "rate And none margin circle Camera(비율크롭과 공백없는 동그라미 크롭 카메라)",
+                "rate And none margin circle Photo(비율크롭과 공백없는 동그라미 크롭 사진)",
+                "rate And none margin circle Other1(비율크롭과 공백없는 동그라미 크롭 기타1)",
+                "rate And none margin circle Other2(비율크롭과 공백없는 동그라미 크롭 기타2)",
+                ],[
+                    "rate And rotate circle Camera(비율크롭과 회전 동그라미 크롭 카메라)",
+                    "rate And rotate circle Photo(비율크롭과 회전 동그라미 크롭 사진)",
+                    "rate And rotate circle Other1(비율크롭과 회전 동그라미 크롭 기타1)",
+                    "rate And rotate circle Other2(비율크롭과 회전 동그라미 크롭 기타2)"
+        ]
+    ]
 }
 
 
@@ -105,7 +106,6 @@ class ViewController: UIViewController {
 //crop 이후 받아오는 delegate입니다.
 extension ViewController: PKCCropDelegate{
     func pkcCropAccessPermissionsChange() -> Bool {
-        
         return true
     }
     func pkcCropAccessPermissionsDenied() {
@@ -120,12 +120,6 @@ extension ViewController: PKCCropDelegate{
         self.imageView.image = image
     }
 }
-
-
-
-
-
-
 
 
 
