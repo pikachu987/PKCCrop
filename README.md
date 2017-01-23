@@ -20,14 +20,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 <br><br>
 
-- import the PKCCrop header
+### - import the PKCCrop header
+
 ~~~~
 import PKCCrop
 ~~~~
 
 <br><br>
 
-- ViewController
+### - ViewController
 ~~~~
 import PKCCheck
 
@@ -43,7 +44,87 @@ class ViewController: UIViewController{
 
 <br><br>
 
-- Options
+### - PKCCrop Method
+
+~~~~
+pkcCrop.cameraCrop()
+~~~~
+
+>Extract images to crop from the camera.
+
+>카메라에서 크롭할 이미지를 추출합니다.
+
+<br><br>
+
+~~~~
+pkcCrop.photoCrop()
+~~~~
+
+>Extract the image to crop from the photobook.
+
+>사진첩에서 크롭할 이미지를 추출합니다.
+
+<br><br>
+
+~~~~
+pkcCrop.otherCrop(_ image: UIImage)
+~~~~
+
+>Insert the image and run the crop.
+
+>이미지를 넣고 크롭을 실행합니다.
+
+<br><br><br><br>
+
+
+### - PKCCrop Delegate
+
+
+~~~~
+
+@extension ViewController: PKCCropDelegate{
+    //If this function is set to false, 
+    //the setting window will not be 
+    //displayed automatically when the user does not give permission. 
+    //If it is set to true or not, the setting window will be automatically opened. 
+    //This feature is optional (not required).
+    //false로 설정하면 사용자가 권한허용을 하지 않을때 설정창에 자동으로 가지 않습니다. 
+    //true로 설정하면 사용자가 권한허용이 되어 있지 않을때 자동으로 설정창에 갑니다. 
+    //해당 기능은 옵셔널입니다.(필수가 아님)
+    func pkcCropAccessPermissionsChange() -> Bool {
+        return true
+    }
+    
+    
+    //Called when the pkcCropAccessPermissionsChange 
+    //function is set to false and the user has not granted permission.
+    //This feature is optional (not required).
+    //pkcCropAccessPermissionsChange 함수가 false로 설정되 있을때 
+    //사용자가 권한허용을 하지 않았을 때 호출됩니다.
+    //해당 기능은 옵셔널입니다.(필수가 아님)
+    func pkcCropAccessPermissionsDenied() {
+        
+    }
+    
+    
+    //You must put in the ViewController at this time.
+    //현재 ViewController을 넣어야 합니다.
+    func pkcCropController() -> UIViewController {
+        return self
+    }
+    
+    //The delegate to which the image is passed since the crop.
+    //크롭이후 이미지가 전달이 되는 delegate입니다.
+    func pkcCropImage(_ image: UIImage) {
+        self.imageView.image = image
+    }
+}    
+~~~~
+
+
+<br><br>
+
+### - Options
 
 > PKCCropManager can change PKCCrop options with a singleton object.
 
@@ -190,88 +271,14 @@ PKCCropManager.shared.setRate(rateWidth: CGFloat, rateHeight: CGFloat) -> Bool
 
 <br><br><br><br>
 
-- PKCCrop Method
-
-~~~~
-pkcCrop.cameraCrop()
-~~~~
-
->Extract images to crop from the camera.
-
->카메라에서 크롭할 이미지를 추출합니다.
-
-<br><br>
-
-~~~~
-pkcCrop.photoCrop()
-~~~~
-
->Extract the image to crop from the photobook.
-
->사진첩에서 크롭할 이미지를 추출합니다.
-
-<br><br>
-
-~~~~
-pkcCrop.otherCrop(_ image: UIImage)
-~~~~
-
->Insert the image and run the crop.
-
->이미지를 넣고 크롭을 실행합니다.
-
-<br><br><br><br>
-
-
-- PKCCrop Delegate
-
-
-~~~~
-
-@extension ViewController: PKCCropDelegate{
-    //If this function is set to false, 
-    //the setting window will not be 
-    //displayed automatically when the user does not give permission. 
-    //If it is set to true or not, the setting window will be automatically opened. 
-    //This feature is optional (not required).
-    //false로 설정하면 사용자가 권한허용을 하지 않을때 설정창에 자동으로 가지 않습니다. 
-    //true로 설정하면 사용자가 권한허용이 되어 있지 않을때 자동으로 설정창에 갑니다. 
-    //해당 기능은 옵셔널입니다.(필수가 아님)
-    func pkcCropAccessPermissionsChange() -> Bool {
-        return true
-    }
-    
-    
-    //Called when the pkcCropAccessPermissionsChange 
-    //function is set to false and the user has not granted permission.
-    //This feature is optional (not required).
-    //pkcCropAccessPermissionsChange 함수가 false로 설정되 있을때 
-    //사용자가 권한허용을 하지 않았을 때 호출됩니다.
-    //해당 기능은 옵셔널입니다.(필수가 아님)
-    func pkcCropAccessPermissionsDenied() {
-        
-    }
-    
-    
-    //You must put in the ViewController at this time.
-    //현재 ViewController을 넣어야 합니다.
-    func pkcCropController() -> UIViewController {
-        return self
-    }
-    
-    //The delegate to which the image is passed since the crop.
-    //크롭이후 이미지가 전달이 되는 delegate입니다.
-    func pkcCropImage(_ image: UIImage) {
-        self.imageView.image = image
-    }
-}    
-~~~~
-
 
 
 <br><br>
 
 ## Requirements
+
+PKCCheck is automatically added.
+자동으로 PKCCheck가 추가됩니다.
 
 ## Installation
 
