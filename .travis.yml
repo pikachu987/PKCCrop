@@ -1,4 +1,13 @@
 language: objective-c
 osx_image: xcode8.2.1
+xcode_workspace: PKCCrop.xcworkspace
+xcode_cheme: PKCCrop
+
+before_install:
+ - gem uninstall cocoapods -a
+ - gem install cocoapods -v 1.2.0.rc.1
+ - gem install xcpretty
+ - pod install --repo-update
+
 script:
- - xcodebuild -workspace Example/PKCCrop.xcworkspace -scheme PKCCrop-Example
+ - set -o pipefail && xcodebuild test -workspace Example/PKCCrop.xcworkspace -scheme PKCCrop-Example -destination 'platform=IOS Simulator,name=iPhone 7' test
