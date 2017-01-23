@@ -4,8 +4,9 @@ branches:
  only:
  - master
 
+xcode_workspace: PKCCrop.xcworkspace
+xcode_scheme: PKCCrop
 xcode_project: PKCCrop.xcodeproj
-xcode_scheme: PKCCropTests
 
 script:
 - xcodebuild clean build test -project PKCCrop.xcodeproj -scheme PKCCropTests
