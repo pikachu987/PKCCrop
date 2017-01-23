@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode8.2.1
 xcode_project: PKCCrop.xcodeproj
-xcode_scheme: PKCCrop
+xcode_scheme: PKCCropTests
 xcode_sdk: iphonesimulator10.2
 
 script:
