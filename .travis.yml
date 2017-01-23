@@ -1,9 +1,5 @@
 language: objective-c
 osx_image: xcode8.2.1
-xcode_workspace: PKCCrop.xcworkspace
-xcode_project: PKCCrop.xcodeproj
-xcode_scheme: PKCCropUITests
-xcode_sdk: iphonesimulator10.2
-
 script:
- - xcodebuild -workspace PKCCrop.xcworkspace -scheme PKCCropUITests -destination 'platform=OS X,arch=x86_64' test
+ - xcodebuild test -workspace Example/PKCCrop.xcworkspace -scheme PKCCrop-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO
+ - pod lib lint
