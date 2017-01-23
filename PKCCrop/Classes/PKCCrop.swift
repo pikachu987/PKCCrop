@@ -85,7 +85,12 @@ extension PKCCrop: PKCCheckDelegate{
         let navVC = UINavigationController(rootViewController: pkcCameraViewController)
         navVC.isNavigationBarHidden = true
         navVC.isToolbarHidden = true
-        vc?.present(navVC, animated: true, completion: nil)
+        DispatchQueue.global().async {
+            Thread.sleep(forTimeInterval: 0.1)
+            DispatchQueue.main.async {
+                vc?.present(navVC, animated: true, completion: nil)
+            }
+        }
     }
     
     public func pkcCheckPhotoPermissionDenied() {
@@ -104,7 +109,12 @@ extension PKCCrop: PKCCheckDelegate{
         let navVC = UINavigationController(rootViewController: pkcPhotoViewController)
         navVC.isNavigationBarHidden = true
         navVC.isToolbarHidden = true
-        vc?.present(navVC, animated: true, completion: nil)
+        DispatchQueue.global().async {
+            Thread.sleep(forTimeInterval: 0.1)
+            DispatchQueue.main.async {
+                vc?.present(navVC, animated: true, completion: nil)
+            }
+        }
     }
 }
 

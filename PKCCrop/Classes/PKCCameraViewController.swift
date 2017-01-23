@@ -62,6 +62,8 @@ class PKCCameraViewController: UIViewController{
         return tv
     }()
     
+    var isView = false
+    
     // MARK: - init
     //Import PKCCameraViewController xib file
     //PKCCameraViewController xib파일을 불러온다
@@ -113,10 +115,12 @@ class PKCCameraViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.isView = true
         self.filterView.isHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        self.isView = false
         self.filterView.isHidden = true
     }
     
@@ -424,33 +428,35 @@ extension PKCCameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate{
         return context.createCGImage(inputImage, from: inputImage.extent)
     }
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
-        let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
-        let cameraImage = CIImage(cvPixelBuffer: pixelBuffer!)
-        let filtersValue = self.cameraFilters[self.filterIdx].filter
-        filtersValue.setValue(cameraImage, forKey: kCIInputImageKey)
-        let image = UIImage(ciImage: filtersValue.value(forKey: kCIOutputImageKey) as! CIImage!)
-        let cgImage = convertCIImageToCGImage(inputImage: filtersValue.value(forKey: kCIOutputImageKey) as! CIImage!)
-        var transform = CGAffineTransform.identity
-        if self.cameraDirection == .front{
-            transform = transform.translatedBy(x: image.size.width, y: 0)
-            transform = transform.rotated(by: CGFloat(M_PI_2))
-            transform = transform.translatedBy(x: image.size.height, y: 0)
-            transform = transform.scaledBy(x: -1, y: 1)
-        }else{
-            transform = transform.translatedBy(x: 0, y: image.size.height)
-            transform = transform.rotated(by: -CGFloat(M_PI_2))
-        }
-        let context = CGContext(data: nil, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: (cgImage?.bitsPerComponent)!, bytesPerRow: 0, space: (cgImage?.colorSpace!)!, bitmapInfo: (cgImage?.bitmapInfo.rawValue)!)
-        
-        context?.concatenate(transform)
-        context?.draw(cgImage!, in: CGRect(x: 0, y: 0, width: image.size.height, height: image.size.width))
-        guard let CGImage = context?.makeImage() else {
-            return
-        }
-        let degreeImage = UIImage(cgImage: CGImage)
-        DispatchQueue.main.async{
-            self.imageView.image = degreeImage
-            self.imageView.transform = CGAffineTransform.identity
+        if self.isView{
+            let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+            let cameraImage = CIImage(cvPixelBuffer: pixelBuffer!)
+            let filtersValue = self.cameraFilters[self.filterIdx].filter
+            filtersValue.setValue(cameraImage, forKey: kCIInputImageKey)
+            let image = UIImage(ciImage: filtersValue.value(forKey: kCIOutputImageKey) as! CIImage!)
+            let cgImage = convertCIImageToCGImage(inputImage: filtersValue.value(forKey: kCIOutputImageKey) as! CIImage!)
+            var transform = CGAffineTransform.identity
+            if self.cameraDirection == .front{
+                transform = transform.translatedBy(x: image.size.width, y: 0)
+                transform = transform.rotated(by: CGFloat(M_PI_2))
+                transform = transform.translatedBy(x: image.size.height, y: 0)
+                transform = transform.scaledBy(x: -1, y: 1)
+            }else{
+                transform = transform.translatedBy(x: 0, y: image.size.height)
+                transform = transform.rotated(by: -CGFloat(M_PI_2))
+            }
+            let context = CGContext(data: nil, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: (cgImage?.bitsPerComponent)!, bytesPerRow: 0, space: (cgImage?.colorSpace!)!, bitmapInfo: (cgImage?.bitmapInfo.rawValue)!)
+            
+            context?.concatenate(transform)
+            context?.draw(cgImage!, in: CGRect(x: 0, y: 0, width: image.size.height, height: image.size.width))
+            guard let CGImage = context?.makeImage() else {
+                return
+            }
+            let degreeImage = UIImage(cgImage: CGImage)
+            DispatchQueue.main.async{
+                self.imageView.image = degreeImage
+                self.imageView.transform = CGAffineTransform.identity
+            }
         }
     }
 }

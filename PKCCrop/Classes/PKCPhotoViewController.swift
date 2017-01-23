@@ -32,7 +32,6 @@ class PKCPhotoViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.collectionView.register(UINib(nibName: "PKCPhotoCell", bundle: Bundle(for: PKCCrop.self)), forCellWithReuseIdentifier: "PKCPhotoCell")
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -43,6 +42,7 @@ class PKCPhotoViewController: UIViewController{
         flow.minimumInteritemSpacing = 0
         flow.minimumLineSpacing = 0
         DispatchQueue.global().async {
+            Thread.sleep(forTimeInterval: 0.1)
             DispatchQueue.main.async {
                 self.gallerySelected()
             }
