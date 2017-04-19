@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,6 +26,7 @@
                 <outlet property="cropTopRight" destination="dJZ-Ip-9EO" id="TV6-ES-vpZ"/>
                 <outlet property="cropTopRightBtn" destination="VL1-Gp-axH" id="0Sf-0c-lnC"/>
                 <outlet property="cropView" destination="FM9-Rm-XnF" id="MWF-5g-jcd"/>
+                <outlet property="exitButton" destination="g7J-nN-goq" id="BFe-tS-pxS"/>
                 <outlet property="mainView" destination="iN0-l3-epB" id="wY4-vQ-imD"/>
                 <outlet property="maskBottom" destination="tSW-Qh-LQT" id="TVF-Nc-Dd7"/>
                 <outlet property="maskLeft" destination="zGx-RF-orZ" id="Ov6-yY-Foc"/>
@@ -398,11 +399,6 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     <state key="normal" image="pkc_crop_exit.png"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="ceL-MB-772"/>
                     </connections>
@@ -416,11 +412,6 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     <state key="normal" image="pkc_crop_crop.png"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="cropAction:" destination="-1" eventType="touchUpInside" id="UJw-r0-GM3"/>
                     </connections>

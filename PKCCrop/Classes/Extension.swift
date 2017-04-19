@@ -8,39 +8,6 @@
 
 import UIKit
 
-@IBDesignable extension UIView {
-    @IBInspectable var borderColor:UIColor? {
-        set {
-            layer.borderColor = newValue!.cgColor
-        }
-        get {
-            if let color = layer.borderColor {
-                return UIColor(cgColor:color)
-            }
-            else {
-                return nil
-            }
-        }
-    }
-    @IBInspectable var borderWidth:CGFloat {
-        set {
-            layer.borderWidth = newValue
-        }
-        get {
-            return layer.borderWidth
-        }
-    }
-    @IBInspectable var cornerRadius:CGFloat {
-        set {
-            layer.cornerRadius = newValue
-            clipsToBounds = newValue > 0
-        }
-        get {
-            return layer.cornerRadius
-        }
-    }
-}
-
 
 
 extension UIImageView{
@@ -102,5 +69,51 @@ extension UIImage{
         let resized = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return resized!
+    }
+    
+    public func imageRotatedByDegrees(_ degrees: CGFloat, flip: Bool) -> UIImage? {
+        let degreesToRadians: (CGFloat) -> CGFloat = {
+            return $0 / 180.0 * CGFloat(Double.pi)
+        }
+        // calculate the size of the rotated view's containing box for our drawing space
+        let rotatedViewBox = UIView(frame: CGRect(origin: CGPoint.zero, size: size))
+        let t = CGAffineTransform(rotationAngle: degreesToRadians(degrees));
+        rotatedViewBox.transform = t
+        let rotatedSize = rotatedViewBox.frame.size
+        // Create the bitmap context
+        UIGraphicsBeginImageContext(rotatedSize)
+        let bitmap = UIGraphicsGetCurrentContext()
+        // Move the origin to the middle of the image so we will rotate and scale around the center.
+        bitmap?.translateBy(x: rotatedSize.width / 2.0, y: rotatedSize.height / 2.0);
+        //Rotate the image context
+        bitmap?.rotate(by: degreesToRadians(degrees));
+        // Now, draw the rotated/scaled image into the context
+        var yFlip: CGFloat
+        
+        if(flip){
+            yFlip = CGFloat(-1.0)
+        } else {
+            yFlip = CGFloat(1.0)
+        }
+        
+        bitmap?.scaleBy(x: yFlip, y: -1.0)
+        guard let cgImg = self.cgImage else{
+            return nil
+        }
+        bitmap?.draw(cgImg, in: CGRect(x: -size.width / 2, y: -size.height / 2, width: size.width, height: size.height))
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+    
+    public func resize(_ size: CGSize) -> UIImage?{
+        let hasAlpha = true
+        let scale: CGFloat = 0.0 // Use scale factor of main screen
+        UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
+        self.draw(in: CGRect(origin: CGPoint.zero, size: size))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        return scaledImage
     }
 }

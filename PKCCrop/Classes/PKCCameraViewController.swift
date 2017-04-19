@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 // MARK: - CameraDirection(카메라 앞, 뒤쪽)
 fileprivate enum CameraDirection{
@@ -17,27 +18,23 @@ fileprivate enum CameraDirection{
 
 class PKCCameraViewController: UIViewController{
     // MARK: - IBOutlet
+    @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet weak var captureView: UIView!
+    
+    
+    
     @IBOutlet var mainView: UIView!
-    @IBOutlet var captureView: UIView!
     @IBOutlet var cameraView: UIView!
-    @IBOutlet var imageView: UIImageView!
     @IBOutlet var noneCaptureView: UIView!
     
     @IBOutlet var light: UIButton!
-    @IBOutlet var filter: UIButton!
-    @IBOutlet var filterView: UIView!
-    @IBOutlet var filterRight: NSLayoutConstraint!
-    @IBOutlet var filterTableView: UITableView!
     
     @IBOutlet var captureBtn1: UIButton!
     @IBOutlet var captureBtn2: UIButton!
     @IBOutlet var captureBtn3: UIButton!
     
     // MARK: - properties
-    let interactor = Interactor()
-    var delegate: PKCCropPictureDelegate?
-    fileprivate var cameraFilters: [Filter]!
-    fileprivate var filterIdx = 0
+    weak var delegate: PKCCropPictureDelegate?
     fileprivate var isLoading = true
     
     //Variables related to camera operation
@@ -70,7 +67,9 @@ class PKCCameraViewController: UIViewController{
     init() {
         super.init(nibName: "PKCCameraViewController", bundle: Bundle(for: PKCCrop.self))
     }
-    
+    deinit {
+        print("deinit \(self)")
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -78,24 +77,21 @@ class PKCCameraViewController: UIViewController{
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        self.exitButton.layer.cornerRadius = 20
+        self.captureBtn1.layer.cornerRadius = 30
+        self.captureBtn2.layer.cornerRadius = 25
+        self.captureBtn3.layer.cornerRadius = 20
+        self.captureView.layer.cornerRadius = 30
+        
+        
         self.mainView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         self.view.layoutIfNeeded()
-        self.view.setNeedsLayout()
         
-        self.cameraFilters = PKCCropManager.shared.cameraFilters
-        if self.cameraFilters == nil{
-            self.cameraFilters = [Filter(name: "Normal", filter: CIFilter(name: "CIColorControls")!, image: UIImage())]
-        }
-        if self.cameraFilters.count != 1{
-            self.filterTableView.register(UINib(nibName: "PKCCameraFilterCell", bundle: Bundle(for: PKCCrop.self)), forCellReuseIdentifier: "PKCCameraFilterCell")
-            self.filterTableView.rowHeight = UITableViewAutomaticDimension
-            self.filterTableView.estimatedRowHeight = 100
-            self.filterTableView.separatorStyle = .none
-            self.filterTableView.delegate = self
-            self.filterTableView.dataSource = self
-        }else{
-            self.filter.isHidden = true
-        }
+        let volumeView = MPVolumeView(frame: CGRect(x: 0, y: -100, width: 0, height: 0))
+        self.view.addSubview(volumeView)
+        
+        self.view.setNeedsLayout()
         
         self.noneCaptureView.addSubview(self.touchView)
         
@@ -104,9 +100,6 @@ class PKCCameraViewController: UIViewController{
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.isLoading = false
-            self.imageView.isHidden = false
-            Thread.sleep(forTimeInterval: 0.1)
-            self.cameraView.isHidden = true
         }
     }
     
@@ -115,15 +108,33 @@ class PKCCameraViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.isView = true
-        self.filterView.isHidden = false
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(volumeChanged(notification:)),
+            name: NSNotification.Name(rawValue: "AVSystemController_SystemVolumeDidChangeNotification"),
+            object: nil
+        )
     }
-    
     override func viewWillDisappear(_ animated: Bool) {
-        self.isView = false
-        self.filterView.isHidden = true
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(
+            self,
+            name: NSNotification.Name(rawValue: "AVSystemController_SystemVolumeDidChangeNotification"),
+            object: nil
+        )
     }
     
+    
+    func volumeChanged(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            if let volumeChangeType = userInfo["AVSystemController_AudioVolumeChangeReasonNotificationParameter"] as? String {
+                if volumeChangeType == "ExplicitVolumeChange" {
+                    self.captureAction("" as Any)
+                }
+            }
+        }
+    }
     
     //Capture Button Colored to Original State
     //캡쳐버튼 색깔 원래 상태로 변환
@@ -139,29 +150,6 @@ class PKCCameraViewController: UIViewController{
     // MARK: - actions
     
     
-    
-    
-    //filter right->left gestureAction
-    //Swipe 왼쪽에서 오른쪽 이동 제스쳐, 필터 변환
-    @IBAction func leftGestureAction(_ sender: Any){
-        self.captureBtnOriginColor()
-        if self.filterIdx == 0{
-            self.filterIdx = self.cameraFilters.count-1
-        }else{
-            self.filterIdx -= 1
-        }
-    }
-    
-    //filter left->right gestureAction
-    //Swipe 오른쪽에서 왼쪽 이동 제스쳐, 필터 변환
-    @IBAction func rightGestureAction(_ sender: Any){
-        self.captureBtnOriginColor()
-        if self.filterIdx == self.cameraFilters.count-1{
-            self.filterIdx = 0
-        }else{
-            self.filterIdx += 1
-        }
-    }
     
     
     //Go back to previous screen
@@ -191,47 +179,6 @@ class PKCCameraViewController: UIViewController{
         }
     }
     
-    //Filter button When you touch the filter View View
-    //필터버튼 터치하면 필터View 보임
-    @IBAction func filterAction(_ sender: Any) {
-        UIView.animate(withDuration: 0.5) { 
-            self.filterRight.constant = 0
-            self.noneCaptureView.layoutIfNeeded()
-            self.noneCaptureView.setNeedsLayout()
-        }
-    }
-    
-    //<< Touch disappears when you touch the filter
-    //<< 터치하면 필터View 사라짐
-    @IBAction func filterCloseAction(_ sender: Any) {
-        UIView.animate(withDuration: 0.5) {
-            self.filterRight.constant = -100
-            self.noneCaptureView.layoutIfNeeded()
-            self.noneCaptureView.setNeedsLayout()
-        }
-    }
-    
-    //Filter View PanGesture
-    //필터View PanGesture
-    @IBAction func filterGestureAction(_ sender: UIPanGestureRecognizer) {
-        if sender.state == .ended{
-            if self.filterRight.constant < -50{
-                self.filterRight.constant = -100
-                self.noneCaptureView.layoutIfNeeded()
-                self.noneCaptureView.setNeedsLayout()
-            }else{
-                self.filterRight.constant = 0
-                self.noneCaptureView.layoutIfNeeded()
-                self.noneCaptureView.setNeedsLayout()
-            }
-        }else{
-            let translation = sender.translation(in: self.filterTableView)
-            let progress = MenuHelper.calculateProgress(translation, viewBounds: self.filterTableView.bounds, direction: .right)
-            self.filterRight.constant = -self.filterTableView.frame.width*progress
-            self.noneCaptureView.layoutIfNeeded()
-            self.noneCaptureView.setNeedsLayout()
-        }
-    }
     
     //Camera front and back conversion
     //카메라 앞면과 뒷면 변환
@@ -335,46 +282,41 @@ extension PKCCameraViewController{
     //Camera settings
     //카메라 설정
     dynamic fileprivate func setCaptureCamera(){
-        if self.cameraDirection == .back{
-            if let device = self.captureDevice {
-                do{
-                    try device.lockForConfiguration()
-                    device.focusMode = .locked
-                    device.unlockForConfiguration()
-                }catch {
-                    print("locaForConfiguration error")
+        DispatchQueue.main.async {
+            do{
+                if self.captureDeviceInput != nil{
+                    self.captureSession.removeInput(self.captureDeviceInput)
                 }
+                if self.captureSession.isRunning{
+                    self.captureSession.stopRunning()
+                }
+                try self.captureDeviceInput = AVCaptureDeviceInput(device: self.captureDevice)
+                self.captureSession.addInput(self.captureDeviceInput)
+                self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
+                self.previewLayer?.frame = self.view.layer.frame
+                self.captureSession.startRunning()
+                self.previewLayer?.removeFromSuperlayer()
+                self.cameraView.layer.addSublayer(self.previewLayer!)
+                
+                self.stillImageOutput.outputSettings = [AVVideoCodecKey:AVVideoCodecJPEG]
+                if self.captureSession.canAddOutput(self.stillImageOutput) {
+                    self.captureSession.addOutput(self.stillImageOutput)
+                }
+                
+                if self.cameraDirection == .back{
+                    if let device = self.captureDevice {
+                        do{
+                            try device.lockForConfiguration()
+                            device.focusMode = .locked
+                            device.unlockForConfiguration()
+                        }catch {
+                            print("locaForConfiguration error")
+                        }
+                    }
+                }
+            }catch{
+                print("error")
             }
-        }
-        do{
-            if self.captureDeviceInput != nil{
-                self.captureSession.removeInput(captureDeviceInput)
-            }
-            if self.captureSession.isRunning{
-                self.captureSession.stopRunning()
-            }
-            try self.captureDeviceInput = AVCaptureDeviceInput(device: self.captureDevice)
-            self.captureSession.addInput(captureDeviceInput)
-            
-            
-            let videoOutput = AVCaptureVideoDataOutput()
-            videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sample buffer delegate", attributes: []))
-            if captureSession.canAddOutput(videoOutput){
-                captureSession.addOutput(videoOutput)
-            }
-            
-            self.stillImageOutput.outputSettings = [AVVideoCodecKey:AVVideoCodecJPEG]
-            if captureSession.canAddOutput(stillImageOutput) {
-                captureSession.addOutput(stillImageOutput)
-            }
-            
-            self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
-            self.previewLayer?.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            self.captureSession.startRunning()
-            self.previewLayer?.removeFromSuperlayer()
-            self.cameraView.layer.addSublayer(self.previewLayer!)
-        }catch{
-            print("error")
         }
     }
     
@@ -388,78 +330,44 @@ extension PKCCameraViewController{
             return
         }
         self.isLoading = true
-        let captureSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        let captureRect = UIScreen.main.bounds
         
-        UIGraphicsBeginImageContextWithOptions(captureSize, false, 0.0)
-        self.imageView.drawHierarchy(in: captureRect, afterScreenUpdates: false)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        let pkcCropViewController = PKCCropViewController()
-        pkcCropViewController.delegate = self
-        pkcCropViewController.image = image
-        pkcCropViewController.cropType = CropType.camera
-        self.show(pkcCropViewController, sender: nil)
-        
-        if self.cameraDirection == .back{
-            if let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo), device.hasTorch {
-                do {
-                    try device.lockForConfiguration()
-                    try device.setTorchModeOnWithLevel(1.0)
-                    self.light.setImage(UIImage(named: "pkc_crop_light_off.png", in: Bundle(for: PKCCrop.self), compatibleWith: UITraitCollection(displayScale: 1)), for: .normal)
-                    device.torchMode = .off
-                    device.unlockForConfiguration()
-                } catch {
-                    print("error")
+        if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo) {
+            stillImageOutput.captureStillImageAsynchronously(from: videoConnection) {
+                (imageDataSampleBuffer, error) -> Void in
+                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+                
+                var image = UIImage(data: imageData!)!.resize(UIScreen.main.bounds.size)
+                if self.cameraDirection == .front{
+                    image = image?.imageRotatedByDegrees(0, flip: true)
                 }
-            }
-        }
-        self.isLoading = false
-    }
-}
-
-
-
-// MARK: - extension AVCaptureVideoDataOutputSampleBufferDelegate
-extension PKCCameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate{
-    func convertCIImageToCGImage(inputImage: CIImage) -> CGImage! {
-        let context = CIContext(options: nil)
-        return context.createCGImage(inputImage, from: inputImage.extent)
-    }
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
-        if self.isView{
-            let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
-            let cameraImage = CIImage(cvPixelBuffer: pixelBuffer!)
-            let filtersValue = self.cameraFilters[self.filterIdx].filter
-            filtersValue.setValue(cameraImage, forKey: kCIInputImageKey)
-            let image = UIImage(ciImage: filtersValue.value(forKey: kCIOutputImageKey) as! CIImage!)
-            let cgImage = convertCIImageToCGImage(inputImage: filtersValue.value(forKey: kCIOutputImageKey) as! CIImage!)
-            var transform = CGAffineTransform.identity
-            if self.cameraDirection == .front{
-                transform = transform.translatedBy(x: image.size.width, y: 0)
-                transform = transform.rotated(by: CGFloat(M_PI_2))
-                transform = transform.translatedBy(x: image.size.height, y: 0)
-                transform = transform.scaledBy(x: -1, y: 1)
-            }else{
-                transform = transform.translatedBy(x: 0, y: image.size.height)
-                transform = transform.rotated(by: -CGFloat(M_PI_2))
-            }
-            let context = CGContext(data: nil, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: (cgImage?.bitsPerComponent)!, bytesPerRow: 0, space: (cgImage?.colorSpace!)!, bitmapInfo: (cgImage?.bitmapInfo.rawValue)!)
-            
-            context?.concatenate(transform)
-            context?.draw(cgImage!, in: CGRect(x: 0, y: 0, width: image.size.height, height: image.size.width))
-            guard let CGImage = context?.makeImage() else {
-                return
-            }
-            let degreeImage = UIImage(cgImage: CGImage)
-            DispatchQueue.main.async{
-                self.imageView.image = degreeImage
-                self.imageView.transform = CGAffineTransform.identity
+                
+                let pkcCropViewController = PKCCropViewController()
+                pkcCropViewController.delegate = self
+                pkcCropViewController.image = image
+                pkcCropViewController.cropType = CropType.camera
+                self.show(pkcCropViewController, sender: nil)
+                
+                if self.cameraDirection == .back{
+                    if let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo), device.hasTorch {
+                        do {
+                            try device.lockForConfiguration()
+                            try device.setTorchModeOnWithLevel(1.0)
+                            self.light.setImage(UIImage(named: "pkc_crop_light_off.png", in: Bundle(for: PKCCrop.self), compatibleWith: UITraitCollection(displayScale: 1)), for: .normal)
+                            device.torchMode = .off
+                            device.unlockForConfiguration()
+                        } catch {
+                            print("error")
+                        }
+                    }
+                }
+                self.isLoading = false
+                
+                
             }
         }
     }
 }
+
 
 
 // MARK: - extension PKCCropPictureDelegate
@@ -471,29 +379,3 @@ extension PKCCameraViewController: PKCCropPictureDelegate{
     }
 }
 
-
-
-
-extension PKCCameraViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cameraFilters.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = self.cameraFilters[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PKCCameraFilterCell", for: indexPath) as! PKCCameraFilterCell
-        cell.img.image = row.image
-        cell.txt.text = row.name
-        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.tableCellTouch(_:))))
-        return cell
-    }
-    func tableCellTouch(_ sender: UITapGestureRecognizer){
-        if let cell = sender.view as? UITableViewCell{
-            let indexPath = self.filterTableView.indexPath(for: cell)
-            self.filterIdx = (indexPath?.row)!
-        }
-    }
-}
-extension PKCCameraViewController: UITableViewDelegate{
-    
-}

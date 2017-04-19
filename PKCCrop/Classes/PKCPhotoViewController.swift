@@ -13,9 +13,10 @@ import Photos
 class PKCPhotoViewController: UIViewController{
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBOutlet weak var exitButton: UIButton!
     
     // MARK: - properties
-    var delegate: PKCCropPictureDelegate?
+    weak var delegate: PKCCropPictureDelegate?
     var assetsFetchResults: PHFetchResult<PHAsset>!
     var imageManger: PHCachingImageManager!
     
@@ -26,12 +27,19 @@ class PKCPhotoViewController: UIViewController{
         super.init(nibName: "PKCPhotoViewController", bundle: Bundle(for: PKCCrop.self))
     }
     
+    deinit {
+        print("deinit \(self)")
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.exitButton.layer.cornerRadius = 20
+        
         self.collectionView.register(UINib(nibName: "PKCPhotoCell", bundle: Bundle(for: PKCCrop.self)), forCellWithReuseIdentifier: "PKCPhotoCell")
         self.collectionView.delegate = self
         self.collectionView.dataSource = self

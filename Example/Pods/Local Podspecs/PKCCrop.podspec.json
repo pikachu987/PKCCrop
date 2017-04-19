@@ -1,6 +1,6 @@
 {
   "name": "PKCCrop",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "summary": "Images of cameras, galleries, etc. crop",
   "description": "There are many options that can be used to easily put images into crops.",
   "homepage": "https://github.com/pikachu987/PKCCrop",
@@ -13,17 +13,12 @@
   },
   "source": {
     "git": "https://github.com/pikachu987/PKCCrop.git",
-    "tag": "0.1.1"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "PKCCrop/Classes/*",
-  "dependencies": {
-    "PKCCheck": [
-
-    ]
-  },
   "resources": "PKCCrop/**/*",
   "resource_bundles": {
     "PKCCrop": [

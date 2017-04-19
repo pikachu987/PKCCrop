@@ -8,18 +8,15 @@
 
 import Foundation
 import UIKit
-import PKCCheck
+import AVFoundation
+import Photos
 
 
 // MARK: - PKCCropDelegate
-@objc public protocol PKCCropDelegate{
-    //If this function is set to false, the setting window will not be displayed automatically when the user does not give permission. If it is set to true or not, the setting window will be automatically opened.
-    //false로 설정하면 사용자가 권한허용을 하지 않을때 설정창에 자동으로 가지 않습니다. true로 설정하면 사용자가 권한허용이 되어 있지 않을때 자동으로 설정창에 갑니다.
-    @objc optional func pkcCropAccessPermissionsChange() -> Bool
-    
+public protocol PKCCropDelegate: class{
     //Called when the pkcCropAccessPermissionsChange function is set to false and the user has not granted permission.
     //pkcCropAccessPermissionsChange 함수가 false로 설정되 있을때 사용자가 권한허용을 하지 않았을 때 호출됩니다.
-    @objc optional func pkcCropAccessPermissionsDenied()
+    func pkcCropAccessPermissionsDenied(_ type: UIImagePickerControllerSourceType)
     
     //You must put in the ViewController at this time.
     //현재 ViewController을 넣어야 합니다.
@@ -33,7 +30,7 @@ import PKCCheck
 // MARK: - PKCCropPictureDelegate
 //This is the delegate used by CropViewController, CameraViewController, and PhotoViewController.
 //CropViewController과 CameraViewController, PhotoViewController에서 사용하는 Delegate 입니다.
-protocol PKCCropPictureDelegate {
+protocol PKCCropPictureDelegate: class {
     func pkcCropPicture(_ image: UIImage)
 }
 
@@ -42,21 +39,49 @@ protocol PKCCropPictureDelegate {
 open class PKCCrop: NSObject {
     weak open var delegate: PKCCropDelegate?
     
-    fileprivate var pkcCheck: PKCCheck = PKCCheck()
-    
     // MARK: - init
     public override init() {
         super.init()
-        self.pkcCheck.delegate = self
     }
     
     
     open func cameraCrop(){
-        self.pkcCheck.cameraAccessCheck()
+        if AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) == .authorized{
+            self.openCamera()
+        }else if AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) == .denied{
+            self.delegate?.pkcCropAccessPermissionsDenied(.camera)
+        }else{
+            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo){ (isAccess) in
+                if isAccess{
+                    self.openCamera()
+                }else{
+                    self.delegate?.pkcCropAccessPermissionsDenied(.camera)
+                }
+            }
+        }
     }
+    
+    
     open func photoCrop(){
-        self.pkcCheck.photoAccessCheck()
+        if PHPhotoLibrary.authorizationStatus() == .authorized{
+            self.openPhoto()
+        }else if PHPhotoLibrary.authorizationStatus() == .denied{
+            self.delegate?.pkcCropAccessPermissionsDenied(.photoLibrary)
+        }else{
+            PHPhotoLibrary.requestAuthorization() { (status) in
+                switch status {
+                case .authorized:
+                    self.openPhoto()
+                    break
+                default:
+                    self.delegate?.pkcCropAccessPermissionsDenied(.photoLibrary)
+                }
+            }
+        }
     }
+    
+    
+    
     open func otherCrop(_ image: UIImage){
         let vc = self.delegate?.pkcCropController()
         let pkcCropViewController = PKCCropViewController()
@@ -65,20 +90,10 @@ open class PKCCrop: NSObject {
         pkcCropViewController.cropType = CropType.other
         vc?.present(pkcCropViewController, animated: true, completion: nil)
     }
-}
-
-// MARK: - extension PKCCheckDelegate
-extension PKCCrop: PKCCheckDelegate{
-    public func pkcCheckCameraPermissionDenied() {
-        let change = self.delegate?.pkcCropAccessPermissionsChange?()
-        if change == nil || change == true{
-            self.pkcCheck.permissionsChange()
-        }else{
-            self.delegate?.pkcCropAccessPermissionsDenied?()
-        }
-    }
     
-    public func pkcCheckCameraPermissionGranted() {
+    
+    
+    func openCamera(){
         let vc = self.delegate?.pkcCropController()
         let pkcCameraViewController = PKCCameraViewController()
         pkcCameraViewController.delegate = self
@@ -93,16 +108,8 @@ extension PKCCrop: PKCCheckDelegate{
         }
     }
     
-    public func pkcCheckPhotoPermissionDenied() {
-        let change = self.delegate?.pkcCropAccessPermissionsChange?()
-        if change == nil || change == true{
-            self.pkcCheck.permissionsChange()
-        }else{
-            self.delegate?.pkcCropAccessPermissionsDenied?()
-        }
-    }
     
-    public func pkcCheckPhotoPermissionGranted() {
+    func openPhoto(){
         let vc = self.delegate?.pkcCropController()
         let pkcPhotoViewController = PKCPhotoViewController()
         pkcPhotoViewController.delegate = self
@@ -119,6 +126,7 @@ extension PKCCrop: PKCCheckDelegate{
 }
 
 
+
 extension PKCCrop: PKCCropPictureDelegate{
     func pkcCropPicture(_ image: UIImage) {
         self.delegate?.pkcCropImage(image)
@@ -131,12 +139,6 @@ enum CropType{
 }
 
 
-// MARK: - Filter
-public struct Filter{
-    var name: String
-    var filter: CIFilter
-    var image: UIImage
-}
 
 public enum PKCCropType{
     //freeRate And margin possible
@@ -179,23 +181,7 @@ public enum PKCCropType{
 public class PKCCropManager{
     // MARK: - singleton
     public static let shared = PKCCropManager()
-    
-    //You can add or remove filters. If you do not insert a filter or insert only one, when you swipe on the camera screen, there is no response and the filter button disappears.
-    //필터를 넣거나 뺄수 있습니다. 만약 필터를 넣지 않거나 1개만 넣게 되면 카메라 화면에서 Swipe했을때 반응이 없고 필터버튼이 사라집니다.
-    lazy open var cameraFilters : [Filter] = {
-        var array = [Filter]()
-        array.append(Filter(name: "Normal", filter: CIFilter(name: "CIColorControls")!, image: UIImage(named: "pkc_crop_filter_nomal.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)!))
-        array.append(Filter(name: "Mono", filter: CIFilter(name: "CIPhotoEffectMono")!, image: UIImage(named: "pkc_crop_filter_mono.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)!))
-        array.append(Filter(name: "Chrome", filter: CIFilter(name: "CIPhotoEffectChrome")!, image: UIImage(named: "pkc_crop_filter_chrome.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)!))
-        array.append(Filter(name: "Fade", filter: CIFilter(name: "CIPhotoEffectFade")!, image: UIImage(named: "pkc_crop_filter_fade.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)!))
-        array.append(Filter(name: "Instant", filter: CIFilter(name: "CIPhotoEffectInstant")!, image: UIImage(named: "pkc_crop_filter_instant.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)!))
-        array.append(Filter(name: "Noir", filter: CIFilter(name: "CIPhotoEffectNoir")!, image: UIImage(named: "pkc_crop_filter_noir.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)!))
-        array.append(Filter(name: "Process", filter: CIFilter(name: "CIPhotoEffectProcess")!, image: UIImage(named: "pkc_crop_filter_process.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)!))
-        array.append(Filter(name: "Tonal", filter: CIFilter(name: "CIPhotoEffectTonal")!, image: UIImage(named: "pkc_crop_filter_tonal.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)!))
-        array.append(Filter(name: "Transfer", filter: CIFilter(name: "CIPhotoEffectTransfer")!, image: UIImage(named: "pkc_crop_filter_transfer.png", in: Bundle(for: PKCCrop.self), compatibleWith: nil)!))
-        return array
-    }()
-    
+        
     
     //Zoom the image before cropping.
     //크롭 이전에 줌을 합니다.

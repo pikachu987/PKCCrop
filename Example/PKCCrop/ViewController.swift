@@ -105,16 +105,14 @@ class ViewController: UIViewController {
 //The delegate to receive after crop.
 //crop 이후 받아오는 delegate입니다.
 extension ViewController: PKCCropDelegate{
-    func pkcCropAccessPermissionsChange() -> Bool {
-        return true
-    }
-    func pkcCropAccessPermissionsDenied() {
-        
+    func pkcCropAccessPermissionsDenied(_ type: UIImagePickerControllerSourceType) {
+        print("denied \(type)")
     }
     
     func pkcCropController() -> UIViewController {
         return self
     }
+    
     
     func pkcCropImage(_ image: UIImage) {
         self.imageView.image = image

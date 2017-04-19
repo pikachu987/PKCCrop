@@ -8,7 +8,6 @@
 
 ## example Image
 
-![image](./1.jpeg)
 ![image](./2.jpeg)
 ![image](./3.jpeg)
 ![image](./4.jpeg)
@@ -29,7 +28,6 @@ import PKCCrop
 
 ### - ViewController
 ~~~~
-import PKCCheck
 
 class ViewController: UIViewController{
   let pkcCrop = PKCCrop()
@@ -82,19 +80,6 @@ Insert the image and run the crop.
 ~~~~
 
 extension ViewController: PKCCropDelegate{
-    //If this function is set to false, 
-    //the setting window will not be 
-    //displayed automatically when the user does not give permission. 
-    //If it is set to true or not, the setting window will be automatically opened. 
-    //This feature is optional (not required).
-    //false로 설정하면 사용자가 권한허용을 하지 않을때 설정창에 자동으로 가지 않습니다. 
-    //true로 설정하면 사용자가 권한허용이 되어 있지 않을때 자동으로 설정창에 갑니다. 
-    //해당 기능은 옵셔널입니다.(필수가 아님)
-    func pkcCropAccessPermissionsChange() -> Bool {
-        return true
-    }
-    
-    
     //Called when the pkcCropAccessPermissionsChange 
     //function is set to false and the user has not granted permission.
     //This feature is optional (not required).
@@ -199,27 +184,6 @@ CropType 의 구조는 이렇게 되어 있습니다.
 
 <br>
 
-~~~~
-PKCCropManager.shared.cameraFilters
-~~~~
-
-This option is Array [Filter] and you can give a list of filters when you run the camera.
-
-해당 옵션은 Array[Filter] 이며 카메라를 실행 시켰을 때 필터 리스트를 줄 수 있습니다. 
-
-~~~~
-public struct Filter{
-    var name: String
-    var filter: CIFilter
-    var image: UIImage
-}
-~~~~
-
-The structure of the Filter is as follows.
-
-Filter의 구조는 이렇게 되어 있습니다.
-
-<br>
 
 
 ~~~~
@@ -274,11 +238,7 @@ The method sets the ratio when the ratio is Crop. The maximum difference between
 
 <br><br>
 
-## Requirements
 
-PKCCheck is automatically added.
-
-자동으로 PKCCheck가 추가됩니다.
 
 ## Installation
 

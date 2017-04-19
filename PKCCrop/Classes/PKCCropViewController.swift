@@ -11,10 +11,13 @@ import UIKit
 
 
 class PKCCropViewController: UIViewController{
-    var delegate: PKCCropPictureDelegate?
+    weak var delegate: PKCCropPictureDelegate?
     var image: UIImage!
     var imageView: UIImageView!
     var cropType: CropType!
+    
+    @IBOutlet weak var exitButton: UIButton!
+    
     
     //This is a required variable when cropping. Compares the point of the current drag to that point.
     //크롭할때 필요한 변수입니다. 현재 드래그의 포인트와 해당 포인트를 비교합니다.
@@ -102,6 +105,10 @@ class PKCCropViewController: UIViewController{
         super.init(nibName: "PKCCropViewController", bundle: Bundle(for: PKCCrop.self))
     }
     
+    deinit {
+        print("deinit \(self)")
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -117,6 +124,8 @@ class PKCCropViewController: UIViewController{
         self.mainView.layoutIfNeeded()
         self.mainView.setNeedsLayout()
         
+        self.exitButton.layer.cornerRadius = 20
+        self.crop.layer.cornerRadius = 20
         
         self.imageView = UIImageView(image: self.image)
         self.imageView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
@@ -394,7 +403,7 @@ class PKCCropViewController: UIViewController{
         self.rotateLbl.text = "\(Int(self.rotateSlider.value))˚"
         //x degree = x * π / 180 radian
         //x radian = x * 180 / π degree
-        self.imageView.transform = CGAffineTransform(rotationAngle: CGFloat(self.rotateSlider.value * Float(M_PI)/180))
+        self.imageView.transform = CGAffineTransform(rotationAngle: CGFloat(self.rotateSlider.value * Float(Double.pi)/180))
     }
     
     //Rotate the image 90 degrees to the left.

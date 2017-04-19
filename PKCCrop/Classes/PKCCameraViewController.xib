@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,12 +15,8 @@
                 <outlet property="captureBtn1" destination="agw-83-9dA" id="NWy-I8-zxn"/>
                 <outlet property="captureBtn2" destination="FXa-D2-2AM" id="6NR-vr-ZJn"/>
                 <outlet property="captureBtn3" destination="aPW-Qo-3eg" id="yBc-uO-Fm2"/>
-                <outlet property="captureView" destination="gwQ-Cv-yf5" id="KTR-gA-cyK"/>
-                <outlet property="filter" destination="RRE-WA-Yit" id="NBs-K3-dhJ"/>
-                <outlet property="filterRight" destination="9es-Lr-C4Z" id="XBo-fU-c5P"/>
-                <outlet property="filterTableView" destination="sAs-ZI-EVv" id="alO-ZY-pB9"/>
-                <outlet property="filterView" destination="cgy-0i-Tge" id="59M-z4-qxW"/>
-                <outlet property="imageView" destination="7Ye-zN-7VZ" id="Ure-HJ-ioN"/>
+                <outlet property="captureView" destination="8Lh-4D-f6D" id="0Qk-pP-fd2"/>
+                <outlet property="exitButton" destination="JEJ-uP-Rbm" id="UlH-6O-yIV"/>
                 <outlet property="light" destination="z1X-BO-pkY" id="gMv-WD-f1d"/>
                 <outlet property="mainView" destination="iN0-l3-epB" id="O0U-gd-n3h"/>
                 <outlet property="noneCaptureView" destination="F42-ir-oeQ" id="W2T-iD-s7b"/>
@@ -39,19 +35,12 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <gestureRecognizers/>
                         </view>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ye-zN-7VZ">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        </imageView>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="fNI-Bz-6fm" secondAttribute="bottom" id="61T-h3-2wH"/>
                         <constraint firstItem="fNI-Bz-6fm" firstAttribute="leading" secondItem="gwQ-Cv-yf5" secondAttribute="leading" id="Foz-ck-WSY"/>
-                        <constraint firstItem="7Ye-zN-7VZ" firstAttribute="top" secondItem="gwQ-Cv-yf5" secondAttribute="top" id="KBq-AT-HPc"/>
                         <constraint firstAttribute="trailing" secondItem="fNI-Bz-6fm" secondAttribute="trailing" id="bIC-r5-v5g"/>
-                        <constraint firstItem="7Ye-zN-7VZ" firstAttribute="leading" secondItem="gwQ-Cv-yf5" secondAttribute="leading" id="dL3-oO-WhF"/>
-                        <constraint firstAttribute="trailing" secondItem="7Ye-zN-7VZ" secondAttribute="trailing" id="iV9-mQ-4af"/>
                         <constraint firstItem="fNI-Bz-6fm" firstAttribute="top" secondItem="gwQ-Cv-yf5" secondAttribute="top" id="nm9-dU-iFR"/>
-                        <constraint firstAttribute="bottom" secondItem="7Ye-zN-7VZ" secondAttribute="bottom" id="y9c-Ve-bFs"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F42-ir-oeQ">
@@ -66,11 +55,6 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                             <state key="normal" image="pkc_crop_exit.png"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="20"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="backAction:" destination="-1" eventType="touchUpInside" id="XrX-eq-bza"/>
                             </connections>
@@ -105,11 +89,6 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agw-83-9dA">
                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="30"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="captureAction:" destination="-1" eventType="touchUpInside" id="kjw-hQ-YM9"/>
                                         <action selector="captureTouchDown:" destination="-1" eventType="touchDown" id="6oi-BC-cyh"/>
@@ -119,11 +98,6 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXa-D2-2AM">
                                     <rect key="frame" x="5" y="5" width="50" height="50"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="25"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="captureAction:" destination="-1" eventType="touchUpInside" id="2hi-Kn-52b"/>
                                         <action selector="captureTouchDown:" destination="-1" eventType="touchDown" id="nnk-8c-KyR"/>
@@ -133,11 +107,6 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPW-Qo-3eg">
                                     <rect key="frame" x="10" y="10" width="40" height="40"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="20"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="captureAction:" destination="-1" eventType="touchUpInside" id="6df-bD-4jH"/>
                                         <action selector="captureTouchDown:" destination="-1" eventType="touchDown" id="LgS-JU-TTT"/>
@@ -162,90 +131,20 @@
                                 <constraint firstItem="FXa-D2-2AM" firstAttribute="top" secondItem="8Lh-4D-f6D" secondAttribute="top" constant="5" id="woO-QC-H9h"/>
                                 <constraint firstAttribute="trailing" secondItem="FXa-D2-2AM" secondAttribute="trailing" constant="5" id="y24-Ab-zVh"/>
                             </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="30"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRE-WA-Yit">
-                            <rect key="frame" x="325" y="30" width="40" height="40"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="40" id="1Xf-lX-I7T"/>
-                                <constraint firstAttribute="height" constant="40" id="gpx-UE-WBF"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                            <state key="normal" image="pkc_crop_filter.png"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="20"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="filterAction:" destination="-1" eventType="touchUpInside" id="CJT-67-blj"/>
-                            </connections>
-                        </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgy-0i-Tge">
-                            <rect key="frame" x="375" y="0.0" width="100" height="667"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pkc_crop_filter_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="14g-0U-fxu">
-                                    <rect key="frame" x="0.0" y="0.0" width="30" height="667"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="aqg-PB-JmM"/>
-                                    </constraints>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQy-ah-NLh">
-                                    <rect key="frame" x="0.0" y="0.0" width="30" height="667"/>
-                                    <gestureRecognizers/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="eKo-xC-maa"/>
-                                    </constraints>
-                                    <connections>
-                                        <action selector="filterCloseAction:" destination="-1" eventType="touchUpInside" id="OOy-Mt-4JV"/>
-                                        <outletCollection property="gestureRecognizers" destination="9MJ-lt-HYI" appends="YES" id="8vQ-S2-qip"/>
-                                    </connections>
-                                </button>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sAs-ZI-EVv">
-                                    <rect key="frame" x="30" y="0.0" width="70" height="667"/>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </tableView>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="14g-0U-fxu" firstAttribute="top" secondItem="cgy-0i-Tge" secondAttribute="top" id="1KF-u7-Woh"/>
-                                <constraint firstItem="sAs-ZI-EVv" firstAttribute="leading" secondItem="JQy-ah-NLh" secondAttribute="trailing" id="5Y3-MS-7oW"/>
-                                <constraint firstItem="14g-0U-fxu" firstAttribute="leading" secondItem="cgy-0i-Tge" secondAttribute="leading" id="Fj8-a0-Kai"/>
-                                <constraint firstAttribute="bottom" secondItem="14g-0U-fxu" secondAttribute="bottom" id="Oo5-eR-PTi"/>
-                                <constraint firstAttribute="bottom" secondItem="JQy-ah-NLh" secondAttribute="bottom" id="RzD-ea-HCz"/>
-                                <constraint firstItem="JQy-ah-NLh" firstAttribute="leading" secondItem="cgy-0i-Tge" secondAttribute="leading" id="VX8-Cn-BSq"/>
-                                <constraint firstItem="JQy-ah-NLh" firstAttribute="top" secondItem="cgy-0i-Tge" secondAttribute="top" id="dfH-mX-DPM"/>
-                                <constraint firstItem="sAs-ZI-EVv" firstAttribute="top" secondItem="cgy-0i-Tge" secondAttribute="top" id="k4x-HR-45t"/>
-                                <constraint firstAttribute="bottom" secondItem="sAs-ZI-EVv" secondAttribute="bottom" id="nY7-v6-qJZ"/>
-                                <constraint firstAttribute="trailing" secondItem="sAs-ZI-EVv" secondAttribute="trailing" id="u1e-HP-bdA"/>
-                                <constraint firstAttribute="width" constant="100" id="wlJ-iP-HCQ"/>
-                            </constraints>
                         </view>
                     </subviews>
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="n7l-fm-g0u" secondAttribute="bottom" constant="20" id="5Na-2i-dK5"/>
                         <constraint firstAttribute="bottom" secondItem="z1X-BO-pkY" secondAttribute="bottom" constant="20" id="8Jt-Uj-keT"/>
-                        <constraint firstAttribute="trailing" secondItem="cgy-0i-Tge" secondAttribute="trailing" constant="-100" id="9es-Lr-C4Z"/>
                         <constraint firstItem="z1X-BO-pkY" firstAttribute="leading" secondItem="F42-ir-oeQ" secondAttribute="leading" constant="30" id="BAo-HS-gJ2"/>
                         <constraint firstAttribute="bottom" secondItem="8Lh-4D-f6D" secondAttribute="bottom" constant="10" id="DQB-Ua-bee"/>
-                        <constraint firstAttribute="bottom" secondItem="cgy-0i-Tge" secondAttribute="bottom" id="ReU-RT-uyx"/>
-                        <constraint firstItem="cgy-0i-Tge" firstAttribute="top" secondItem="F42-ir-oeQ" secondAttribute="top" id="TWp-aN-b7h"/>
                         <constraint firstAttribute="trailing" secondItem="n7l-fm-g0u" secondAttribute="trailing" constant="30" id="W7j-03-mCr"/>
                         <constraint firstItem="JEJ-uP-Rbm" firstAttribute="leading" secondItem="F42-ir-oeQ" secondAttribute="leading" constant="10" id="WBz-aS-v3S"/>
-                        <constraint firstAttribute="trailing" secondItem="RRE-WA-Yit" secondAttribute="trailing" constant="10" id="Wge-3n-gGl"/>
                         <constraint firstItem="JEJ-uP-Rbm" firstAttribute="top" secondItem="F42-ir-oeQ" secondAttribute="top" constant="30" id="ggS-hI-9fp"/>
-                        <constraint firstItem="RRE-WA-Yit" firstAttribute="top" secondItem="F42-ir-oeQ" secondAttribute="top" constant="30" id="j24-gW-tit"/>
                         <constraint firstItem="8Lh-4D-f6D" firstAttribute="centerX" secondItem="F42-ir-oeQ" secondAttribute="centerX" id="ySn-ZR-3rO"/>
                     </constraints>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="fSQ-Ud-pwY" appends="YES" id="zuk-TU-jBy"/>
-                        <outletCollection property="gestureRecognizers" destination="UA0-iU-ocs" appends="YES" id="3o1-Sl-lmJ"/>
                         <outletCollection property="gestureRecognizers" destination="LlX-vz-BPd" appends="YES" id="Htb-vA-s7J"/>
                     </connections>
                 </view>
@@ -263,31 +162,14 @@
             </constraints>
             <point key="canvasLocation" x="33.5" y="68.5"/>
         </view>
-        <swipeGestureRecognizer direction="right" id="UA0-iU-ocs">
-            <connections>
-                <action selector="leftGestureAction:" destination="-1" id="UnJ-Ci-dk9"/>
-            </connections>
-        </swipeGestureRecognizer>
-        <swipeGestureRecognizer direction="left" id="fSQ-Ud-pwY">
-            <connections>
-                <action selector="rightGestureAction:" destination="-1" id="Z2J-cQ-YLB"/>
-            </connections>
-        </swipeGestureRecognizer>
         <tapGestureRecognizer id="LlX-vz-BPd">
             <connections>
                 <action selector="imageTouchAction:" destination="-1" id="s6k-NQ-yCG"/>
             </connections>
         </tapGestureRecognizer>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="9MJ-lt-HYI">
-            <connections>
-                <action selector="filterGestureAction:" destination="-1" id="Avn-5J-H5P"/>
-            </connections>
-        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="pkc_crop_exit.png" width="100" height="100"/>
-        <image name="pkc_crop_filter.png" width="128" height="128"/>
-        <image name="pkc_crop_filter_arrow.png" width="96" height="96"/>
         <image name="pkc_crop_light_off.png" width="100" height="100"/>
         <image name="pkc_crop_reverse.png" width="64" height="64"/>
     </resources>
