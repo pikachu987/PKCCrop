@@ -10,19 +10,21 @@ import UIKit
 import PKCCrop
 
 class ViewController: UIViewController {
-    let pkcCrop = PKCCrop()
     
+    @IBOutlet fileprivate weak var imageView: UIImageView!
+    @IBOutlet fileprivate weak var widthConst: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var heightConst: NSLayoutConstraint!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.pkcCrop.delegate = self
+        self.title = "PKCCrop"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.cropAction(_:)))
         
-        
-        let _ = PKCCropManager.shared.setRate(rateWidth: 16, rateHeight: 9)
-        PKCCropManager.shared.cropType = .rateAndRotate
-        PKCCropManager.shared.isZoomAnimation = false
-        PKCCropManager.shared.isZoom = false
+        DispatchQueue.main.async {
+            self.cropAction()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,271 +32,74 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func cameraAction(_ sender: Any) {
-        self.pkcCrop.cameraCrop()
-        self.imageView.image = nil
-    }
-    @IBAction func galleryAction(_ sender: Any) {
-        self.pkcCrop.photoCrop()
-        self.imageView.image = nil
-    }
-    @IBAction func otherAction(_ sender: Any) {
-        self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-        self.imageView.image = nil
+    
+    @objc private func cropAction(_ sender: UIBarButtonItem){
+        self.cropAction()
     }
     
-    
-    
-    
-    //Test
-    //test입니다.
-    @IBOutlet var detailTestTableView: UITableView!
-    @IBOutlet var imageView: UIImageView!
-    var testArray : [[String]] = [
-        [
-            "free rate And margin Camera(자율크롭과 공백있게 카메라)",
-            "free rate And margin Photo(자율크롭과 공백있게 사진)",
-            "free rate And margin Other1(자율크롭과 공백있게 기타1)",
-            "free rate And margin Other2(자율크롭과 공백있게 기타2)"
-        ],[
-            "free rate And none margin Camera(자율크롭과 공백없게 카메라)",
-            "free rate And none margin Photo(자율크롭과 공백없게 사진)",
-            "free rate And none margin Other1(자율크롭과 공백없게 기타1)",
-            "free rate And none margin Other2(자율크롭과 공백없게 기타2)",
-            ],[
-                "free rate And rotate Camera(자율크롭과 회전 카메라)",
-                "free rate And rotate Photo(자율크롭과 회전 사진)",
-                "free rate And rotate Other1(자율크롭과 회전 기타1)",
-                "free rate And rotate Other2(자율크롭과 회전 기타2)"
-        ],[
-            "rate And margin Camera(비율크롭과 공백있게 카메라)",
-            "rate And margin Photo(비율크롭과 공백있게 사진)",
-            "rate And margin Other1(비율크롭과 공백있게 기타1)",
-            "rate And margin Other2(비율크롭과 공백있게 기타2)",
-            ],[
-                "rate And none margin Camera(비율크롭과 공백없게 카메라)",
-                "rate And none margin Photo(비율크롭과 공백없게 사진)",
-                "rate And none margin Other1(비율크롭과 공백없게 기타1)",
-                "rate And none margin Other2(비율크롭과 공백없게 기타2)",
-                ],[
-                    "rate And rotate Camera(비율크롭과 회전 카메라)",
-                    "rate And rotate Photo(비율크롭과 회전 사진)",
-                    "rate And rotate Other1(비율크롭과 회전 기타1)",
-                    "rate And rotate Other2(비율크롭과 회전 기타2)"
-        ],[
-            "rate And margin circle Camera(비율크롭과 공백있는 동그라미 크롭 카메라)",
-            "rate And margin circle Photo(비율크롭과 공백있는 동그라미 크롭 사진)",
-            "rate And margin circle Other1(비율크롭과 공백있는 동그라미 크롭 기타1)",
-            "rate And margin circle Other2(비율크롭과 공백있는 동그라미 크롭 기타2)",
-            ],[
-                "rate And none margin circle Camera(비율크롭과 공백없는 동그라미 크롭 카메라)",
-                "rate And none margin circle Photo(비율크롭과 공백없는 동그라미 크롭 사진)",
-                "rate And none margin circle Other1(비율크롭과 공백없는 동그라미 크롭 기타1)",
-                "rate And none margin circle Other2(비율크롭과 공백없는 동그라미 크롭 기타2)",
-                ],[
-                    "rate And rotate circle Camera(비율크롭과 회전 동그라미 크롭 카메라)",
-                    "rate And rotate circle Photo(비율크롭과 회전 동그라미 크롭 사진)",
-                    "rate And rotate circle Other1(비율크롭과 회전 동그라미 크롭 기타1)",
-                    "rate And rotate circle Other2(비율크롭과 회전 동그라미 크롭 기타2)"
-        ]
-    ]
+    private func cropAction(){
+        let alertController = UIAlertController(title: "", message: "choice type", preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Open Gallery", style: .default, handler: { (_) in
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+                let imagePickerController = UIImagePickerController()
+                imagePickerController.delegate = self
+                imagePickerController.sourceType = .photoLibrary
+                self.present(imagePickerController, animated: true, completion: nil)
+            }
+        }))
+        alertController.addAction(UIAlertAction(title: "Image 1", style: .default, handler: { (_) in
+            PKCCropHelper.shared.isNavigationBarShow = false
+            let cropVC = PKCCrop().cropViewController(UIImage(named: "image.jpeg")!)
+            cropVC.delegate = self
+            self.navigationController?.pushViewController(cropVC, animated: true)
+        }))
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
 
 
 
-//The delegate to receive after crop.
-//crop 이후 받아오는 delegate입니다.
 extension ViewController: PKCCropDelegate{
-    func pkcCropAccessPermissionsDenied(_ type: UIImagePickerControllerSourceType) {
-        print("denied \(type)")
-    }
-    
-    func pkcCropController() -> UIViewController {
-        return self
-    }
-    
-    
-    func pkcCropImage(_ image: UIImage) {
+    //return Crop Image & Original Image
+    func pkcCropImage(_ image: UIImage?, originalImage: UIImage?) {
+        if let image = image{
+            self.widthConst.constant = image.size.width
+            self.heightConst.constant = image.size.height
+        }
         self.imageView.image = image
     }
-}
-
-
-
-
-
-//detail test
-extension ViewController: UITableViewDataSource{
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 9
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.testArray[section].count
+    
+    //If crop is canceled
+    func pkcCropCancel(_ viewController: PKCCropViewController) {
+        viewController.navigationController?.popViewController(animated: true)
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0{
-            return "free rate And margin(자유비율크롭 공백있게)"
-        }else if section == 1{
-            return "free rate And none margin(자유비율크롭 공백없게)"
-        }else if section == 2{
-            return "free rate And rotate margin(자유비율크롭 회전)"
-        }else if section == 3{
-            return "rate And margin(비율크롭 공백있게)"
-        }else if section == 4{
-            return "rate And none margin(비율크롭 공백없게)"
-        }else if section == 5{
-            return "rate And rotate margin(비율크롭 회전)"
-        }else if section == 6{
-            return "rate And margin circle(비율크롭 공백있게 원)"
-        }else if section == 7{
-            return "free rate And none margin circle(비율크롭 공백없게 원)"
+    //Successful crop
+    func pkcCropComplete(_ viewController: PKCCropViewController) {
+        if viewController.tag == 0{
+            viewController.navigationController?.popViewController(animated: true)
         }else{
-            return "free rate And rotate circle(비율크롭 회전 원)"
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = self.testArray[indexPath.section][indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath)
-        cell.textLabel?.text = row
-        return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.imageView.image = nil
-        _ = PKCCropManager.shared.setRate(rateWidth: 1, rateHeight: 1)
-        PKCCropManager.shared.isZoom = false
-        
-        if indexPath.section == 0{
-            if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .freeRateAndMargin
-                self.pkcCrop.cameraCrop()
-            }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .freeRateAndMargin
-                self.pkcCrop.photoCrop()
-            }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .freeRateAndMargin
-                self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-            }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .freeRateAndMargin
-                self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
-            }
-        }else if indexPath.section == 1{
-            if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .freeRateAndNoneMargin
-                self.pkcCrop.cameraCrop()
-            }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .freeRateAndNoneMargin
-                self.pkcCrop.photoCrop()
-            }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .freeRateAndNoneMargin
-                self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-            }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .freeRateAndNoneMargin
-                self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
-            }
-        }else if indexPath.section == 2{
-            if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .freeRateAndRotate
-                self.pkcCrop.cameraCrop()
-            }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .freeRateAndRotate
-                self.pkcCrop.photoCrop()
-            }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .freeRateAndRotate
-                self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-            }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .freeRateAndRotate
-                self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
-            }
-        }else if indexPath.section == 3{
-            if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .rateAndMargin
-                self.pkcCrop.cameraCrop()
-            }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .rateAndMargin
-                self.pkcCrop.photoCrop()
-            }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .rateAndMargin
-                self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-            }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .rateAndMargin
-                self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
-            }
-        }else if indexPath.section == 4{
-            if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .rateAndNoneMargin
-                self.pkcCrop.cameraCrop()
-            }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .rateAndNoneMargin
-                self.pkcCrop.photoCrop()
-            }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .rateAndNoneMargin
-                self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-            }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .rateAndNoneMargin
-                self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
-            }
-        }else if indexPath.section == 5{
-            if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .rateAndRotate
-                self.pkcCrop.cameraCrop()
-            }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .rateAndRotate
-                self.pkcCrop.photoCrop()
-            }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .rateAndRotate
-                self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-            }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .rateAndRotate
-                self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
-            }
-        }else if indexPath.section == 6{
-            if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .rateAndMarginCircle
-                self.pkcCrop.cameraCrop()
-            }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .rateAndMarginCircle
-                self.pkcCrop.photoCrop()
-            }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .rateAndMarginCircle
-                self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-            }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .rateAndMarginCircle
-                self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
-            }
-        }else if indexPath.section == 7{
-            if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .rateAndNoneMarginCircle
-                self.pkcCrop.cameraCrop()
-            }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .rateAndNoneMarginCircle
-                self.pkcCrop.photoCrop()
-            }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .rateAndNoneMarginCircle
-                self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-            }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .rateAndNoneMarginCircle
-                self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
-            }
-        }else if indexPath.section == 8{
-            if indexPath.row == 0{
-                PKCCropManager.shared.cropType = .rateAndRotateCircle
-                self.pkcCrop.cameraCrop()
-            }else if indexPath.row == 1{
-                PKCCropManager.shared.cropType = .rateAndRotateCircle
-                self.pkcCrop.photoCrop()
-            }else if indexPath.row == 2{
-                PKCCropManager.shared.cropType = .rateAndRotateCircle
-                self.pkcCrop.otherCrop(UIImage(named: "test1.png")!)
-            }else if indexPath.row == 3{
-                PKCCropManager.shared.cropType = .rateAndRotateCircle
-                self.pkcCrop.otherCrop(UIImage(named: "test2.png")!)
-            }
+            viewController.dismiss(animated: true, completion: nil)
         }
     }
 }
-extension ViewController: UITableViewDelegate{
+
+
+
+
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else{
+            return
+        }
+        PKCCropHelper.shared.isNavigationBarShow = true
+        let cropVC = PKCCrop().cropViewController(image, tag: 1)
+        cropVC.delegate = self
+        picker.pushViewController(cropVC, animated: true)
+    }
 }
-
-
