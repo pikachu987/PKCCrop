@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,8 +13,6 @@
             <connections>
                 <outlet property="cropLineView" destination="s3o-CZ-FSI" id="whU-eD-tVU"/>
                 <outlet property="maskView" destination="2yD-j9-UbT" id="VJn-kc-B9S"/>
-                <outlet property="rotateLeftBarButtonItem" destination="oq4-yF-LkD" id="xqM-p0-OTD"/>
-                <outlet property="rotateRightBarButtonItem" destination="2XZ-3S-K6V" id="cNO-Pk-zWb"/>
                 <outlet property="scrollBottomConst" destination="mtf-mK-ceZ" id="lfq-m8-WDI"/>
                 <outlet property="scrollLeadingConst" destination="fY0-Cr-Tn7" id="ajM-In-EOw"/>
                 <outlet property="scrollTopConst" destination="Juu-4F-tsB" id="XMc-mb-wyv"/>
@@ -44,31 +43,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="jha-vs-02k"/>
                     </constraints>
-                    <items>
-                        <barButtonItem systemItem="cancel" id="WS5-4m-aRr">
-                            <connections>
-                                <action selector="cancelAction:" destination="-1" id="7bG-8x-jGc"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iSJ-7k-5XO"/>
-                        <barButtonItem image="pkc_crop_rotate_left.png" id="oq4-yF-LkD">
-                            <connections>
-                                <action selector="rotateLeftAction:" destination="-1" id="DTm-xE-F26"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="zcU-66-1CV"/>
-                        <barButtonItem image="pkc_crop_rotate_right.png" id="2XZ-3S-K6V">
-                            <connections>
-                                <action selector="rotateRightAction:" destination="-1" id="bkj-OA-sOy"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="XHP-rT-AHT"/>
-                        <barButtonItem systemItem="done" id="J9X-av-dhd">
-                            <connections>
-                                <action selector="doneAction:" destination="-1" id="Y1C-nP-AIf"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
+                    <items/>
                 </toolbar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,8 +68,4 @@
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="pkc_crop_rotate_left.png" width="96" height="96"/>
-        <image name="pkc_crop_rotate_right.png" width="96" height="96"/>
-    </resources>
 </document>

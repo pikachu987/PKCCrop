@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -212,52 +212,48 @@
                         <action selector="touchUpAction:forEvent:" destination="-1" eventType="touchUpInside" id="i7K-rW-T33"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHg-bw-M42">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHg-bw-M42" customClass="PKCButton" customModule="PKCCrop" customModuleProvider="target">
                     <rect key="frame" x="48" y="48" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="gI7-zl-E2y"/>
                         <constraint firstAttribute="height" constant="40" id="xzQ-tJ-ptA"/>
                     </constraints>
-                    <state key="normal" image="pkc_crop_top_left.png"/>
                     <connections>
                         <action selector="leftTopDragAction:forEvent:" destination="-1" eventType="touchDragInside" id="wKu-c8-o8k"/>
                         <action selector="touchDownAction:forEvent:" destination="-1" eventType="touchDown" id="13R-oF-P6R"/>
                         <action selector="touchUpAction:forEvent:" destination="-1" eventType="touchUpInside" id="fom-za-MlZ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHM-MP-ko4">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHM-MP-ko4" customClass="PKCButton" customModule="PKCCrop" customModuleProvider="target">
                     <rect key="frame" x="212" y="48" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="0hW-v2-XZn"/>
                         <constraint firstAttribute="height" constant="40" id="1yG-5Z-6EW"/>
                     </constraints>
-                    <state key="normal" image="pkc_crop_top_right.png"/>
                     <connections>
                         <action selector="rightTopDragAction:forEvent:" destination="-1" eventType="touchDragInside" id="FKV-BU-e38"/>
                         <action selector="touchDownAction:forEvent:" destination="-1" eventType="touchDown" id="6yj-w7-G80"/>
                         <action selector="touchUpAction:forEvent:" destination="-1" eventType="touchUpInside" id="uma-fi-Dbe"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cju-Y0-kMc">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cju-Y0-kMc" customClass="PKCButton" customModule="PKCCrop" customModuleProvider="target">
                     <rect key="frame" x="48" y="212" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="Ejg-j9-vhM"/>
                         <constraint firstAttribute="height" constant="40" id="Zyg-X8-kCs"/>
                     </constraints>
-                    <state key="normal" image="pkc_crop_bottom_left.png"/>
                     <connections>
                         <action selector="leftBottomDragAction:forEvent:" destination="-1" eventType="touchDragInside" id="o3W-tg-SDd"/>
                         <action selector="touchDownAction:forEvent:" destination="-1" eventType="touchDown" id="JxD-Pg-xk4"/>
                         <action selector="touchUpAction:forEvent:" destination="-1" eventType="touchUpInside" id="0IP-y1-mpX"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-px-seb">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-px-seb" customClass="PKCButton" customModule="PKCCrop" customModuleProvider="target">
                     <rect key="frame" x="212" y="212" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="0Lk-5G-YRh"/>
                         <constraint firstAttribute="height" constant="40" id="NMc-mw-gBI"/>
                     </constraints>
-                    <state key="normal" image="pkc_crop_bottom_right.png"/>
                     <connections>
                         <action selector="rightBottomDragAction:forEvent:" destination="-1" eventType="touchDragInside" id="aXO-RB-5fb"/>
                         <action selector="touchDownAction:forEvent:" destination="-1" eventType="touchDown" id="r64-7T-LbX"/>
@@ -349,10 +345,4 @@
             <point key="canvasLocation" x="33.5" y="178.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="pkc_crop_bottom_left.png" width="96" height="96"/>
-        <image name="pkc_crop_bottom_right.png" width="96" height="96"/>
-        <image name="pkc_crop_top_left.png" width="96" height="96"/>
-        <image name="pkc_crop_top_right.png" width="96" height="96"/>
-    </resources>
 </document>

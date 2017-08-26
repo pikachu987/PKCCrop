@@ -33,10 +33,10 @@ class PKCCropLineView: UIView {
     @IBOutlet private weak var lineView: UIView!
     @IBOutlet private weak var subLineView: UIView!
 
-    @IBOutlet private weak var leftTopButton: UIButton!
-    @IBOutlet private weak var leftBottomButton: UIButton!
-    @IBOutlet private weak var rightTopButton: UIButton!
-    @IBOutlet private weak var rightBottomButton: UIButton!
+    @IBOutlet private weak var leftTopButton: PKCButton!
+    @IBOutlet private weak var leftBottomButton: PKCButton!
+    @IBOutlet private weak var rightTopButton: PKCButton!
+    @IBOutlet private weak var rightBottomButton: PKCButton!
     @IBOutlet private weak var topButton: UIButton!
     @IBOutlet private weak var bottomTopButton: UIButton!
     @IBOutlet private weak var leftButton: UIButton!
@@ -92,6 +92,13 @@ class PKCCropLineView: UIView {
 
         self.minHeightConst.constant = PKCCropHelper.shared.minSize
         self.minWidthConst.constant = PKCCropHelper.shared.minSize
+        
+        DispatchQueue.main.async{
+            self.leftTopButton.leftTop()
+            self.rightTopButton.rightTop()
+            self.leftBottomButton.leftBottom()
+            self.rightBottomButton.rightBottom()
+        }
     }
 
 

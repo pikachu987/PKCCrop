@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C9BAADC1F518EB3001AA9AA /* image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BAADB1F518EB3001AA9AA /* image.jpeg */; };
+		0C9BAAFE1F51B253001AA9AA /* pkc_crop_rotate_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BAAFC1F51B253001AA9AA /* pkc_crop_rotate_left.png */; };
+		0C9BAAFF1F51B253001AA9AA /* pkc_crop_rotate_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BAAFD1F51B253001AA9AA /* pkc_crop_rotate_right.png */; };
 		2267FE0C8CA06EB5F4D6DD89 /* Pods_PKCCrop_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE0F253F3F08D0486B6E23C /* Pods_PKCCrop_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		0625E1157C5624CA25C2B820 /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9BAADB1F518EB3001AA9AA /* image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpeg; sourceTree = "<group>"; };
+		0C9BAAFC1F51B253001AA9AA /* pkc_crop_rotate_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pkc_crop_rotate_left.png; sourceTree = "<group>"; };
+		0C9BAAFD1F51B253001AA9AA /* pkc_crop_rotate_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pkc_crop_rotate_right.png; sourceTree = "<group>"; };
 		0EFDAA7E952D8270E2528C01 /* Pods-PKCCrop_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PKCCrop_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PKCCrop_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		607FACD21AFB9204008FA782 /* Example for PKCCrop */ = {
 			isa = PBXGroup;
 			children = (
+				0C9BAAFC1F51B253001AA9AA /* pkc_crop_rotate_left.png */,
+				0C9BAAFD1F51B253001AA9AA /* pkc_crop_rotate_right.png */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				0C9BAADB1F518EB3001AA9AA /* image.jpeg */,
@@ -253,7 +259,9 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				0C9BAADC1F518EB3001AA9AA /* image.jpeg in Resources */,
+				0C9BAAFE1F51B253001AA9AA /* pkc_crop_rotate_left.png in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				0C9BAAFF1F51B253001AA9AA /* pkc_crop_rotate_right.png in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,9 @@
 ![image](./image2.png)
 ![image](./image3.png)
 
+![image](./pkc_crop_rotate_left.png)
+![image](./pkc_crop_rotate_right.png)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -24,6 +27,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ### - ViewController
 ~~~~
 
+PKCCropHelper.shared.degressBeforeImage = UIImage(named: "pkc_crop_rotate_left.png")
+PKCCropHelper.shared.degressAfterImage = UIImage(named: "pkc_crop_rotate_right.png")
 PKCCropHelper.shared.isNavigationBarShow = false
 let cropVC = PKCCrop().cropViewController(UIImage(named: "image.jpeg")!)
 cropVC.delegate = self
@@ -39,24 +44,26 @@ self.present(cropVC, animated: true, completion: nil)
 ~~~~
 
 extension ViewController: PKCCropDelegate{
-//return Crop Image & Original Image
-func pkcCropImage(_ image: UIImage?, originalImage: UIImage?) {
 
-}
+    //return Crop Image & Original Image
+    func pkcCropImage(_ image: UIImage?, originalImage: UIImage?) {
 
-//If crop is canceled
-func pkcCropCancel(_ viewController: PKCCropViewController) {
-viewController.navigationController?.popViewController(animated: true)
-}
+    }
 
-//Successful crop
-func pkcCropComplete(_ viewController: PKCCropViewController) {
-if viewController.tag == 0{
-viewController.navigationController?.popViewController(animated: true)
-}else{
-viewController.dismiss(animated: true, completion: nil)
-}
-}
+    //If crop is canceled
+    func pkcCropCancel(_ viewController: PKCCropViewController) {
+        viewController.navigationController?.popViewController(animated: true)
+    }
+
+    //Successful crop
+    func pkcCropComplete(_ viewController: PKCCropViewController) {
+        if viewController.tag == 0{
+            viewController.navigationController?.popViewController(animated: true)
+        }else{
+            viewController.dismiss(animated: true, completion: nil)
+        }
+    }
+
 }
 
 ~~~~

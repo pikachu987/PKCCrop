@@ -18,11 +18,5 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "PKCCrop/Classes/*",
-  "resources": "PKCCrop/**/*",
-  "resource_bundles": {
-    "PKCCrop": [
-      "PKCCrop/Assets/*.png"
-    ]
-  }
+  "source_files": "PKCCrop/Classes/*"
 }

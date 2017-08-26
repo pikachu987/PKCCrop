@@ -44,9 +44,7 @@ public class PKCCropViewController: UIViewController {
 
     @IBOutlet fileprivate weak var cropLineView: PKCCropLineView!
     @IBOutlet fileprivate weak var maskView: UIView!
-    @IBOutlet private weak var rotateLeftBarButtonItem: UIBarButtonItem!
-    @IBOutlet private weak var rotateRightBarButtonItem: UIBarButtonItem!
-
+    
     private var imageRotateRate: Float = 0
 
     init(_ image: UIImage, tag: Int = 0) {
@@ -114,15 +112,39 @@ public class PKCCropViewController: UIViewController {
         self.scrollView.delegate = self
         self.scrollView.showsVerticalScrollIndicator = false
         self.scrollView.showsHorizontalScrollIndicator = false
-
-        self.rotateLeftBarButtonItem.image = UIImage(named: "pkc_crop_rotate_left.png", in: Bundle.init(for: PKCCrop.self), compatibleWith: nil)?.resize(CGSize(width: 24, height: 24))
-        self.rotateRightBarButtonItem.image = UIImage(named: "pkc_crop_rotate_right.png", in: Bundle.init(for: PKCCrop.self), compatibleWith: nil)?.resize(CGSize(width: 24, height: 24))
-
+        
         self.toolBar.barTintColor = PKCCropHelper.shared.barTintColor
         self.toolBar.backgroundColor = .white
         self.toolBar.items?.forEach({ (item) in
             item.tintColor = PKCCropHelper.shared.tintColor
         })
+        
+        var barButtonItems = [UIBarButtonItem]()
+        
+        barButtonItems.append(UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.cancelAction(_:))))
+        if !PKCCropHelper.shared.isDegressShow{
+            barButtonItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil))
+        }else{
+            barButtonItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil))
+            
+            if let image = PKCCropHelper.shared.degressBeforeImage{
+                barButtonItems.append(UIBarButtonItem(image: image.resize(CGSize(width: 24, height: 24)), style: .done, target: self, action: #selector(self.rotateLeftAction(_:))))
+            }else{
+                barButtonItems.append(UIBarButtonItem(title: "-90 Degress", style: .done, target: self, action: #selector(self.rotateLeftAction(_:))))
+            }
+            
+            barButtonItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil))
+            
+            if let image = PKCCropHelper.shared.degressAfterImage{
+                barButtonItems.append(UIBarButtonItem(image: image.resize(CGSize(width: 24, height: 24)), style: .done, target: self, action: #selector(self.rotateRightAction(_:))))
+            }else{
+                barButtonItems.append(UIBarButtonItem(title: "90 Degress", style: .done, target: self, action: #selector(self.rotateRightAction(_:))))
+            }
+            
+            barButtonItems.append(UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil))
+        }
+        barButtonItems.append(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.doneAction(_:))))
+        self.toolBar.setItems(barButtonItems, animated: true)
     }
 
 
@@ -169,11 +191,11 @@ public class PKCCropViewController: UIViewController {
 
 
 
-    @IBAction private func cancelAction(_ sender: UIBarButtonItem) {
+    @objc private func cancelAction(_ sender: UIBarButtonItem) {
         self.delegate?.pkcCropCancel(self)
     }
 
-    @IBAction private func doneAction(_ sender: UIBarButtonItem) {
+    @objc private func doneAction(_ sender: UIBarButtonItem) {
         let cropSize = self.cropLineView.cropSize()
         let captureRect = CGRect(
             x: -cropSize.origin.x+2,
@@ -193,7 +215,7 @@ public class PKCCropViewController: UIViewController {
     }
 
 
-    @IBAction private func rotateLeftAction(_ sender: UIBarButtonItem) {
+    @objc private func rotateLeftAction(_ sender: UIBarButtonItem) {
         guard let image = self.imageView.image?.imageRotatedByDegrees(-90, flip: false) else {
             return
         }
@@ -201,7 +223,7 @@ public class PKCCropViewController: UIViewController {
     }
 
     
-    @IBAction private func rotateRightAction(_ sender: UIBarButtonItem) {
+    @objc private func rotateRightAction(_ sender: UIBarButtonItem) {
         guard let image = self.imageView.image?.imageRotatedByDegrees(90, flip: false) else {
             return
         }

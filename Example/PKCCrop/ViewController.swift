@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         self.title = "PKCCrop"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.cropAction(_:)))
         
+        PKCCropHelper.shared.degressBeforeImage = UIImage(named: "pkc_crop_rotate_left.png")
+        PKCCropHelper.shared.degressAfterImage = UIImage(named: "pkc_crop_rotate_right.png")
+        
         DispatchQueue.main.async {
             self.cropAction()
         }
