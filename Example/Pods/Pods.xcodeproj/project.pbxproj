@@ -11,6 +11,7 @@
 		06F4260DED73C3E09128E596CCA89BEB /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91A0212CBC0AB9B20E3155073DF7E8 /* UIImageView+.swift */; };
 		0720F27D6FD8A5546338821B6C1E6D85 /* pkc_crop_rotate_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 93E22571D4BBA52240C9E2C569CCB82A /* pkc_crop_rotate_right.png */; };
 		0970891CDF95B10A6326795EE99CB8D3 /* PKCCropLineView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 8BDE4F48061A904C77518544D3BB66B5 /* PKCCropLineView.swift */; };
+		0C9BAA721F517B10001AA9AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9BAA711F517B10001AA9AA /* UIKit.framework */; };
 		16BBA4A09D50ECA9237B815275BF02A1 /* UIView+.swift in Resources */ = {isa = PBXBuildFile; fileRef = 4C4536B9C2ED0C52B77DCFE34C925BB9 /* UIView+.swift */; };
 		19871F31B8706233F23D701D98F2035F /* pkc_crop_rotate_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E6FDB363DED6B6D4616ADD98B5E0386 /* pkc_crop_rotate_left.png */; };
 		1E18D2B87636D188BF5BC6AED7219712 /* pkc_crop_top_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 78F17AE7FB2270AA85DB05764C9C581B /* pkc_crop_top_left.png */; };
@@ -67,20 +68,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C9BAA711F517B10001AA9AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		139C4E729234E56C4878EE45D76519F1 /* Pods-PKCCrop_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PKCCrop_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		13CE29330EC6AC49E7FAE29369692B9D /* PKCCrop-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCrop-umbrella.h"; sourceTree = "<group>"; };
 		236E212F6F98CFDA4452FE5A94D9A6F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25D911C0A7C19FD81A4569A557D8E6C9 /* Pods-PKCCrop_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PKCCrop_Example.modulemap"; sourceTree = "<group>"; };
+		25D911C0A7C19FD81A4569A557D8E6C9 /* Pods-PKCCrop_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PKCCrop_Example.modulemap"; sourceTree = "<group>"; };
 		31E2CF919670459DC1228CE235BE04D0 /* Pods-PKCCrop_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PKCCrop_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3D4862B492A767EE003C4F43BE470C79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42122F7705F8D51FB8E5A00145030342 /* Pods-PKCCrop_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PKCCrop_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		465001315E0C163D757E880BA18E81F6 /* Pods-PKCCrop_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Example-resources.sh"; sourceTree = "<group>"; };
 		480A7B8EFC53DB29D9A4AB226F806B66 /* pkc_crop_bottom_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_bottom_right.png; sourceTree = "<group>"; };
-		4910B24F2EBB6629B8DB7415EDA8047F /* Classes */ = {isa = PBXFileReference; includeInIndex = 1; path = Classes; sourceTree = "<group>"; };
+		4910B24F2EBB6629B8DB7415EDA8047F /* Classes */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
 		4C4536B9C2ED0C52B77DCFE34C925BB9 /* UIView+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		5238F5EB945844CD2C31A3EC1F1C62A6 /* PKCCrop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCrop.swift; sourceTree = "<group>"; };
 		53230978A097E330B4AA3ED0473AB412 /* PKCCropViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCropViewController.xib; sourceTree = "<group>"; };
-		5C4D62452B56E596206F3D4161D3874E /* PKCCrop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PKCCrop.modulemap; sourceTree = "<group>"; };
+		5C4D62452B56E596206F3D4161D3874E /* PKCCrop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PKCCrop.modulemap; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6E6FDB363DED6B6D4616ADD98B5E0386 /* pkc_crop_rotate_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_rotate_left.png; sourceTree = "<group>"; };
 		722628FA546E503380664DCEA780957A /* Pods-PKCCrop_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 		8BDE4F48061A904C77518544D3BB66B5 /* PKCCropLineView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCropLineView.swift; sourceTree = "<group>"; };
 		8BFD0BEBDBC92B5622B0AB9EB5CB4B57 /* Pods-PKCCrop_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8DF75849394A6FA6CAF1BC9AA5204562 /* Pods-PKCCrop_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PKCCrop_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93E22571D4BBA52240C9E2C569CCB82A /* pkc_crop_rotate_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_rotate_right.png; sourceTree = "<group>"; };
 		93EF8BF355DFCAE6448A0FA3265FC379 /* Pods-PKCCrop_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Example.release.xcconfig"; sourceTree = "<group>"; };
 		966A5F6EB58F8F86961AEAE1016DA4E4 /* PKCCrop-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PKCCrop-prefix.pch"; sourceTree = "<group>"; };
@@ -101,18 +103,18 @@
 		A3DCF6965EBE6118C264AA9E7BE38B48 /* PKCCropHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCropHelper.swift; sourceTree = "<group>"; };
 		A903E26281FFEAEFE1C17E498E8C2F60 /* Pods-PKCCrop_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B431FED843EB432FAD7ABB004021C9BC /* Pods-PKCCrop_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PKCCrop_Tests-resources.sh"; sourceTree = "<group>"; };
-		C2802EDACE1D9A7430435F2AD55B0DFD /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PKCCrop_Tests.framework; path = "Pods-PKCCrop_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2802EDACE1D9A7430435F2AD55B0DFD /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C487EC9ADABD06DC59A372C021304351 /* pkc_crop_bottom_left.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_bottom_left.png; sourceTree = "<group>"; };
 		C606756DA2858107164D2E403154EFEE /* ResourceBundle-PKCCrop-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PKCCrop-Info.plist"; sourceTree = "<group>"; };
-		C6548D53271249B7D992994D1A2B41F3 /* Pods_PKCCrop_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PKCCrop_Example.framework; path = "Pods-PKCCrop_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6548D53271249B7D992994D1A2B41F3 /* Pods_PKCCrop_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC91A0212CBC0AB9B20E3155073DF7E8 /* UIImageView+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		D0DCDC79577592E9EDFC0618290A9768 /* PKCCropViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PKCCropViewController.swift; sourceTree = "<group>"; };
 		D33EAC1FDB1FE05031C014AF4775249E /* PKCCrop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PKCCrop-dummy.m"; sourceTree = "<group>"; };
-		D439EACFD27E28279821E028B5364B72 /* PKCCrop.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PKCCrop.bundle; path = PKCCrop.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D439EACFD27E28279821E028B5364B72 /* PKCCrop.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKCCrop.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5135FD002337F323992E3C02FB53F06 /* Pods-PKCCrop_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PKCCrop_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DF502F0D68FCCB69165B3470B1600777 /* Pods-PKCCrop_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PKCCrop_Tests.modulemap"; sourceTree = "<group>"; };
-		E061795AA7C4F4CCEF27352D74B006B3 /* PKCCrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PKCCrop.framework; path = PKCCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3E4BC66BD20F667689E97A9B16AF8C9 /* Assets */ = {isa = PBXFileReference; includeInIndex = 1; path = Assets; sourceTree = "<group>"; };
+		DF502F0D68FCCB69165B3470B1600777 /* Pods-PKCCrop_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PKCCrop_Tests.modulemap"; sourceTree = "<group>"; };
+		E061795AA7C4F4CCEF27352D74B006B3 /* PKCCrop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PKCCrop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3E4BC66BD20F667689E97A9B16AF8C9 /* Assets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		F2254DC0166D2B568DB0C08263D3FF86 /* PKCCropLineView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PKCCropLineView.xib; sourceTree = "<group>"; };
 		F875D9FB7DFB2A0A5163C671E434A6BA /* Pods-PKCCrop_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PKCCrop_Tests-dummy.m"; sourceTree = "<group>"; };
 		F994459B855A565FDFD76A6DE0C6ABFE /* pkc_crop_top_right.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = pkc_crop_top_right.png; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9BAA721F517B10001AA9AA /* UIKit.framework in Frameworks */,
 				CC6AD26E84DB82C84286D1D9435BECF7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,7 +207,6 @@
 				78F17AE7FB2270AA85DB05764C9C581B /* pkc_crop_top_left.png */,
 				F994459B855A565FDFD76A6DE0C6ABFE /* pkc_crop_top_right.png */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -212,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -284,7 +285,6 @@
 				43FAF0C75984F6178A6838DC1F355145 /* Assets */,
 				594F55995D00860738C45CE3065BCCBC /* Classes */,
 			);
-			name = PKCCrop;
 			path = PKCCrop;
 			sourceTree = "<group>";
 		};
@@ -307,6 +307,7 @@
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				0C9BAA711F517B10001AA9AA /* UIKit.framework */,
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
@@ -324,7 +325,6 @@
 				CC91A0212CBC0AB9B20E3155073DF7E8 /* UIImageView+.swift */,
 				4C4536B9C2ED0C52B77DCFE34C925BB9 /* UIView+.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -333,7 +333,6 @@
 			children = (
 				E4E138128F3A470638B7AA2F131552AF /* Classes */,
 			);
-			name = PKCCrop;
 			path = PKCCrop;
 			sourceTree = "<group>";
 		};
