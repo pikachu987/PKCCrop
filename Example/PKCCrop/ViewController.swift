@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         }))
         alertController.addAction(UIAlertAction(title: "Image 1", style: .default, handler: { (_) in
             PKCCropHelper.shared.isNavigationBarShow = false
-            let cropVC = PKCCrop().cropViewController(UIImage(named: "image.jpeg")!)
+            let cropVC = PKCCropViewController(UIImage(named: "image.jpeg")!)
             cropVC.delegate = self
             self.navigationController?.pushViewController(cropVC, animated: true)
         }))
@@ -101,7 +101,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
             return
         }
         PKCCropHelper.shared.isNavigationBarShow = true
-        let cropVC = PKCCrop().cropViewController(image, tag: 1)
+        let cropVC = PKCCropViewController(image, tag: 1)
         cropVC.delegate = self
         picker.pushViewController(cropVC, animated: true)
     }

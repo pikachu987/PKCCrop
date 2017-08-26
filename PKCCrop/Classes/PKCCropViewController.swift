@@ -47,7 +47,7 @@ public class PKCCropViewController: UIViewController {
     
     private var imageRotateRate: Float = 0
 
-    init(_ image: UIImage, tag: Int = 0) {
+    public init(_ image: UIImage, tag: Int = 0) {
         super.init(nibName: "PKCCropViewController", bundle: Bundle(for: PKCCrop.self))
         self.image = image
         self.tag = tag
