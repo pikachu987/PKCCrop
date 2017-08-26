@@ -39,24 +39,24 @@ self.present(cropVC, animated: true, completion: nil)
 ~~~~
 
 extension ViewController: PKCCropDelegate{
-    //return Crop Image & Original Image
-    func pkcCropImage(_ image: UIImage?, originalImage: UIImage?) {
-        
-    }
-    
-    //If crop is canceled
-    func pkcCropCancel(_ viewController: PKCCropViewController) {
-        viewController.navigationController?.popViewController(animated: true)
-    }
-    
-    //Successful crop
-    func pkcCropComplete(_ viewController: PKCCropViewController) {
-        if viewController.tag == 0{
-            viewController.navigationController?.popViewController(animated: true)
-        }else{
-            viewController.dismiss(animated: true, completion: nil)
-        }
-    }
+//return Crop Image & Original Image
+func pkcCropImage(_ image: UIImage?, originalImage: UIImage?) {
+
+}
+
+//If crop is canceled
+func pkcCropCancel(_ viewController: PKCCropViewController) {
+viewController.navigationController?.popViewController(animated: true)
+}
+
+//Successful crop
+func pkcCropComplete(_ viewController: PKCCropViewController) {
+if viewController.tag == 0{
+viewController.navigationController?.popViewController(animated: true)
+}else{
+viewController.dismiss(animated: true, completion: nil)
+}
+}
 }
 
 ~~~~

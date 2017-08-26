@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  PKCCrop
 //
-//  Created by pikachu987 on 01/19/2017.
+//  Created by pikachu987 on 08/26/2017.
 //  Copyright (c) 2017 pikachu987. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet fileprivate weak var imageView: UIImageView!
     @IBOutlet fileprivate weak var widthConst: NSLayoutConstraint!
     @IBOutlet fileprivate weak var heightConst: NSLayoutConstraint!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,12 +26,12 @@ class ViewController: UIViewController {
             self.cropAction()
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     @objc private func cropAction(_ sender: UIBarButtonItem){
         self.cropAction()

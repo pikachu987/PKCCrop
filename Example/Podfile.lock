@@ -1,5 +1,5 @@
 PODS:
-  - PKCCrop (0.1.9)
+  - PKCCrop (0.2.1)
 
 DEPENDENCIES:
   - PKCCrop (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  PKCCrop: d006fc620f1c5cccb7ea447b91bed1bff3287fff
+  PKCCrop: 632cfa2fa46f3760fbd880875e2d221391a1ab04
 
 PODFILE CHECKSUM: 7fb175e6ce2262a32a03407de01cd2220cca51c0
 
