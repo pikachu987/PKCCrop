@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C9BAA781F518077001AA9AA /* image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BAA771F518077001AA9AA /* image.jpeg */; };
+		0C9BAADC1F518EB3001AA9AA /* image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0C9BAADB1F518EB3001AA9AA /* image.jpeg */; };
+		2267FE0C8CA06EB5F4D6DD89 /* Pods_PKCCrop_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE0F253F3F08D0486B6E23C /* Pods_PKCCrop_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		629CFB16AEE9570C9A3CF206 /* Pods_PKCCrop_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D1F58197E360246229B339 /* Pods_PKCCrop_Example.framework */; };
-		D1B89D8452E16F53B46BB75B /* Pods_PKCCrop_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C01675F608E57C452357A4 /* Pods_PKCCrop_Tests.framework */; };
+		D01F979528DB830EEE36B3B9 /* Pods_PKCCrop_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0625E1157C5624CA25C2B820 /* Pods_PKCCrop_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,11 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D1F58197E360246229B339 /* Pods_PKCCrop_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C9BAA771F518077001AA9AA /* image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpeg; sourceTree = "<group>"; };
-		471C42338E6BEA0A84A77E4F /* Pods-PKCCrop_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		47C01675F608E57C452357A4 /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D66AD661853FA8E843BEE3F /* Pods-PKCCrop_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Example/Pods-PKCCrop_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		0625E1157C5624CA25C2B820 /* Pods_PKCCrop_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9BAADB1F518EB3001AA9AA /* image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpeg; sourceTree = "<group>"; };
+		0EFDAA7E952D8270E2528C01 /* Pods-PKCCrop_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PKCCrop_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PKCCrop_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,11 +42,13 @@
 		607FACE51AFB9204008FA782 /* PKCCrop_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKCCrop_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7BEEEE2A9291E62F42724651 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		7CB9B0468FB6F13521F742E1 /* PKCCrop.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PKCCrop.podspec; path = ../PKCCrop.podspec; sourceTree = "<group>"; };
-		A18601BA5CB3DF1970BFADF6 /* Pods-PKCCrop_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A80FE37ECC32731204508B36 /* Pods-PKCCrop_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Example/Pods-PKCCrop_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D188036B8A0BEFCF429B6176 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		82B87A7C91C78C7A37218CF1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		910753236C66FE4B444C552E /* PKCCrop.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PKCCrop.podspec; path = ../PKCCrop.podspec; sourceTree = "<group>"; };
+		919740DAE5AAA949502BA009 /* Pods-PKCCrop_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Example/Pods-PKCCrop_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EECE54903AD2BAE126F983F3 /* Pods-PKCCrop_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F61F0B538C2FF1A4110C04B7 /* Pods-PKCCrop_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKCCrop_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PKCCrop_Example/Pods-PKCCrop_Example.release.xcconfig"; sourceTree = "<group>"; };
+		FCE0F253F3F08D0486B6E23C /* Pods_PKCCrop_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKCCrop_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEC84B51D289A8CC5D23261 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				629CFB16AEE9570C9A3CF206 /* Pods_PKCCrop_Example.framework in Frameworks */,
+				2267FE0C8CA06EB5F4D6DD89 /* Pods_PKCCrop_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,22 +64,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1B89D8452E16F53B46BB75B /* Pods_PKCCrop_Tests.framework in Frameworks */,
+				D01F979528DB830EEE36B3B9 /* Pods_PKCCrop_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04F686B36B634BDA62819D7C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				00D1F58197E360246229B339 /* Pods_PKCCrop_Example.framework */,
-				47C01675F608E57C452357A4 /* Pods_PKCCrop_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -87,8 +78,8 @@
 				607FACD21AFB9204008FA782 /* Example for PKCCrop */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				F5061EB92FB840E27C449784 /* Pods */,
-				04F686B36B634BDA62819D7C /* Frameworks */,
+				F8194EA43D620547918CDA9C /* Pods */,
+				8E336FBA19253453E8151CB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,7 +97,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				0C9BAA771F518077001AA9AA /* image.jpeg */,
+				0C9BAADB1F518EB3001AA9AA /* image.jpeg */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -144,20 +135,29 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				7CB9B0468FB6F13521F742E1 /* PKCCrop.podspec */,
-				7BEEEE2A9291E62F42724651 /* README.md */,
-				D188036B8A0BEFCF429B6176 /* LICENSE */,
+				910753236C66FE4B444C552E /* PKCCrop.podspec */,
+				FDEC84B51D289A8CC5D23261 /* README.md */,
+				82B87A7C91C78C7A37218CF1 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		F5061EB92FB840E27C449784 /* Pods */ = {
+		8E336FBA19253453E8151CB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4D66AD661853FA8E843BEE3F /* Pods-PKCCrop_Example.debug.xcconfig */,
-				A80FE37ECC32731204508B36 /* Pods-PKCCrop_Example.release.xcconfig */,
-				471C42338E6BEA0A84A77E4F /* Pods-PKCCrop_Tests.debug.xcconfig */,
-				A18601BA5CB3DF1970BFADF6 /* Pods-PKCCrop_Tests.release.xcconfig */,
+				FCE0F253F3F08D0486B6E23C /* Pods_PKCCrop_Example.framework */,
+				0625E1157C5624CA25C2B820 /* Pods_PKCCrop_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8194EA43D620547918CDA9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				919740DAE5AAA949502BA009 /* Pods-PKCCrop_Example.debug.xcconfig */,
+				F61F0B538C2FF1A4110C04B7 /* Pods-PKCCrop_Example.release.xcconfig */,
+				0EFDAA7E952D8270E2528C01 /* Pods-PKCCrop_Tests.debug.xcconfig */,
+				EECE54903AD2BAE126F983F3 /* Pods-PKCCrop_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -169,12 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PKCCrop_Example" */;
 			buildPhases = (
-				5C5B0EAEE36E2543B248FE76 /* [CP] Check Pods Manifest.lock */,
+				B0757745B7A4736904E31837 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				7FC319E91500CD967DB3DAE8 /* [CP] Embed Pods Frameworks */,
-				4D64381B76FE68ACBF9174AC /* [CP] Copy Pods Resources */,
+				63E6BFDB88D51406991D0D85 /* [CP] Embed Pods Frameworks */,
+				11AF935EDD9CA5E30B07A8EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,12 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PKCCrop_Tests" */;
 			buildPhases = (
-				94B3B66F166182FE6D58DA00 /* [CP] Check Pods Manifest.lock */,
+				9AC6EC50B8AFEDEADE4D69A8 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				54872B51928B8CA516D1E4FA /* [CP] Embed Pods Frameworks */,
-				4B83B663550D08742324CFE4 /* [CP] Copy Pods Resources */,
+				50E0EDB19428501E960AD810 /* [CP] Embed Pods Frameworks */,
+				C421D855CFF7813F73548271 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,7 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				0C9BAA781F518077001AA9AA /* image.jpeg in Resources */,
+				0C9BAADC1F518EB3001AA9AA /* image.jpeg in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -268,22 +268,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B83B663550D08742324CFE4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4D64381B76FE68ACBF9174AC /* [CP] Copy Pods Resources */ = {
+		11AF935EDD9CA5E30B07A8EF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,7 +283,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PKCCrop_Example/Pods-PKCCrop_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		54872B51928B8CA516D1E4FA /* [CP] Embed Pods Frameworks */ = {
+		50E0EDB19428501E960AD810 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,22 +298,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C5B0EAEE36E2543B248FE76 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7FC319E91500CD967DB3DAE8 /* [CP] Embed Pods Frameworks */ = {
+		63E6BFDB88D51406991D0D85 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,7 +313,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PKCCrop_Example/Pods-PKCCrop_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		94B3B66F166182FE6D58DA00 /* [CP] Check Pods Manifest.lock */ = {
+		9AC6EC50B8AFEDEADE4D69A8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -356,6 +326,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B0757745B7A4736904E31837 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C421D855CFF7813F73548271 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PKCCrop_Tests/Pods-PKCCrop_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -497,7 +497,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D66AD661853FA8E843BEE3F /* Pods-PKCCrop_Example.debug.xcconfig */;
+			baseConfigurationReference = 919740DAE5AAA949502BA009 /* Pods-PKCCrop_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PKCCrop/Info.plist;
@@ -511,7 +511,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A80FE37ECC32731204508B36 /* Pods-PKCCrop_Example.release.xcconfig */;
+			baseConfigurationReference = F61F0B538C2FF1A4110C04B7 /* Pods-PKCCrop_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PKCCrop/Info.plist;
@@ -525,7 +525,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 471C42338E6BEA0A84A77E4F /* Pods-PKCCrop_Tests.debug.xcconfig */;
+			baseConfigurationReference = 0EFDAA7E952D8270E2528C01 /* Pods-PKCCrop_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -545,7 +545,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A18601BA5CB3DF1970BFADF6 /* Pods-PKCCrop_Tests.release.xcconfig */;
+			baseConfigurationReference = EECE54903AD2BAE126F983F3 /* Pods-PKCCrop_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
