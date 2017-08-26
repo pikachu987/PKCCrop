@@ -18,6 +18,8 @@
 ![image](./pkc_crop_rotate_left.png)
 ![image](./pkc_crop_rotate_right.png)
 
+[https://icons8.com/](https://icons8.com/)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
