@@ -61,6 +61,16 @@ class PKCCropLineView: UIView {
     @IBOutlet private weak var minHeightConst: NSLayoutConstraint!
     @IBOutlet private weak var minWidthConst: NSLayoutConstraint!
     
+    @IBOutlet weak var topGuideLine: UIView!
+    @IBOutlet weak var leftGuideLine: UIView!
+    @IBOutlet weak var rightGuideLine: UIView!
+    @IBOutlet weak var bottomGuideLine: UIView!
+    
+    @IBOutlet weak var innerTopGuideLine: UIView!
+    @IBOutlet weak var innerLeftGuideLine: UIView!
+    @IBOutlet weak var innerRightGuideLine: UIView!
+    @IBOutlet weak var innerBottomGuideLine: UIView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInitialization()
@@ -92,6 +102,30 @@ class PKCCropLineView: UIView {
 
         self.minHeightConst.constant = PKCCropHelper.shared.minSize
         self.minWidthConst.constant = PKCCropHelper.shared.minSize
+        
+        switch PKCCropHelper.shared.lineColor {
+        case PKCCropLineColor.white:
+            topGuideLine.backgroundColor = .white
+            leftGuideLine.backgroundColor = .white
+            rightGuideLine.backgroundColor = .white
+            bottomGuideLine.backgroundColor = .white
+            
+            innerTopGuideLine.backgroundColor = .white
+            innerLeftGuideLine.backgroundColor = .white
+            inngerRightGuideLine.backgroundColor = .white
+            innerBottomGuideLine.backgroundColor = .white
+            
+        case PKCCropLineColor.lightGray:
+            topGuideLine.backgroundColor = .lightGray
+            leftGuideLine.backgroundColor = .lightGray
+            rightGuideLine.backgroundColor = .lightGray
+            bottomGuideLine.backgroundColor = .lightGray
+            
+            innerTopGuideLine.backgroundColor = .lightGray
+            innerLeftGuideLine.backgroundColor = .lightGray
+            inngerRightGuideLine.backgroundColor = .lightGray
+            innerBottomGuideLine.backgroundColor = .lightGray
+        }
         
         DispatchQueue.main.async{
             self.leftTopButton.leftTop()
