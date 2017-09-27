@@ -97,6 +97,12 @@ public class PKCCropViewController: UIViewController {
     }
 
     private func initVars(){
+
+        //add navigation title when has navigationBar
+        if self.navigationController != nil || PKCCropHelper.shared.isNavigationBarShow {
+            self.title = PKCCropHelper.shared.titleText
+        }
+
         self.view.backgroundColor = .black
         self.maskView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: PKCCropHelper.shared.maskAlpha)
         self.maskView.isUserInteractionEnabled = false

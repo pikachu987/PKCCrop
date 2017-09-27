@@ -29,6 +29,7 @@ public enum PKCCropLineType{
 public class PKCCropHelper{
     public static let shared = PKCCropHelper()
 
+    public var titleText = ""
     public var isNavigationBarShow = false
     public var lineType: PKCCropLineType = .default
     public var maskAlpha: CGFloat = 0.4
